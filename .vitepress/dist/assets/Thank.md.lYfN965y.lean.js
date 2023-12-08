@@ -1,0 +1,1 @@
+import{_ as r,o as e,c as a,R as t}from"./chunks/framework.slSl-7H0.js";const _=JSON.parse('{"title":"感谢","description":"","frontmatter":{},"headers":[],"relativePath":"Thank.md","filePath":"Thank.md"}'),l={name:"Thank.md"},d=t("",7),o=[d];function i(n,h,u,s,g,m){return e(),a("div",null,o)}const b=r(l,[["render",i]]);export{_ as __pageData,b as default};
