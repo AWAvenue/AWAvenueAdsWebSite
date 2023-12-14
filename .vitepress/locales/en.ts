@@ -12,6 +12,7 @@ export default defineConfig({
 
 function nav() {
     return [
+        { text: 'Donate', link: '/en/Donate.html' },
         { text: 'Subscribe', link: '/en/Sub.html' },
         { text: 'Thanks', link: '/en/Thank.html' },
         { text: 'Communication', link: '/en/Support.html' },

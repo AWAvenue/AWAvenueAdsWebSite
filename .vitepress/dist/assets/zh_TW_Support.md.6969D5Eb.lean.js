@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as r,R as a}from"./chunks/framework.7nWTRhJx.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"zh_TW/Support.md","filePath":"zh_TW/Support.md"}'),l={name:"zh_TW/Support.md"},s=a("",5),o=[s];function i(n,u,h,_,c,p){return t(),r("div",null,o)}const m=e(l,[["render",i]]);export{f as __pageData,m as default};
