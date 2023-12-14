@@ -26,26 +26,36 @@ jsDriver官方的加速訂閱，訪問速度快，一周左右更新一次，可
 
 ## AdGuard Home/DNS 訂閱鏈接
 
-- [GitHub Raw 訂閱](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Adblock-Rule.txt)
+- [GitHub Raw 訂閱](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
 
-- [微軟 CDN 反代訂閱地址](https://jsd.onmicrosoft.cn/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Adblock-Rule.txt)
+- [微軟 CDN 反代訂閱地址](https://jsd.onmicrosoft.cn/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Ads-Rule.txt)
 
-- [jsDelivr(gcore) 反代訂閱地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Adblock-Rule.txt)
+- [jsDelivr(gcore) 反代訂閱地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Ads-Rule.txt)
 
-- [ghproxy 反代訂閱地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Adblock-Rule.txt)
+- [ghproxy 反代訂閱地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
 
 
 ## 藍貓 訂閱鏈接
 
-- [GitHub Raw 訂閱](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Adblock-Rule-Clash.yaml)
+- [GitHub Raw 訂閱](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule-Clash.yaml)
 
-- [渺軟 CDN 反代訂閱地址](https://jsd.onmicrosoft.cn/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Adblock-Rule-Clash.yaml)
+- [渺軟 CDN 反代訂閱地址](https://jsd.onmicrosoft.cn/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Ads-Rule-Clash.yaml)
 
-- [jsDelivr(gcore) 反代訂閱地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Adblock-Rule-Clash.yaml)
+- [jsDelivr(gcore) 反代訂閱地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Ads-Rule-Clash.yaml)
 
-- [ghproxy 反代訂閱地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Adblock-Rule-Clash.yaml)
+- [ghproxy 反代訂閱地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule-Clash.yaml)
 
 > *具體如何使用請參考[使用教程](./Knowledge)*
+
+## Surge/Surfboard 订阅链接
+
+- [GitHub Raw 訂閱](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule-Surge.txt)
+
+- [渺軟 CDN 反代訂閱地址](https://jsd.onmicrosoft.cn/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Ads-Rule-Surge.txt)
+
+- [jsDelivr(gcore) 反代訂閱地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Ads-Rule-Surge.txt)
+
+- [ghproxy 反代訂閱地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule-Surge.txt)
 
 ## 意見反饋&交流群
 

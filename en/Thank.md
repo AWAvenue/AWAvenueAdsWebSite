@@ -1,15 +1,15 @@
-# Acknowledgments
+# Acknowledgment
 
 During the development of **AWAvenue Ads Rule**, we received valuable assistance from various open-source projects and independent developers. Thanks to all of you!
 
 (In no particular order)
 
 ### Project
-- [AdGuard](https://github.com/AdguardTeam)
+- [「Vercel」](https://vercel.com/)
+- [「svnc host」 by svnc](https://gitee.com/svnc/host)
 - [AdGuardHome](https://github.com/AdguardTeam/AdGuardHome)
 - [AdGuardDNS](https://github.com/AdguardTeam/AdGuardDNS)
 - [AdguardForAndroid](https://github.com/AdguardTeam/AdguardForAndroid)
-- [AdguardForiOS](https://github.com/AdguardTeam/AdguardForiOS)
 - [AdguardFilters](https://github.com/AdguardTeam/AdguardFilters)
 
 ### Developers

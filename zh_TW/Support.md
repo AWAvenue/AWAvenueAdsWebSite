@@ -11,6 +11,6 @@
 ## 使用者交流
 
 - Telegram 頻道: [AWAvenue Ads Rule](https://t.me/AWAvenueAdsRule)
-- Telegram 頻道: [秋風飛舞的山間小路](https://t.me/AWAvenueAdsChat)
+- Telegram 頻道: [秋風がく山道](https://t.me/AWAvenueAdsChat)
 - QQ 群聊: [你猜有沒有？](https://youtu.be/dQw4w9WcQ)
 - QQ 頻道: [你再猜有沒有？](https://www.ubisoft.com/zh-tw/game/rainbow-six/siege)
