@@ -24,7 +24,7 @@ rule-providers:
     format: yaml
     path: ./rule_providers/AWAvenue-Ads-Rule-Clash.yaml
     #此处“/rule_providers”自行参考
-    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Adblock-Rule-Clash.yaml"
+    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule-Clash.yaml"
     interval: 60480
 rules:
   - RULE-SET,秋风广告规则,REJECT

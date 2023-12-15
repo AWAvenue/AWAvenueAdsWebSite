@@ -1,6 +1,6 @@
-# Donation
+# Donate
 
-## Donation Guidelines
+## Donation Instructions
 
 ::: danger Note
 Donation is entirely voluntary， Minors should donate with the consent and supervision of their guardians.
