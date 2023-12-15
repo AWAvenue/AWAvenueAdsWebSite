@@ -19,7 +19,7 @@ export default defineConfig({
 
 function nav() {
     return [
-        { text: '贊助', link: '/zh_TW/Donate.html' },
+        { text: '創作激勵', link: '/zh_TW/Donate.html' },
         { text: '訂閱規則', link: '/zh_TW/Sub.html' },
         { text: '感謝名單', link: '/zh_TW/Thank.html' },
         { text: '用戶交流', link: '/zh_TW/Support.html' },

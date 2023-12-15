@@ -18,7 +18,7 @@ export default defineConfig({
 
 function nav() {
     return [
-        { text: '捐赠', link: '/Donate.html' },
+        { text: '创作激励', link: '/Donate.html' },
         { text: '订阅规则', link: '/Sub.html' },
         { text: '感谢列表', link: '/Thank.html' },
         { text: '用户交流', link: '/Support.html' },
