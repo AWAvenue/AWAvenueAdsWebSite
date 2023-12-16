@@ -17,7 +17,7 @@ export default defineConfig( {
             copyright: 'Copyright © 2022-2023 秋风のとおり道'
         },
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/TG-Twilight/AWAvenue-Adblock-Rule' }
+            { icon: 'github', link: 'https://github.com/TG-Twilight/AWAvenue-Ads-Rule' }
         ]
     }
 })
