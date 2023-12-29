@@ -7,15 +7,15 @@ hero:
   text: "Eliminate All Malicious Ads"
   tagline: "Use Adblock syntax to fight against various advertising SDKs in Android applications from the network level , prevent them from loading"
   image:
-    src: images/logo.png
+    src: /logo.png
     alt: 秋风广告规则
   actions:
     - theme: brand
+      text: Start
+      link: /en/Start.html
+    - theme: alt
       text: Subscription
       link: /en/Sub.html
-    - theme: alt
-      text: GitHub
-      link: https://github.com/saraSakuHj/Hyperceiler
     - theme: alt
       text: Thanks
       link: /en/Thank.html

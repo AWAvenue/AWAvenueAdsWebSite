@@ -36,25 +36,25 @@ A mirror for Github raw, updating relatively quickly but with moderate reliabili
 
 ## Clash Meta Subscription Links
 
-- [GitHub Raw Subscription](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule-Clash.yaml)
+- [GitHub Raw Subscription](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml)
 
-- [Microsoft CDN Mirror Subscription](https://jsd.onmicrosoft.cn/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Ads-Rule-Clash.yaml)
+- [Microsoft CDN Mirror Subscription](https://jsd.onmicrosoft.cn/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.yaml)
 
-- [jsDelivr(gcore) Mirror Subscription](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Ads-Rule-Clash.yaml)
+- [jsDelivr(gcore) Mirror Subscription](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.yaml)
 
-- [ghproxy Mirror Subscription](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule-Clash.yaml)
+- [ghproxy Mirror Subscription](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml)
 
 > *For specific usage instructions, refer to the [User Guide](./Knowledge)*
 
 ## Surge/Surfboard Subscription Links
 
-- [GitHub Raw Subscription](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule-Surge.txt)
+- [GitHub Raw Subscription](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.txt)
 
-- [Microsoft CDN Mirror Subscription](https://jsd.onmicrosoft.cn/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Ads-Rule-Surge.txt)
+- [Microsoft CDN Mirror Subscription](https://jsd.onmicrosoft.cn/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Surge.txt)
 
-- [jsDelivr(gcore) Mirror Subscription](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Ads-Rule-Surge.txt)
+- [jsDelivr(gcore) Mirror Subscription](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Surge.txt)
 
-- [ghproxy Mirror Subscription](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule-Surge.txt)
+- [ghproxy Mirror Subscription](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.txt)
 
 ## Feedback & Communication Group
 

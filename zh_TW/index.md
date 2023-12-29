@@ -7,15 +7,15 @@ hero:
   text: "幹掉所有無良廣告"
   tagline: 使用Adblock語法，攔截Android應用程式中各種廣告sdk的網路請求，阻止其載入
   image:
-    src: images/logo.png
+    src: /logo.png
     alt: 秋风广告规则
   actions:
     - theme: brand
+      text: 快速開始
+      link: /zh_TW/Start.html
+    - theme: alt
       text: 訂閱規則
       link: /zh_TW/Sub.html
-    - theme: alt
-      text: GitHub
-      link: https://github.com/TG-Twilight/AWAvenue-Adblock-Rule
     - theme: alt
       text: 感謝列表
       link: /zh_TW/Thank.html
