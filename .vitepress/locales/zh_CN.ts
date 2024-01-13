@@ -13,6 +13,11 @@ export default defineConfig({
         outline: {
             label: '目录'
         },
+
+        editLink: {
+            pattern: 'https://github.com/TG-Twilight/AWAvenueAdsWebSite/edit/main/:path',
+            text: '在 GitHub 中编辑本页'
+        }
     }
 })
 

@@ -7,6 +7,10 @@ export default defineConfig({
     themeConfig: {
         nav: nav(),
 
+        editLink: {
+            pattern: 'https://github.com/TG-Twilight/AWAvenueAdsWebSite/edit/main/:path',
+            text: 'Edit this page on GitHub'
+        }
     }
 })
 
