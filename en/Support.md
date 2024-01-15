@@ -11,6 +11,6 @@ Note: The community is for user communication and feedback. Questions in the gro
 ## User Communication
 
 - Telegram Channel: [AWAvenue Ads Rule](https://t.me/AWAvenueAdsRule)
-- Telegram Channel: [秋風がく山道](https://t.me/AWAvenueAdsChat)
+- Telegram Group: [秋風がく山道](https://t.me/AWAvenueAdsChat)
 - QQ Group: [Guess if It Exists?](https://youtu.be/dQw4w9WgXcQ)
 - QQ Channel: [Guess Again If It Exists?](https://www.ubisoft.com/zh-tw/game/rainbow-six/siege)

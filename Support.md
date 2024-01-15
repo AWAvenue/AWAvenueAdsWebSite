@@ -10,6 +10,6 @@
 ## 用户交流
 
 - Telegram 频道: [AWAvenue Ads Rule](https://t.me/AWAvenueAdsRule)
-- Telegram 频道: [秋風がく山道](https://t.me/AWAvenueAdsChat)
+- Telegram 群组: [秋風がく山道](https://t.me/AWAvenueAdsChat)
 - QQ 群聊: [你猜有没有？](https://youtu.be/dQw4w9WgXcQ)
 - QQ 频道: [你再猜有没有？](https://www.ubisoft.com/zh-tw/game/rainbow-six/siege)
