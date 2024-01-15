@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as i,R as e}from"./chunks/framework.7nWTRhJx.js";const c=JSON.parse('{"title":"如何使用","description":"","frontmatter":{},"headers":[],"relativePath":"Knowledge.md","filePath":"Knowledge.md"}'),n={name:"Knowledge.md"},l=e("",14),t=[l];function h(p,r,d,k,o,E){return a(),i("div",null,t)}const g=s(n,[["render",h]]);export{c as __pageData,g as default};
