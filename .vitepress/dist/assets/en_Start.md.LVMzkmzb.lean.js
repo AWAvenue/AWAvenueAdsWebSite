@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a,R as i}from"./chunks/framework.7nWTRhJx.js";const b=JSON.parse('{"title":"Quick Start","description":"","frontmatter":{},"headers":[],"relativePath":"en/Start.md","filePath":"en/Start.md"}'),o={name:"en/Start.md"},r=i("",19),n=[r];function d(s,c,l,h,u,p){return t(),a("div",null,n)}const v=e(o,[["render",d]]);export{b as __pageData,v as default};
