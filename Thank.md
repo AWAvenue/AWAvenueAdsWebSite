@@ -12,6 +12,7 @@
 - [「AdGuardDNS」 by AdguardTeam](https://github.com/AdguardTeam/AdGuardDNS)
 - [「AdguardForAndroid」 by AdguardTeam](https://github.com/AdguardTeam/AdguardForAndroid)
 - [「AdguardFilters」 by AdguardTeam](https://github.com/AdguardTeam/AdguardFilters)
+- [「原神」 by mihomo](https://ys.mihoyo.com/)
 
 
 ### 开发者

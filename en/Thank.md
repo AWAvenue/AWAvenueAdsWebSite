@@ -11,6 +11,7 @@ During the development of **AWAvenue Ads Rule**, we received valuable assistance
 - [AdGuardDNS](https://github.com/AdguardTeam/AdGuardDNS)
 - [AdguardForAndroid](https://github.com/AdguardTeam/AdguardForAndroid)
 - [AdguardFilters](https://github.com/AdguardTeam/AdguardFilters)
+- [「Genshin」 by mihomo](https://genshin.hoyoverse.com/en)
 
 ### Developers
 - [Andrey Meshkov](https://github.com/ameshkov) (AdguardTeam)

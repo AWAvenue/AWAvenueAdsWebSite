@@ -10,7 +10,8 @@
 - [「AdGuardHome」 by AdguardTeam](https://github.com/AdguardTeam/AdGuardHome)
 - [「AdGuardDNS」 by AdguardTeam](https://github.com/AdguardTeam/AdGuardDNS)
 - [「AdguardForAndroid」 by AdguardTeam](https://github.com/AdguardTeam/AdguardForAndroid)
-- [「AdguardFilters」 by AdguardTeam](https://github.com/AdguardTeam/AdguardFilters)
+- [「AdguardFilters」 by AdguardTeam](https://github.com/AdguardTeam/AdguardFilters) 
+- [「原神」 by mihomo](https://ys.mihoyo.com/)
 
 ### 開發者
 - [「Andrey Meshkov」 by AdguardTeam](https://github.com/ameshkov)
