@@ -1,0 +1,1 @@
+import{_ as l,o as a,c as e,R as t}from"./chunks/framework.emLw3Ecc.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"AdGuard.md","filePath":"AdGuard.md"}'),o={name:"AdGuard.md"},p=t("",11),n=[p];function r(i,s,d,h,c,V){return a(),e("div",null,n)}const W=l(o,[["render",r]]);export{m as __pageData,W as default};

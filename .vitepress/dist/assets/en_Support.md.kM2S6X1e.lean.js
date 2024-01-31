@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as o,R as r}from"./chunks/framework.emLw3Ecc.js";const b=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"en/Support.md","filePath":"en/Support.md"}'),a={name:"en/Support.md"},s=r("",6),n=[s];function i(l,u,c,d,p,h){return t(),o("div",null,n)}const f=e(a,[["render",i]]);export{b as __pageData,f as default};
