@@ -12,6 +12,8 @@ In the rule list, directly find "AWAvenue Ads Rule" and check the subscription.
 
 Copy the available subscription link and import it into AdGuard's custom filtering list to take effect.
 
+[Detailed Tutorial (including instructional videos)](./AdGuard.md)
+
 ### Clash Meta
 
 Simply configure it yourself. Note that feedback groups do not accept this type of inquiry.

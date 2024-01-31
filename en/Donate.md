@@ -27,6 +27,6 @@ https://afdian.net/a/AdsRule
 
 # Donor List
 
-😶‍🌫️empty
+Guyuan - 2024.1.31 -- 500 CNY
 
 # Finally, thank you for your support!
