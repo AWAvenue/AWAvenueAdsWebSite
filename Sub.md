@@ -49,7 +49,9 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 - [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt)
 
 
-## 蓝猫 订阅链接
+## Clash 规则订阅链接
+
+> 官核无法使用 仅限Premium或者Meta版本的Clash
 
 - [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml)
 
