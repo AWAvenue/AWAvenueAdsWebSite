@@ -36,7 +36,7 @@
 
 ### 进阶教程：
 
-[AdGuard与常见代理软件的共存方法](https://github.com/AWAvenue/AWAvenueAdsWebSite/blob/main/Coexist.md)
+[AdGuard与常见代理软件的共存方法](./Coexist.md)
 
 <br />
 
