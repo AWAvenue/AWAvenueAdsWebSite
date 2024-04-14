@@ -1,0 +1,1 @@
+import{_ as a,o as e,c as r,R as o}from"./chunks/framework.emLw3Ecc.js";const _=JSON.parse('{"title":"Clash 与 Adguard 共存","description":"","frontmatter":{},"headers":[],"relativePath":"Coexist.md","filePath":"Coexist.md"}'),t={name:"Coexist.md"},d=o("",13),l=[d];function i(s,n,h,c,u,g){return e(),r("div",null,l)}const N=a(t,[["render",i]]);export{_ as __pageData,N as default};
