@@ -1,1 +1,0 @@
-import{_ as e,o as r,c as a,R as t}from"./chunks/framework.7nWTRhJx.js";const f=JSON.parse('{"title":"感謝","description":"","frontmatter":{},"headers":[],"relativePath":"zh_TW/Thank.md","filePath":"zh_TW/Thank.md"}'),l={name:"zh_TW/Thank.md"},o=t("",7),i=[o];function h(n,d,s,u,c,_){return r(),a("div",null,i)}const g=e(l,[["render",h]]);export{f as __pageData,g as default};

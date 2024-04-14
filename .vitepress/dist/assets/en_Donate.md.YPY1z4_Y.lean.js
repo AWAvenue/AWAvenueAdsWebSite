@@ -1,1 +1,0 @@
-import{_ as a,o as t,c as n,R as o,a1 as e}from"./chunks/framework.7nWTRhJx.js";const f=JSON.parse('{"title":"Donate","description":"","frontmatter":{},"headers":[],"relativePath":"en/Donate.md","filePath":"en/Donate.md"}'),i={name:"en/Donate.md"},r=o("",18),s=[r];function u(l,d,h,c,p,m){return t(),n("div",null,s)}const _=a(i,[["render",u]]);export{f as __pageData,_ as default};
