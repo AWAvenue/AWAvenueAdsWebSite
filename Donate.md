@@ -27,6 +27,6 @@ https://afdian.net/a/AdsRule
 
 # 捐赠名单
 
-Guyuan - 2024.1.31 -- 500 CNY
+TG User - 2024.4.14 -- 88.88 CNY
 
 # 最后，感谢您的支持！

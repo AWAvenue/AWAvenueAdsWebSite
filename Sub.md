@@ -90,27 +90,6 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 </details>
 
 <details>
-  <summary>Singbox 订阅链接</summary>
-
-- [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
-
-- [天命CFCDN反代订阅地址](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
-
-- [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox.json)
-
-- [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
-
-- [GitHub Raw 订阅（REGEX）](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
-
-- [天命CFCDN反代订阅地址（REGEX）](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
-
-- [jsDelivr(gcore)反代订阅地址（REGEX）](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
-
-- [ghproxy反代订阅地址（REGEX）](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
-
-</details>
-
-<details>
   <summary>AdClose 订阅链接（纯域名格式）</summary>
 
 - [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.txt)
@@ -133,6 +112,48 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
 
 - [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
+
+</details>
+
+<details>
+  <summary>RouterOS 订阅链接（分 240.0.0.1 与 Adlist 0.0.0.0 格式）</summary>
+
+- [GitHub Raw 订阅 (240.0.0.1)](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
+
+- [天命CFCDN反代订阅地址 (240.0.0.1)](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
+
+- [jsDelivr(gcore)反代订阅地址 (240.0.0.1)](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
+
+- [ghproxy反代订阅地址 (240.0.0.1)](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
+
+- [GitHub Raw 订阅 (Adlist)](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
+
+- [天命CFCDN反代订阅地址 (Adlist)](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
+
+- [jsDelivr(gcore)反代订阅地址 (Adlist)](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
+
+- [ghproxy反代订阅地址 (Adlist)](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
+
+</details>
+
+<details>
+  <summary>Singbox 订阅链接</summary>
+
+- [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
+
+- [天命CFCDN反代订阅地址](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
+
+- [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox.json)
+
+- [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
+
+- [GitHub Raw 订阅（REGEX）](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
+
+- [天命CFCDN反代订阅地址（REGEX）](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
+
+- [jsDelivr(gcore)反代订阅地址（REGEX）](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
+
+- [ghproxy反代订阅地址（REGEX）](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
 
 </details>
 
