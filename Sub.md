@@ -90,7 +90,7 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 </details>
 
 <details>
-  <summary>AdClose 订阅链接（纯域名格式）</summary>
+  <summary>AdClose 订阅链接（纯域名格式，目前仅供开发者使用）</summary>
 
 - [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.txt)
 
