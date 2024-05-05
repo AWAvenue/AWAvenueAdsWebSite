@@ -23,10 +23,15 @@ https://afdian.net/a/AdsRule
 
 <br>
 <br>
+
+# Donation List
+
+CA - 2024.4.14 -- 88.88 CNY
 <br>
-
-# Donor List
-
-Guyuan - 2024.1.31 -- 500 CNY
+*Jian - 2024.4.19 -- 8.88 CNY
+<br>
+**Cong - 2024.4.15 -- 1.43 CNY
+<br>
+Pavel Durov - 2024.5.5 -- 0.0288TON (CNY 1.174)
 
 # Finally, thank you for your support!

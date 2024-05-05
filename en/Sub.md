@@ -1,30 +1,29 @@
-# Subscribe to Rules
+# Subscription Rules
 
 ## Subscription Notice
 
-::: danger Note
-**Before subscribing to this rule, please read the [User Agreement](./Protocol.md) and [Usage Tutorial](./Knowledge) in full, and make sure you have the ability to solve certain problems.**
+::: danger Attention
+**Before subscribing to these rules, please make sure to read the [User Agreement](./Protocol.md) and [Usage Guide](./Knowledge) completely, and confirm that you have the ability to solve certain problems.**
 :::
 
-**The following subscription links are for the official version of the Autumn Breeze Ads Rule. They include:**
+**The subscription links below are the official version of the AWAvenue Ads Rule, including:**
 
-- Github Raw:
+- GitHub Raw:
 
-Official direct links from Github, providing the fastest access speed and highest reliability.
+The official direct link from GitHub, updated in real-time, with the highest reliability.
 
-*PS: For users in the Tivat Continent, this subscription link may be blocked by "Let's explore the front regions later!" If it cannot be used, please use other subscriptions.*
+- Tianming CFCDN Proxy:
 
-- Microsoft CDN Proxy:
-
-China Mainland filing, fast access speed, updated every 7-10 days, relatively high reliability.
+A CloudFlare private proxy subscription link provided by one of the maintainers of these rules, [@天命 (Tianming)](https://github.com/tmby).
 
 - jsDelivr:
 
-Official accelerated subscription from jsDelivr, fast access speed, updated approximately every week, relatively high reliability.
+An official accelerated subscription link from jsDelivr, with fast access speed, updated approximately once a week, and relatively high reliability.
 
 - ghproxy Proxy:
 
-A proxy for Github raw, with a faster update speed but lower reliability.
+A proxy for GitHub raw, with faster update speed, but average reliability.
+
 
 ## AdGuard Home/DNS Subscription Links
 
@@ -84,32 +83,12 @@ A proxy for Github raw, with a faster update speed but lower reliability.
 </details>
 
 <details>
-  <summary>Singbox Subscription Links</summary>
+  <summary>AdClose Subscription Links (Currently only for developers, as AdClose already includes these rules (in the Block section))</summary>
 
-- [GitHub Raw Subscription](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
-
-- [Microsoft CDN Proxy Subscription](https://jsd.onmicrosoft.cn/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox.json)
-
-- [jsDelivr(gcore) Proxy Subscription](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox.json)
-
-- [ghproxy Proxy Subscription](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
-
-- [GitHub Raw Subscription (REGEX)](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
-
-- [Microsoft CDN Proxy Subscription (REGEX)](https://jsd.onmicrosoft.cn/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
-
-- [jsDelivr(gcore) Proxy Subscription (REGEX)](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
-
-- [ghproxy Proxy Subscription (REGEX)](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
-
-</details>
-
-<details>
-  <summary>AdClose Subscription Links (Domain-only Format)</summary>
 
 - [GitHub Raw Subscription](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.txt)
 
-- [Microsoft CDN Proxy Subscription](https://jsd.onmicrosoft.cn/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-AdClose.txt)
+- [Tianming CFCDN Proxy Subscription](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.txt)
 
 - [jsDelivr(gcore) Proxy Subscription](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-AdClose.txt)
 
@@ -117,21 +96,94 @@ A proxy for Github raw, with a faster update speed but lower reliability.
 
 </details>
 
+<details>
+  <summary>QuantumultX Subscription Links (.list format)</summary>
+
+- [GitHub Raw Subscription](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
+
+- [Tianming CFCDN Proxy Subscription](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
+
+- [jsDelivr(gcore) Proxy Subscription](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
+
+- [ghproxy Proxy Subscription](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
+
+</details>
+
+<details>
+  <summary>Mosdns V5 Subscription Links</summary>
+
+- [GitHub Raw Subscription](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
+
+- [Tianming CFCDN Proxy Subscription](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
+
+- [jsDelivr(gcore) Proxy Subscription](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
+
+- [ghproxy Proxy Subscription](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
+
+</details>
+
+<details>
+  <summary>RouterOS Subscription Links (divided into 240.0.0.1 and Adlist 0.0.0.0 formats)</summary>
+
+- [GitHub Raw Subscription (240.0.0.1)](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
+
+- [Tianming CFCDN Proxy Subscription (240.0.0.1)](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
+
+- [jsDelivr(gcore) Proxy Subscription (240.0.0.1)](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
+
+- [ghproxy Proxy Subscription (240.0.0.1)](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
+
+- [GitHub Raw Subscription (Adlist)](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
+
+- [Tianming CFCDN Proxy Subscription (Adlist)](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
+
+- [jsDelivr(gcore) Proxy Subscription (Adlist)](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
+
+- [ghproxy Proxy Subscription (Adlist)](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
+
+</details>
+
+<details>
+  <summary>Singbox Subscription Links</summary>
+
+- [GitHub Raw Subscription](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
+
+- [Tianming CFCDN Proxy Subscription](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
+
+- [jsDelivr(gcore) Proxy Subscription](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox.json)
+
+- [ghproxy Proxy Subscription](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
+
+- [GitHub Raw Subscription (REGEX)](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
+
+- [Tianming CFCDN Proxy Subscription (REGEX)](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
+
+- [jsDelivr(gcore) Proxy Subscription (REGEX)](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
+
+- [ghproxy Proxy Subscription (REGEX)](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
+
+</details>
+
 ## Feedback & Community Group
 
-[Click to view](/Support.html)
+[Click here](/Support.html)
 
 ## Latest Version
 
-<span id="hidden">The update log is provided by GitHub. If it continues to fail to load, please change your network environment.</span>
+<span id="hidden">更新日志由 GitHub 提供，如果持续无法加载，请更换网络环境。</span>
 
-Version: <span id="version">Praying for the girl...</span>
+版本号: <span id="version">少女祈祷中...</span>
 
-Update Date: <span id="date">Praying for the girl...</span> (UTC)
+更新日期: <span id="date">少女祈祷中...</span> (UTC)
 
-<p id="info">Praying for the girl...</p>
+<p id="info">少女祈祷中...</p>
 
 <script setup>
 import FetchInfo from '/.vitepress/components/FetchInfo.vue'
 </script>
 <FetchInfo/>
+
+## Total Visits
+
+![:Visits](https://moe-counter.glitch.me/get/@TG-Twiligh?theme=gelbooru)
+Statistics started on May 5, 2024...

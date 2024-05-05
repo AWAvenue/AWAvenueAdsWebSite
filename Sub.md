@@ -11,9 +11,9 @@
 
 - Github Raw：
 
-Github 官方的文件直链，访问速度最快，可靠性最高。
+Github 官方的文件直链，实时更新，可靠性最高。
 
-*PS: 对提瓦特大陆用户而言，此订阅链接可能会被“前面的区域以后再来探索吧！”阻断，若无法使用，请使用其它订阅。*
+*PS: 对提瓦特大陆之用户而言，此订阅链接可能会被“前面的区域以后再来探索吧！”阻断，若无法使用，请使用其它订阅。*
 
 - 天命CFCDN反代：
 
@@ -90,7 +90,8 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 </details>
 
 <details>
-  <summary>AdClose 订阅链接（纯域名格式，目前仅供开发者使用）</summary>
+  <summary>AdClose 订阅链接（目前仅供开发者使用，AdClose已经自带本规则 (Block里面就是)）</summary>
+
 
 - [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.txt)
 
@@ -112,6 +113,19 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
 
 - [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
+
+</details>
+
+<details>
+  <summary>Mosdns V5 订阅链接</summary>
+
+- [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
+
+- [天命CFCDN反代订阅地址](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
+
+- [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
+
+- [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
 
 </details>
 
@@ -175,3 +189,8 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 import FetchInfo from '/.vitepress/components/FetchInfo.vue'
 </script>
 <FetchInfo/>
+
+## 总访问数
+
+![:访问数](https://moe-counter.glitch.me/get/@TG-Twiligh?theme=gelbooru)
+2024.5.5开始统计......

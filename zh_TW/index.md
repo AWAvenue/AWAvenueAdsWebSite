@@ -17,8 +17,8 @@ hero:
       text: 訂閱規則
       link: /zh_TW/Sub.html
     - theme: alt
-      text: 感謝列表
-      link: /zh_TW/Thank.html
+      text: 贊助我們
+      link: /zh_TW//Donate.html
 
 features:
   - title: 專注

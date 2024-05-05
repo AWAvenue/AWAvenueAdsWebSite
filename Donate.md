@@ -27,8 +27,11 @@ https://afdian.net/a/AdsRule
 # 捐赠名单
 
 CA - 2024.4.14 -- 88.88 CNY
+<br>
 *健 - 2024.4.19 -- 8.88 CNY
+<br>
 **聪 - 2024.4.15 -- 1.43 CNY
-Durov - 2024.4.23 -- 0.0193TON (CNY 0.82)
+<br>
+Pavel Durov - 2024.5.5 -- 0.0288TON (CNY 1.174)
 
 # 最后，感谢您的支持！

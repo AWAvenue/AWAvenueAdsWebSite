@@ -17,8 +17,8 @@ hero:
       text: Subscription
       link: /en/Sub.html
     - theme: alt
-      text: Thanks
-      link: /en/Thank.html
+      text: Donate
+      link: /en/Donate.html
 
 features:
   - title: Focus

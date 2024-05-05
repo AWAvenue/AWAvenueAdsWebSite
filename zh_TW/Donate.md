@@ -16,17 +16,22 @@
 <br>
 
 ## 支付寶
- ![Alipay](/images/artalipay.png)
+ ![支付寶](/images/artalipay.png)
 
 ## 愛發電
 https://afdian.net/a/AdsRule
 
 <br>
 <br>
-<br>
 
 # 捐贈名單
 
-Guyuan - 2024.1.31 -- 500 CNY
+CA - 2024.4.14 -- 88.88 CNY
+<br>
+*健 - 2024.4.19 -- 8.88 CNY
+<br>
+**聰 - 2024.4.15 -- 1.43 CNY
+<br>
+Pavel Durov - 2024.5.5 -- 0.0288TON (CNY 1.174)
 
 # 最後，感謝您的支持！

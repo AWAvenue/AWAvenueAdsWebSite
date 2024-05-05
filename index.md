@@ -17,8 +17,8 @@ hero:
       text: 订阅规则
       link: /Sub
     - theme: alt
-      text: 感谢列表
-      link: /Thank
+      text: 赞助我们
+      link: /Donate
 
 features:
   - title: 专注
