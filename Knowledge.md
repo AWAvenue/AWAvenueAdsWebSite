@@ -26,12 +26,45 @@ rule-providers:
     format: yaml
     path: ./rule_providers/AWAvenue-Ads-Rule-Clash.yaml
     #此处“/rule_providers”自行参考
-    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule-Clash.yaml"
+    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Clash.yaml"
     interval: 60480
 rules:
   - RULE-SET,秋风广告规则,REJECT
   #此处“REJECT”分组仅为示例参考，具体分组请根据实际情况自行配置
 ```
+### Sing-Box
+
+简单地举个例子，自行配置，反馈交流群不接受此类型的询问。
+
+```json
+  "route": {
+    "rules": [
+      {
+        "rule_set": "AWAvenue-Ads-Rule",
+        "outbound": "block"
+        //仅供参考，具体出站标签请根据实际情况自行配置
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "AWAvenue-Ads-Rule",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.srs",
+        "download_detour": "proxy"
+        //仅供参考，具体出站标签请根据实际情况自行配置
+      }
+    ]
+  }
+```
+
+### QuantumultX
+
+[自行查看文档](./QuantumultX.md)
+
+### ShadowRocket
+
+[自行查看文档](./ShadowRocket.pdf)
 
 ### Surge
 
