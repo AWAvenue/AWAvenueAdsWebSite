@@ -26,12 +26,38 @@ rule-providers:
     format: yaml
     path: ./rule_providers/AWAvenue-Ads-Rule-Clash.yaml
     # 需要時請調整此路徑
-    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule-Clash.yaml"
+    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
     interval: 60480
 rules:
   - RULE-SET,AWAvenue Ads Rule,REJECT
   # 這裡的「REJECT」組僅為示例。根據實際需要配置具體的組。
-    ```
+```
+
+### Sing-Box
+
+簡單地舉個例子，自行配置。請注意，反饋群不接受此類詢問。
+
+```json
+  "route": {
+    "rules": [
+      {
+        "rule_set": "AWAvenue-Ads-Rule",
+        "outbound": "block"
+        //僅供參考，具體出站標簽請根據實際情況自行配置
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "AWAvenue-Ads-Rule",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.srs",
+        "download_detour": "proxy"
+        //僅供參考，具體出站標簽請根據實際情況自行配置
+      }
+    ]
+  }
+```
 
 ### Surge
 

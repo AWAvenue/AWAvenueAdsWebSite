@@ -26,12 +26,38 @@ rule-providers:
     format: yaml
     path: ./rule_providers/AWAvenue-Ads-Rule-Clash.yaml
     # Adjust this path as needed
-    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule-Clash.yaml"
+    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
     interval: 60480
 rules:
   - RULE-SET,AWAvenue Ads Rule,REJECT
   # The "REJECT" group here is just an example. Configure specific groups based on your needs.
-  ```
+```
+
+### Sing-Box
+
+Simply configure it yourself. Note that feedback groups do not accept this type of inquiry.
+
+```json
+  "route": {
+    "rules": [
+      {
+        "rule_set": "AWAvenue-Ads-Rule",
+        "outbound": "block"
+        //Just an example.
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "AWAvenue-Ads-Rule",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.srs",
+        "download_detour": "proxy"
+        //Just an example.
+      }
+    ]
+  }
+```
 
 ### Surge
 

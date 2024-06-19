@@ -1,1 +1,0 @@
-import{_ as a,o as e,c as t,R as r,a1 as o}from"./chunks/framework.emLw3Ecc.js";const m=JSON.parse('{"title":"捐赠","description":"","frontmatter":{},"headers":[],"relativePath":"Donate.md","filePath":"Donate.md"}'),i={name:"Donate.md"},l=r("",17),n=[l];function s(h,d,c,_,p,b){return e(),t("div",null,n)}const f=a(i,[["render",s]]);export{m as __pageData,f as default};

@@ -64,7 +64,7 @@ rules:
 
 ### ShadowRocket
 
-[自行查看文档](./ShadowRocket.pdf)
+[自行查看文档](./ShadowRocket.md)
 
 ### Surge
 
