@@ -15,11 +15,9 @@
 
 <br>
 
-## 支付寶
- ![支付寶](/images/artalipay.png)
+## 愛發電（支持支付寶、WeixinPay）
 
-## 愛發電
-https://afdian.net/a/AdsRule
+<iframe src="https://afdian.net/leaflet?slug=AdsRule" width="640" scrolling="no" height="200" frameborder="0"></iframe>
 
 <br>
 <br>
