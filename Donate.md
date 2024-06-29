@@ -15,11 +15,9 @@
 
 <br>
 
-## 支付宝
- ![Alipay](/images/artalipay.png)
+## 爱发电（支持支付宝、微信）
 
-## 爱发电
-https://afdian.net/a/AdsRule
+<iframe src="https://afdian.net/leaflet?slug=AdsRule" width="640" scrolling="no" height="200" frameborder="0"></iframe>
 
 <br>
 <br>
