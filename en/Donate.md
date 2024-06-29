@@ -15,11 +15,9 @@ Since the inception of the AWAvenue Ads Rule, I have invested a significant amou
 
 <br>
 
-## Alipay
- ![Alipay](/images/artalipay.png)
+## Aifadian（Supported Alipay、WeixinPay）
 
-## Aifadian
-https://afdian.net/a/AdsRule
+<iframe src="https://afdian.net/leaflet?slug=AdsRule" width="640" scrolling="no" height="200" frameborder="0"></iframe>
 
 <br>
 <br>
