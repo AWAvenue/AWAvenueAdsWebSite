@@ -1,0 +1,1 @@
+import{_ as l,c as a,o as e,a1 as t}from"./chunks/framework.BtBsNfS7.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"AdGuard.md","filePath":"AdGuard.md"}'),o={name:"AdGuard.md"},r=t("",13),n=[r];function p(i,s,d,h,c,b){return e(),a("div",null,n)}const W=l(o,[["render",p]]);export{m as __pageData,W as default};

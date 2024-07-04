@@ -1,0 +1,1 @@
+import{_ as a,c as o,o as r,a1 as t}from"./chunks/framework.BtBsNfS7.js";const b=JSON.parse('{"title":"秋风广告规则用户协议","description":"","frontmatter":{},"headers":[],"relativePath":"Protocol.md","filePath":"Protocol.md"}'),l={name:"Protocol.md"},i=t("",21),e=[i];function n(s,h,d,c,g,u){return r(),o("div",null,e)}const q=a(l,[["render",n]]);export{b as __pageData,q as default};

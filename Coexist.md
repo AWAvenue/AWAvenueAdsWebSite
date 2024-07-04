@@ -45,40 +45,32 @@
   "dns": {
     "servers": [
       {
-        "tag": "dns_proxy",
-        "address": "https://dns.cloudflare.com/dns-query",
-        "address_resolver": "dns_resolver",
+        "tag": "dns_cloudflare",
+        "address": "https://1.1.1.1/dns-query",
         "detour": "proxy"
       },
       {
-        "tag": "dns_direct",
-        "address": "https://dns.alidns.com/dns-query",
-        "address_resolver": "dns_resolver",
-        "detour": "direct"
-      },
-      {
-        "tag": "dns_resolver",
-        "address": "223.5.5.5",
+        "tag": "dns_ali",
+        "address": "https://223.5.5.5/dns-query",
         "detour": "direct"
       }
     ],
     "rules": [
       {
         "outbound": "any",
-        "server": "dns_resolver"
-      },
-      {
-        "rule_set": "geosite-geolocation-!cn",
-        "server": "dns_proxy"
+        "server": "dns_ali"
       },
       {
         "rule_set": "geosite-cn",
-        "server": "dns_direct"
+        "server": "dns_ali"
+      },
+      {
+        "rule_set": "geosite-geolocation-!cn",
+        "server": "dns_cloudflare"
       }
     ],
-    "final": "dns_proxy",
-    "strategy": "ipv4_only",
-    "independent_cache": true
+    "final": "dns_cloudflare",
+    "strategy": "ipv4_only"
   },
   "ntp": {
     "enabled": true,
@@ -92,7 +84,8 @@
       "type": "socks",
       "listen": "::",
       "listen_port": 10808,
-      "sniff": true
+      "sniff": true,
+      "sniff_override_destination": true
     },
     {
       "type": "direct",
@@ -130,26 +123,29 @@
         "outbound": "block"
       },
       {
-        "protocol": "quic",
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 853
+          },
+          {
+            "network": "udp",
+            "port": 443
+          },
+          {
+            "protocol": "stun"
+          }
+        ],
         "outbound": "block"
       },
       {
-        "type": "logical",
-        "mode": "and",
-        "rules": [
-          {
-            "rule_set": "geoip-cn",
-            "invert": true
-          },
-          {
-            "rule_set": "geosite-geolocation-!cn"
-          }
-        ],
-        "outbound": "proxy"
+        "ip_is_private": true,
+        "outbound": "direct"
       },
       {
         "type": "logical",
-        "mode": "and",
+        "mode": "or",
         "rules": [
           {
             "rule_set": "geoip-cn"
@@ -161,12 +157,8 @@
         "outbound": "direct"
       },
       {
-        "rule_set": "geoip-cn",
-        "outbound": "direct"
-      },
-      {
-        "ip_is_private": true,
-        "outbound": "direct"
+        "rule_set": "geosite-geolocation-!cn",
+        "outbound": "proxy"
       }
     ],
     "rule_set": [
@@ -192,21 +184,20 @@
         "download_detour": "proxy"
       }
     ],
-    "final": "proxy",
-    "auto_detect_interface": true,
-    "override_android_vpn": true
+    "final": "proxy"
   },
   "experimental": {
     "cache_file": {
       "enabled": true,
-      "path": "cache.db"
+      "path": "cache.db",
+      "store_rdrc": true
     }
   }
 }
   </code></pre>
 </details>
 
-仅实现了最基本的国内外分流，如有特殊需求请自行查看[文档](https://sing-box.sagernet.org/zh)进行修改。
+仅实现了最基本的国内外分流，如有其他需求请自行查看[文档](https://sing-box.sagernet.org/zh)进行修改。
 ### **Adguard 的设置**
 1. 设置 DNS 服务器  
 在防护-DNS保护功能-DNS服务器-自定义服务器中添加 `127.0.0.1:10853`。如果提示 DNS 服务器不可用，可到设置-通用-高级设置-低级设置中关闭验证 DNS 上游功能。

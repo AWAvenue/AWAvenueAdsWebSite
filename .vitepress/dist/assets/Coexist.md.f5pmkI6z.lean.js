@@ -1,0 +1,1 @@
+import{_ as o,c as t,o as u,a1 as e}from"./chunks/framework.BtBsNfS7.js";const b=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"Coexist.md","filePath":"Coexist.md"}'),n={name:"Coexist.md"},q=e("",19),r=[q];function a(d,l,s,i,c,g){return u(),t("div",null,r)}const p=o(n,[["render",a]]);export{b as __pageData,p as default};
