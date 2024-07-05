@@ -26,3 +26,4 @@
 - [「天命」 独立开发者](https://t.me/tmbyml)
 - [「Reese」 独立开发者](https://github.com/zjyzip)
 - [「Zutzo」 独立开发者](https://github.com/zutzo)
+- [「过去式」 Telegram秋风广告规则官方群组志愿者](https://t.me/s/jam_of_fruits)

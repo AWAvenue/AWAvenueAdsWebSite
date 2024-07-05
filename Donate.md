@@ -17,17 +17,16 @@
 
 ## 爱发电（支持支付宝、微信）
 
-<iframe src="https://afdian.net/leaflet?slug=AdsRule" width="640" scrolling="no" height="200" frameborder="0"></iframe>
+<iframe id="afdian_leaflet_AdsRule" src="https://afdian.net/leaflet?slug=AdsRule" width="100%" scrolling="no" height="200" frameborder="0"></iframe>
 
-## USDT：
+## USDT
 ```USDT-Trc20
 TMMaifAc5ixHDhjy2fYDP4wBxZHnnW7KK1
 ```
 
 <br>
-<br>
 
-# 捐赠名单
+## 捐赠名单
 
 | 昵称                    | 日期        | 金额            |
 |-----------------------|------------|-----------------|
@@ -38,10 +37,12 @@ TMMaifAc5ixHDhjy2fYDP4wBxZHnnW7KK1
 | Pavel Durov           | 2024.5.5   | 0.0288 TON (CNY 1.174) |
 | *烨                   | 2024.5.5   | 8.88 CNY        |
 | *岚                   | 2024.5.5   | 1.00 CNY        |
+| sblyd | 2024.5.5 | 5.00 CNY | 
 | *骏                   | 2024.5.6   | 9.20 CNY        |
 | **军                  | 2024.5.29  | 10.00 CNY       |
 | *帆                   | 2024.5.31  | 10.00 CNY       |
 | **瑞                  | 2024.5.31  | 0.50 CNY        |
+|爱发电用户_79db3  | 2024.6.30  | 8.88 CNY| 
 
 
 # 最后，感谢您的支持！

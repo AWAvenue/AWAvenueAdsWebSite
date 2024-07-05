@@ -1,4 +1,4 @@
-# 如何使用
+# 使用教程
 
 ### AdGuard Home
 
@@ -73,3 +73,71 @@ Just a moment(咕咕咕)
 ### mosdns
 
 Just a moment(咕咕咕)
+
+---
+
+## 常见问题（与答疑）
+
+::: danger 本模块内容旨在为本广告规则用户解决大部常见问题和答疑解惑，不负责处理回答一些低质量的问题。
+
+:::
+
+1、为什么有些APP内的广告拦截不了？（例如banner广告）
+
+A：如果您知道本规则的工作原理您就应该不会有这个问题，我们仅可以拦截拥有独立域名的广告/追踪链接，部分厂商会将正常内容与广告内容混在相同的链接中下发，面对这种情况，除非我们解密您的流量数据（得安装根证书）再作分析，否则几乎无法拦截。
+
+<br />
+
+2、我是小米手机用户，订阅了本规则后，为什么我的 小米云备份 无法上传应用列表完成备份？
+
+A：请阅读这个issue：
+[小米云备份异常 #38](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/38)，然后自行放行
+
+```DOMAIN
+a0.app.xiaomi.com
+```
+
+<br />
+
+3、我是搜狗输入法用户，订阅了本规则后，为什么我的 搜狗输入法 许多在线功能失效了？
+
+A：请阅读这个issue：
+[搜狗输入法跨屏输入的网页被拦截 #45](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/45)，然后自行放行
+
+```DOMAIN
+shouji.sougou.com
+```
+
+<br />
+
+4、我可以用 Cemiuiler/HyperCeiler 中“阻止上传应用列表功能”啊，你们把这个域名移除吧！
+
+A：不是所有人都用 Cemiuiler/HyperCeiler ，亦不是所有人的小米手机都获取了root权限并刷入了LSPosed，我们需要照顾大多数。
+
+<br />
+5、订阅了本规则后，为什么我的 CHANGHONG TV 收不到更新/一些在线功能无法使用了？
+
+A：这个原因我们在添加这些域名的时候就已经公开在多出说明过了。
+
+*“经过长时间的考察与慎重考虑，我们认为 CHANGHONG 是一家打着军工企业胡作非为的流氓公司，故对 CHANGHONG SmartTV 的绝大部分域名进行了封锁拦截，包括但不限于：所有经由域名请求的广告域、欢视商店的检测更新api、主页推送api、全局弹出式banner api（基本都是广告消息推送）、更新检测api、欢付api、不明意义的上传api 等。在拦截后， CHANGHONG SmartTV 作为一台智能电视的基本功能不会受到影响，可以正常使用。”*
+
+如果您需要上述的任何功能，请放行以下域名：
+
+```DOMAIN
+pay.sboot.cn
+scs.openspeech.cn
+sdkauth.hpplay.cn
+itv2-up.openspeech.cn
+mdp-appconf-in.heytapdl.com
+gslb.hpplay.cn
+rp.hpplay.cn
+tvapp.hpplay.cn
+t002.ottcn.com
+smart-tv.cn
+huantv.cn
+```
+
+<br />
+6、为什么 AdGuard for Magisk 模块更新版本后会断网？
+
+A：模块脚本问题，同时我们强烈建议您”就近“使用现成的工具进行广告过滤，例如您已经为您的 Android 设备刷入了 mihomo 系列代理模块，那么您完全可以使用我们为 mohomo 准备的广告规则而不是再刷写一份 AdGuard for Magisk。
