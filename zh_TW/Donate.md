@@ -17,7 +17,7 @@
 
 ## 愛發電（支持支付寶、WeixinPay）
 
-<iframe src="https://afdian.net/leaflet?slug=AdsRule" width="640" scrolling="no" height="200" frameborder="0"></iframe>
+<iframe src="https://afdian.com/leaflet?slug=AdsRule" width="640" scrolling="no" height="200" frameborder="0"></iframe>
 
 ## USDT：
 ```USDT-Trc20
@@ -38,9 +38,12 @@ TMMaifAc5ixHDhjy2fYDP4wBxZHnnW7KK1
 | Pavel Durov           | 2024.5.5   | 0.0288 TON (CNY 1.174) |
 | *烨                   | 2024.5.5   | 8.88 CNY        |
 | *岚                   | 2024.5.5   | 1.00 CNY        |
+| sblyd | 2024.5.5 | 5.00 CNY | 
 | *骏                   | 2024.5.6   | 9.20 CNY        |
 | **军                  | 2024.5.29  | 10.00 CNY       |
 | *帆                   | 2024.5.31  | 10.00 CNY       |
 | **瑞                  | 2024.5.31  | 0.50 CNY        |
+|爱发电用户_79db3  | 2024.6.30  | 8.88 CNY| 
+|爱发电用户_79db3  | 2024.6.30  | 9.90 CNY| 
 
 # 最後，感謝您的支持！

@@ -17,7 +17,7 @@
 
 ## 爱发电（支持支付宝、微信）
 
-<iframe id="afdian_leaflet_AdsRule" src="https://afdian.net/leaflet?slug=AdsRule" width="100%" scrolling="no" height="200" frameborder="0"></iframe>
+<iframe id="afdian_leaflet_AdsRule" src="https://afdian.com/leaflet?slug=AdsRule" width="100%" scrolling="no" height="200" frameborder="0"></iframe>
 
 ## USDT
 ```USDT-Trc20
@@ -43,6 +43,7 @@ TMMaifAc5ixHDhjy2fYDP4wBxZHnnW7KK1
 | *帆                   | 2024.5.31  | 10.00 CNY       |
 | **瑞                  | 2024.5.31  | 0.50 CNY        |
 |爱发电用户_79db3  | 2024.6.30  | 8.88 CNY| 
+|爱发电用户_79db3  | 2024.6.30  | 9.90 CNY| 
 
 
 # 最后，感谢您的支持！
