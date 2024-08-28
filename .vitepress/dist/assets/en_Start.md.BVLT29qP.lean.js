@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a,a1 as o}from"./chunks/framework.BtBsNfS7.js";const b=JSON.parse('{"title":"Quick Start","description":"","frontmatter":{},"headers":[],"relativePath":"en/Start.md","filePath":"en/Start.md"}'),i={name:"en/Start.md"},r=o("",19),d=[r];function n(s,c,l,h,u,p){return a(),t("div",null,d)}const v=e(i,[["render",n]]);export{b as __pageData,v as default};
