@@ -140,4 +140,4 @@ huantv.cn
 <br />
 6、为什么 AdGuard for Magisk 模块更新版本后会断网？
 
-A：模块脚本问题，同时我们强烈建议您”就近“使用现成的工具进行广告过滤，例如您已经为您的 Android 设备刷入了 mihomo 系列代理模块，那么您完全可以使用我们为 mohomo 准备的广告规则而不是再刷写一份 AdGuard for Magisk。
+A：模块脚本问题，同时我们强烈建议您“就近”使用现成的工具进行广告过滤，例如您已经为您的 Android 设备刷入了 mihomo 系列代理模块，那么您完全可以使用我们为 mohomo 准备的广告规则而不是再刷写一份 AdGuard for Magisk。
