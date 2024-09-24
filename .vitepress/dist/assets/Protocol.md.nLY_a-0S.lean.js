@@ -1,1 +1,0 @@
-import{_ as a,o,c as r,R as t}from"./chunks/framework.slSl-7H0.js";const b=JSON.parse('{"title":"秋风广告规则用户协议","description":"","frontmatter":{},"headers":[],"relativePath":"Protocol.md","filePath":"Protocol.md"}'),l={name:"Protocol.md"},i=t("",21),e=[i];function n(s,h,d,c,g,u){return o(),r("div",null,e)}const q=a(l,[["render",n]]);export{b as __pageData,q as default};

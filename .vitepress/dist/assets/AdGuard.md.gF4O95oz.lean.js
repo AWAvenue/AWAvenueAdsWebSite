@@ -1,1 +1,0 @@
-import{_ as l,o as a,c as e,R as t}from"./chunks/framework.slSl-7H0.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"AdGuard.md","filePath":"AdGuard.md"}'),o={name:"AdGuard.md"},r=t("",13),n=[r];function p(i,s,d,h,c,b){return a(),e("div",null,n)}const W=l(o,[["render",p]]);export{m as __pageData,W as default};
