@@ -30,14 +30,4 @@ npm add -D vitepress
 ```
 npm run docs:dev
 ```
-
-修改完成后，使用以下命令，完成文档的构建。
-```
-npm run docs:build
-```
-构建完成后，使用以下命令来检查修改是否正确。
-```
-npm run docs:preview
-```
-
-最后，上传所有的内容，来完成提交，包括”/.Vitepress“。
+修改完成后，上传你修改的“.md”文件即可。
