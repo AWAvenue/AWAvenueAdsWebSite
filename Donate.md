@@ -47,7 +47,9 @@ TMMaifAc5ixHDhjy2fYDP4wBxZHnnW7KK1
 | 爱发电用户_nW9j | 2024-07-05 | 5.00 CNY |
 | koyufox | 2024-07-06 | 6.66 CNY|
 |爱发电用户_79db3  | 2024-07-18  | 9.00 CNY| 
-|苏小玲official  | 2024-08-25  | 19.00 CNY| 
-
+|Mickey Monica  | 2024-08-25  | 19.00 CNY| 
+|翌日YR＿  | 2024-09-16  | 9.90 CNY| 
+|爱发电用户_7012e  | 2024-09-22  | 5.00 CNY| 
+|Akari  | 2024-10-07  | 9.90 CNY| 
 
 # 最后，感谢您的支持！
