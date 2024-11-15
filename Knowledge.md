@@ -72,7 +72,7 @@ Just a moment(咕咕咕)
 
 ### mosdns
 
-Just a moment(咕咕咕)
+目前还没有教程，但是你完全可以把AdGuard Home设置为mosdns的上游来达到去广告的目的。
 
 ---
 
