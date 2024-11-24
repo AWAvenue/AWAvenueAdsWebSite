@@ -1,12 +1,13 @@
 # 感谢
 
-在**秋风广告规则**的发展过程中，得到了许多开源项目和独立开发者的帮助，感谢你们！
+在**秋风广告规则**的发展过程中，得到了许多项目和独立开发者的帮助，感谢你们！
 
 （排名顺序不分先后）
 
 
 ### 项目
-- [「Vercel」](https://vercel.com/)
+- [「CLOUDFLAREl- 提供多项可靠的云服务](https://www.cloudflare.com/)
+- [「Vercel- 尽管现在已经不使用了」](https://vercel.com/)
 - [「svnc host」 by svnc](https://gitee.com/svnc/host)
 - [「AdGuardHome」 by AdguardTeam](https://github.com/AdguardTeam/AdGuardHome)
 - [「AdGuardDNS」 by AdguardTeam](https://github.com/AdguardTeam/AdGuardDNS)
@@ -27,3 +28,4 @@
 - [「Reese」 独立开发者](https://github.com/zjyzip)
 - [「Zutzo」 独立开发者](https://github.com/zutzo)
 - [「过去式」 Telegram秋风广告规则官方群组志愿者](https://t.me/s/jam_of_fruits)
+- [「Linho」 秋风广告规则官方网站维护者](https://github.com/Linho1219)
