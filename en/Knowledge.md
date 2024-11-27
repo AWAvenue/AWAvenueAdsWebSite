@@ -2,7 +2,7 @@
 
 ### AdGuard Home
 
-Copy the available subscription link and import it into AdGuard Home's DNS blacklist to take effect.
+This rule has been added to the official rule list of AdGuard Home. You only need to click "Choose Blacklist" and find "AWAvenue Ads Rule" to check and confirm.
 
 ### AdGuard DNS
 
@@ -27,7 +27,7 @@ rule-providers:
     path: ./rule_providers/AWAvenue-Ads-Rule-Clash.yaml
     # Adjust this path as needed
     url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
-    interval: 60480
+    interval: 86400
 rules:
   - RULE-SET,AWAvenue Ads Rule,REJECT
   # The "REJECT" group here is just an example. Configure specific groups based on your needs.

@@ -2,7 +2,7 @@
 
 ### AdGuard Home
 
-复制可用的订阅链接，将其导入到 AdGuard Home 的 DNS黑名单 中，即可生效。
+本规则已经加入了 AdGuard Home 的官方规则列表，您只需要点击“选择黑名单”然后找到“AWAvenue Ads Rule”勾选确认即可。
 
 ### AdGuard DNS
 
@@ -27,7 +27,7 @@ rule-providers:
     path: ./rule_providers/AWAvenue-Ads-Rule-Clash.yaml
     #此处“/rule_providers”自行参考
     url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Clash.yaml"
-    interval: 60480
+    interval: 86400
 rules:
   - RULE-SET,秋风广告规则,REJECT
   #此处“REJECT”分组仅为示例参考，具体分组请根据实际情况自行配置

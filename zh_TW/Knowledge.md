@@ -2,7 +2,7 @@
 
 ### AdGuard Home
 
-複製可用的訂閱鏈接，將其導入 AdGuard Home 的 DNS 黑名單中，即可生效。
+本規則已經加入了 AdGuard Home 的官方規則列表，您只需要點擊「選擇黑名單」然後找到「AWAvenue Ads Rule」勾選確認即可。
 
 ### AdGuard DNS
 
@@ -27,7 +27,7 @@ rule-providers:
     path: ./rule_providers/AWAvenue-Ads-Rule-Clash.yaml
     # 需要時請調整此路徑
     url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
-    interval: 60480
+    interval: 86400
 rules:
   - RULE-SET,AWAvenue Ads Rule,REJECT
   # 這裡的「REJECT」組僅為示例。根據實際需要配置具體的組。
