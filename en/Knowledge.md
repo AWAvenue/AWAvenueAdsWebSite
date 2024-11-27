@@ -38,25 +38,57 @@ rules:
 Simply configure it yourself. Note that feedback groups do not accept this type of inquiry.
 
 ```json
-  "route": {
+{
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns_block",
+        "address": "rcode://success"
+      }
+    ],
     "rules": [
       {
         "rule_set": "AWAvenue-Ads-Rule",
-        "outbound": "block"
-        //Just an example.
+        "server": "dns_block"
       }
-    ],
+    ]
+  },
+  "route": {
     "rule_set": [
       {
         "type": "remote",
         "tag": "AWAvenue-Ads-Rule",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.srs",
-        "download_detour": "proxy"
-        //Just an example.
+        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Singbox.srs"
       }
     ]
   }
+}
+```
+
+### 1.11.0-alpha.7+
+
+```json
+{
+  "dns": {
+    "rules": [
+      {
+        "rule_set": "geosite-dnsblock",
+        "action": "reject"
+      }
+    ]
+  },
+  "route": {
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geosite-dnsblock",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Singbox.srs"
+      }
+    ]
+  }
+}
 ```
 
 ### Surge

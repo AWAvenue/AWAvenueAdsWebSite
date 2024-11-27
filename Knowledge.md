@@ -38,25 +38,57 @@ rules:
 简单地举个例子，自行配置，反馈交流群不接受此类型的询问。
 
 ```json
-  "route": {
+{
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns_block",
+        "address": "rcode://success"
+      }
+    ],
     "rules": [
       {
         "rule_set": "AWAvenue-Ads-Rule",
-        "outbound": "block"
-        //仅供参考，具体出站标签请根据实际情况自行配置
+        "server": "dns_block"
       }
-    ],
+    ]
+  },
+  "route": {
     "rule_set": [
       {
         "type": "remote",
         "tag": "AWAvenue-Ads-Rule",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.srs",
-        "download_detour": "proxy"
-        //仅供参考，具体出站标签请根据实际情况自行配置
+        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Singbox.srs"
       }
     ]
   }
+}
+```
+
+### 1.11.0-alpha.7+
+
+```json
+{
+  "dns": {
+    "rules": [
+      {
+        "rule_set": "geosite-dnsblock",
+        "action": "reject"
+      }
+    ]
+  },
+  "route": {
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geosite-dnsblock",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Singbox.srs"
+      }
+    ]
+  }
+}
 ```
 
 ### QuantumultX

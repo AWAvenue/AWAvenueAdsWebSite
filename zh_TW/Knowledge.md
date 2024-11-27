@@ -40,25 +40,57 @@ rules:
 簡單地舉個例子，自行配置。請注意，反饋群不接受此類詢問。
 
 ```json
-  "route": {
+{
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns_block",
+        "address": "rcode://success"
+      }
+    ],
     "rules": [
       {
         "rule_set": "AWAvenue-Ads-Rule",
-        "outbound": "block"
-        //僅供參考，具體出站標簽請根據實際情況自行配置
+        "server": "dns_block"
       }
-    ],
+    ]
+  },
+  "route": {
     "rule_set": [
       {
         "type": "remote",
         "tag": "AWAvenue-Ads-Rule",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.srs",
-        "download_detour": "proxy"
-        //僅供參考，具體出站標簽請根據實際情況自行配置
+        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Singbox.srs"
       }
     ]
   }
+}
+```
+
+### 1.11.0-alpha.7+
+
+```json
+{
+  "dns": {
+    "rules": [
+      {
+        "rule_set": "geosite-dnsblock",
+        "action": "reject"
+      }
+    ]
+  },
+  "route": {
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geosite-dnsblock",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Singbox.srs"
+      }
+    ]
+  }
+}
 ```
 
 ### Surge

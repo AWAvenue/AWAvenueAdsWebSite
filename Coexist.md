@@ -1,207 +1,180 @@
-本教程所用到的所有工具如下：
-- [Clash Meta For Android](https://github.com/MetaCubeX/ClashMetaForAndroid/releases/latest)
-- [NekoBox For Android](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases/latest)
-- [Sing-Box](https://github.com/SagerNet/sing-box/releases/latest)
+本教程所用到的所有工具如下（请确保你使用的是最新版本）：
+
 - [Adguard](https://adguard.com/zh_cn/welcome.html)
+- [Clash Meta For Android](https://github.com/MetaCubeX/ClashMetaForAndroid/releases/latest)
+- [Sing-Box](https://github.com/SagerNet/sing-box/releases/latest)
+
+---
+
+## **Adguard 的设置**
+
+1. **设置 DNS 服务器**  
+   在 `防护 -> DNS 保护功能 -> DNS 服务器 -> 自定义服务器` 中添加一个或多个可用的 DoH：
+   - `https://dns.alidns.com/dns-query`
+   - `https://doh.pub/dns-query`
+   - `https://1.1.1.1/dns-query`
+   - `https://8.8.8.8/dns-query`
+
+2. **排除对 Clash Meta For Android 或 Sing-Box 的路由**
+
+---
 
 ## **Clash 与 Adguard 共存**
-### **Clash 的设置**
-1. 将 Clash 设置为仅代理模式  
-关闭设置-网络-自动路由所有流量。
-2. 获取 Clash 代理端口  
-建议使用复合端口，即配置文件中的 `mixed-port`，如果没有也可以使用 SOCKS 端口或 HTTP 端口，也可自行在设置-覆写中填入对应端口，例如 `7890`。
-3. 获取 DNS 监听服务器  
-在配置文件中寻找 `listen`，如果配置文件中没有，自行在设置-覆写-监听中填入，例如 `127.0.0.1:1053`。
-### **Adguard 的设置**
-1. 设置 DNS 服务器  
-在防护-DNS保护功能-DNS服务器-自定义服务器中添加上面获取到的 DNS，例如 `127.0.0.1:1053`。如果提示 DNS 服务器不可用，可到设置-通用-高级设置-低级设置中关闭验证 DNS 上游功能。
-2. 设置代理服务器  
-在设置-过滤-网络-代理-代理服务器中添加，类型选择代理端口的类型，代理主机填写 `127.0.0.1`，代理端口填入上面获取的端口。
-## **NekoBox 与 Adguard 共存**
-### **NekoBox 的设置**
-1. 将 NekoBox 设置为仅代理模式  
-设置-运行模式改为仅代理。
-2. 获取 NekoBox 代理端口  
-设置-入站设置-代理端口。
-3. 获取 DNS 监听服务器  
-设置-入站设置-本地 DNS 的端口。
-4. 路由规则的设置  
-启用默认规则即可，可看[文档](https://matsuridayo.github.io/nb4a-route)自行修改。
-### **Adguard 的设置**
-1. 设置 DNS 服务器  
-在防护-DNS保护功能-DNS服务器-自定义服务器中添加上面获取到的 DNS，例如 `127.0.0.1:6450`。如果提示 DNS 服务器不可用，可到设置-通用-高级设置-低级设置中关闭验证 DNS 上游功能。
-2. 设置代理服务器  
-在设置-过滤-网络-代理-代理服务器中添加，类型选择代理端口的类型，代理主机填写 `127.0.0.1`，代理端口填入上面获取的端口。
-## **Sing-Box 与 Adguard 共存**
-### **Sing-Box 示例配置**
 
-<details>
-  <summary>点击展开</summary>
-  <pre><code>
-{
-  "log": {
-    "level": "info"
-  },
-  "dns": {
-    "servers": [
+### **Clash 的设置**
+
+1. **下载 Clash 的配置文件**
+
+2. **获取 Clash 代理端口**  
+   查看配置文件中的 `mixed-port` 或 `socks-port`。
+
+3. **关闭 DNS**  
+   手动编辑配置文件，设置如下：
+   ```yaml
+   dns:
+      enable: false
+   ```
+
+4. **本地导入修改后的配置文件**
+
+5. **将 Clash 设置为仅代理模式**  
+   关闭 `设置 -> 网络 -> 自动路由所有流量`。
+
+---
+
+### **Adguard 的设置**
+
+1. 打开 `设置 -> 过滤 -> 网络 -> 代理 -> 代理服务器 -> 添加代理`。
+
+2. 配置代理：
+   - **代理类型**：选择 `SOCKS5`。
+   - **代理主机**：填写 `127.0.0.1`。
+   - **代理端口**：填入获取到的端口。
+   - **高级设置**：
+     - 可根据节点状态选择开启 `通过 SOCKS5 路由 UDP`。
+     - **注意**：`使用 FakeDNS` 保持关闭。
+
+---
+
+## **Sing-Box 与 Adguard 共存**
+
+### **Sing-Box 共存示例配置**
+
+- **1.11.0-alpha.7-**
+
+  ```json
+  {
+    "inbounds": [
       {
-        "tag": "dns_cloudflare",
-        "address": "https://1.1.1.1/dns-query",
-        "detour": "proxy"
-      },
-      {
-        "tag": "dns_ali",
-        "address": "https://223.5.5.5/dns-query",
-        "detour": "direct"
+        "type": "socks",
+        "listen": "127.0.0.1",
+        "listen_port": 10808,
+        "sniff": true,
+        "sniff_override_destination": true
       }
     ],
-    "rules": [
+    "outbounds": [
       {
-        "outbound": "any",
-        "server": "dns_ali"
+        "tag": "proxy"
       },
       {
-        "rule_set": "geosite-cn",
-        "server": "dns_ali"
-      },
-      {
-        "rule_set": "geosite-geolocation-!cn",
-        "server": "dns_cloudflare"
+        "type": "direct",
+        "tag": "direct"
       }
     ],
-    "final": "dns_cloudflare",
-    "strategy": "ipv4_only"
-  },
-  "ntp": {
-    "enabled": true,
-    "interval": "30m0s",
-    "server": "time.apple.com",
-    "server_port": 123,
-    "detour": "direct"
-  },
-  "inbounds": [
-    {
-      "type": "socks",
-      "listen": "::",
-      "listen_port": 10808,
-      "sniff": true,
-      "sniff_override_destination": true
-    },
-    {
-      "type": "direct",
-      "listen": "::",
-      "listen_port": 10853,
-      "sniff": true
-    }
-  ],
-  "outbounds": [
-    {
-      //粘贴你的客户端配置，需要保留 "tag": "proxy"
-      "tag": "proxy"
-    },
-    {
-      "type": "direct",
-      "tag": "direct"
-    },
-    {
-      "type": "block",
-      "tag": "block"
-    },
-    {
-      "type": "dns",
-      "tag": "dns-out"
-    }
-  ],
-  "route": {
-    "rules": [
-      {
-        "protocol": "dns",
-        "outbound": "dns-out"
-      },
-      {
-        "ip_version": 6,
-        "outbound": "block"
-      },
-      {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "port": 853
-          },
-          {
-            "network": "udp",
-            "port": 443
-          },
-          {
-            "protocol": "stun"
-          }
-        ],
-        "outbound": "block"
-      },
-      {
-        "ip_is_private": true,
-        "outbound": "direct"
-      },
-      {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "rule_set": "geoip-cn"
-          },
-          {
-            "rule_set": "geosite-cn"
-          }
-        ],
-        "outbound": "direct"
-      },
-      {
-        "rule_set": "geosite-geolocation-!cn",
-        "outbound": "proxy"
-      }
-    ],
-    "rule_set": [
-      {
-        "type": "remote",
-        "tag": "geosite-geolocation-!cn",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/CHIZI-0618/v2ray-rules-dat/release/singbox_rule_set/geosite-geolocation-!cn.srs",
-        "download_detour": "proxy"
-      },
-      {
-        "type": "remote",
-        "tag": "geoip-cn",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/CHIZI-0618/v2ray-rules-dat/release/singbox_rule_set/geoip-cn.srs",
-        "download_detour": "proxy"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-cn",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/CHIZI-0618/v2ray-rules-dat/release/singbox_rule_set/geosite-cn.srs",
-        "download_detour": "proxy"
-      }
-    ],
-    "final": "proxy"
-  },
-  "experimental": {
-    "cache_file": {
-      "enabled": true,
-      "path": "cache.db",
-      "store_rdrc": true
+    "route": {
+      "rules": [
+        {
+          "rule_set": "geosite-cn",
+          "outbound": "direct"
+        },
+        {
+          "rule_set": "geoip-cn",
+          "outbound": "direct"
+        }
+      ],
+      "rule_set": [
+        {
+          "type": "remote",
+          "tag": "geosite-cn",
+          "format": "binary",
+          "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/cn.srs"
+        },
+        {
+          "type": "remote",
+          "tag": "geoip-cn",
+          "format": "binary",
+          "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/cn.srs"
+        }
+      ]
     }
   }
-}
-  </code></pre>
-</details>
+  ```
 
-仅实现了最基本的国内外分流，如有其他需求请自行查看[文档](https://sing-box.sagernet.org/zh)进行修改。
+- **1.11.0-alpha.7+**
+
+  ```json
+  {
+    "inbounds": [
+      {
+        "type": "socks",
+        "listen": "127.0.0.1",
+        "listen_port": 10808
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy"
+      },
+      {
+        "type": "direct",
+        "tag": "direct"
+      }
+    ],
+    "route": {
+      "rules": [
+        {
+          "action": "sniff"
+        },
+        {
+          "rule_set": "geosite-cn",
+          "outbound": "direct"
+        },
+        {
+          "rule_set": "geoip-cn",
+          "outbound": "direct"
+        }
+      ],
+      "rule_set": [
+        {
+          "type": "remote",
+          "tag": "geosite-cn",
+          "format": "binary",
+          "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/cn.srs"
+        },
+        {
+          "type": "remote",
+          "tag": "geoip-cn",
+          "format": "binary",
+          "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/cn.srs"
+        }
+      ]
+    }
+  }
+  ```
+
+- 仅实现了最基本的国内外分流，如有其他需求，请自行查看 [文档](https://sing-box.sagernet.org/zh) 进行修改。
+
+---
+
 ### **Adguard 的设置**
-1. 设置 DNS 服务器  
-在防护-DNS保护功能-DNS服务器-自定义服务器中添加 `127.0.0.1:10853`。如果提示 DNS 服务器不可用，可到设置-通用-高级设置-低级设置中关闭验证 DNS 上游功能。
-2. 设置代理服务器  
-在设置-过滤-网络-代理-代理服务器中添加，类型选择`SOCKS`，代理主机填写 `127.0.0.1`，代理端口填入`10808`。
 
-其余代理软件与 Adguard 的共存方法类似，都是把 Adguard 的 DNS 服务器设置为代理软件本地的 DNS 服务器，Adguard 的代理服务器设置为代理软件的代理端口。
+1. 打开 `设置 -> 过滤 -> 网络 -> 代理 -> 代理服务器 -> 添加代理`。
+
+2. 配置代理：
+   - **代理类型**：选择 `SOCKS5`。
+   - **代理主机**：填写 `127.0.0.1`。
+   - **代理端口**：填入 `10808`。
+   - **高级设置**：
+     - 可根据节点状态选择开启 `通过 SOCKS5 路由 UDP`。
+     - **注意**：`使用 FakeDNS` 保持关闭。
