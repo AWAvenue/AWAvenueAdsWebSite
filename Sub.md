@@ -38,7 +38,7 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 - [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
 
 
-## hosts 订阅链接 （x圣净化可用）
+## hosts 订阅链接 （AdAway、x圣净等化可用）
 
 - [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt)
 
