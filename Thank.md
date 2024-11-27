@@ -7,13 +7,14 @@
 
 ### 项目
 - [「CLOUDFLAREl- 提供多项可靠的云服务](https://www.cloudflare.com/)
-- [「Vercel- 尽管现在已经不使用了」](https://vercel.com/)
+- [「Vercell- 尽管现在已经不使用了](https://vercel.com/)
 - [「svnc host」 by svnc](https://gitee.com/svnc/host)
 - [「AdGuardHome」 by AdguardTeam](https://github.com/AdguardTeam/AdGuardHome)
 - [「AdGuardDNS」 by AdguardTeam](https://github.com/AdguardTeam/AdGuardDNS)
 - [「AdguardForAndroid」 by AdguardTeam](https://github.com/AdguardTeam/AdguardForAndroid)
 - [「AdguardFilters」 by AdguardTeam](https://github.com/AdguardTeam/AdguardFilters)
 - [「Vitepress」 by vuejs](https://vitepress.dev/)
+- [「科技圈🎗在花频道」 Telegram 知名新闻频道](t.me/zaihuanews)
 - [「原神」 by mihomo](https://ys.mihoyo.com/)
 
 
@@ -29,3 +30,4 @@
 - [「Zutzo」 独立开发者](https://github.com/zutzo)
 - [「过去式」 Telegram秋风广告规则官方群组志愿者](https://t.me/s/jam_of_fruits)
 - [「Linho」 秋风广告规则官方网站维护者](https://github.com/Linho1219)
+- [「Truenoja」 社区志愿者](tg://user?id=5047149352)
