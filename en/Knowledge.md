@@ -1,8 +1,8 @@
 # How to Use
 
 ### AdGuard Home
-
-This rule has been added to the official rule list of AdGuard Home. You only need to click "Choose Blacklist" and find "AWAvenue Ads Rule" to check and confirm.
+- (recommended) Copy the available subscription link and import it into AdGuard Home's DNS blacklist to take effect.
+- This rule has been added to the official rule list of AdGuard Home. You only need to click "Choose Blacklist" and find "AWAvenue Ads Rule" to check and confirm.
 
 ### AdGuard DNS
 

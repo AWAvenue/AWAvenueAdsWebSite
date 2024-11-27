@@ -2,7 +2,8 @@
 
 ### AdGuard Home
 
-本规则已经加入了 AdGuard Home 的官方规则列表，您只需要点击“选择黑名单”然后找到“AWAvenue Ads Rule”勾选确认即可。
+- (**推荐使用**) 复制可用的订阅链接，将其导入到 AdGuard Home 的 DNS黑名单 中，即可生效。
+- 本规则已经加入了 AdGuard Home 的官方规则列表，您只需要点击“选择黑名单”然后找到“AWAvenue Ads Rule”勾选确认即可。
 
 ### AdGuard DNS
 
