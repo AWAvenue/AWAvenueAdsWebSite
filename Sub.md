@@ -21,13 +21,15 @@ Github 官方的文件直链，实时更新，可靠性最高。
 
 - jsDelivr：
 
-jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可靠性较高。
+jsDriver官方的加速订阅，访问速度快，三天到一周左右更新一次。
 
- - ghproxy反代：
+ - ghproxy-gci反代：
 
-为 Github raw 的反代，更新速度较快，但可靠性一般。
+ghproxy-gci反代订阅地址，更新速度较快。
 
-## AdGuard Home/DNS 订阅链接
+## AdGuard (iOS/Android)/Home/DNS 订阅链接
+
+> AdGuard 家族系列除AdGuard for Chrome之外皆可订阅，支持/部分支持 adblock 语法的你也可以试试，例如DNS去广告。
 
 - [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
 
@@ -35,10 +37,12 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Ads-Rule.txt)
 
-- [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
+- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
 
 
-## hosts 订阅链接 （AdAway、x圣净等化可用）
+## hosts 订阅链接
+
+> AdAway、x圣净化等支持hosts的工具皆可订阅。
 
 - [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt)
 
@@ -46,10 +50,10 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-hosts.txt)
 
-- [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt)
+- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt)
 
 
-## Clash 规则订阅链接
+## Clash 规则订阅链接（）
 
 > 官核无法使用 仅限Premium或者Meta版本的Clash，QuantumultX经过配置后亦可使用，但同时我们也为QuantumultX提供了“.list”格式的订阅链接，请自行在下方查看。
 
@@ -59,7 +63,7 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.yaml)
 
-- [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml)
+- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml)
 
 > *具体语法格式请参考[使用教程](./Knowledge#蓝猫)*
 
@@ -71,7 +75,7 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Surge.list)
 
-- [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.list)
+- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.list)
 
 <details>
   <summary>RULE-SET 版本订阅链接</summary>
@@ -83,7 +87,7 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
 
-- [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
+- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
 
 </details>
 
@@ -98,7 +102,7 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Replenish.txt)
 
-- [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Replenish.txt)
+- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Replenish.txt)
 
   *Tips：“秋风广告规则-补充规则” 仅提供适用于“AdGuard Home/DNS”的订阅链接，若需要其他格式请自行转换*
 </details>
@@ -113,7 +117,7 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-AdClose.rule)
 
-- [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.rule)
+- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.rule)
 
 </details>
 
@@ -126,7 +130,7 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
 
-- [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
+- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
 
 </details>
 
@@ -139,7 +143,7 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
 
-- [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
+- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
 
 </details>
 
@@ -152,7 +156,7 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 
 - [jsDelivr(gcore)反代订阅地址 (240.0.0.1)](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
 
-- [ghproxy反代订阅地址 (240.0.0.1)](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
+- [ghproxy-gci反代订阅地址 (240.0.0.1)](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
 
 - [GitHub Raw 订阅 (Adlist)](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
 
@@ -160,7 +164,7 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 
 - [jsDelivr(gcore)反代订阅地址 (Adlist)](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
 
-- [ghproxy反代订阅地址 (Adlist)](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
+- [ghproxy-gci反代订阅地址 (Adlist)](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
 
 </details>
 
@@ -173,7 +177,7 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox.json)
 
-- [ghproxy反代订阅地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
+- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
 
 - [GitHub Raw 订阅（REGEX）](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
 
@@ -181,7 +185,7 @@ jsDriver官方的加速订阅，访问速度快，一周左右更新一次，可
 
 - [jsDelivr(gcore)反代订阅地址（REGEX）](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
 
-- [ghproxy反代订阅地址（REGEX）](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
+- [ghproxy-gci反代订阅地址（REGEX）](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
 
 </details>
 
@@ -207,4 +211,4 @@ import FetchInfo from '/.vitepress/components/FetchInfo.vue'
 ## 总访问数
 
 ![:访问数](https://moe-counter.glitch.me/get/@TG-Twiligh?theme=gelbooru)
-2024.5.5开始统计......
+2024年6月开始统计，统计偶尔会寄......
