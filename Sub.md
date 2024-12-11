@@ -53,7 +53,7 @@ ghproxy-gci反代订阅地址，更新速度较快。
 - [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt)
 
 
-## Clash 规则订阅链接（）
+## Clash 规则订阅链接
 
 > 官核无法使用 仅限Premium或者Meta版本的Clash，QuantumultX经过配置后亦可使用，但同时我们也为QuantumultX提供了“.list”格式的订阅链接，请自行在下方查看。
 
@@ -66,6 +66,8 @@ ghproxy-gci反代订阅地址，更新速度较快。
 - [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml)
 
 > *具体语法格式请参考[使用教程](./Knowledge#蓝猫)*
+
+> *没有root且同时使用Clash与AdGuard for Android的枫叶们请参考[AdGuard共存使用教程](https://awavenue.top/AdGuard.html)*
 
 ## Surge/Surfboard 订阅链接
 
@@ -123,6 +125,8 @@ ghproxy-gci反代订阅地址，更新速度较快。
 
 <details>
   <summary>QuantumultX 订阅链接（.list格式）</summary>
+
+> 如果你不清楚 QuantumultX 如何配置，请自行前往[QuantumultX使用指南](https://awavenue.top/QuantumultX.html)查看使用教程。
 
 - [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
 
