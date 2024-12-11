@@ -67,7 +67,7 @@ ghproxy-gci反代订阅地址，更新速度较快。
 
 > *具体语法格式请参考[使用教程](./Knowledge#蓝猫)*
 
-> *没有root且同时使用Clash与AdGuard for Android的枫叶们请参考[AdGuard共存使用教程](https://awavenue.top/AdGuard.html)*
+> *没有root且同时使用Clash与AdGuard for Android的枫叶们请参考[AdGuard共存使用教程](https://awavenue.top/Coexist.html)*
 
 ## Surge/Surfboard 订阅链接
 
