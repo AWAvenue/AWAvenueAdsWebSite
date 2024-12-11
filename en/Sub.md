@@ -88,7 +88,7 @@ A proxy for GitHub raw, with faster update speed, but average reliability.
 
 - [GitHub Raw Subscription](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.txt)
 
-- [Tianming CFCDN Proxy Subscription](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.txt)
+- [Tianming CFCDN Proxy Subscription](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.txt)
 
 - [jsDelivr(gcore) Proxy Subscription](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-AdClose.txt)
 
@@ -101,7 +101,7 @@ A proxy for GitHub raw, with faster update speed, but average reliability.
 
 - [GitHub Raw Subscription](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
 
-- [Tianming CFCDN Proxy Subscription](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
+- [Tianming CFCDN Proxy Subscription](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
 
 - [jsDelivr(gcore) Proxy Subscription](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
 
@@ -114,7 +114,7 @@ A proxy for GitHub raw, with faster update speed, but average reliability.
 
 - [GitHub Raw Subscription](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
 
-- [Tianming CFCDN Proxy Subscription](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
+- [Tianming CFCDN Proxy Subscription](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
 
 - [jsDelivr(gcore) Proxy Subscription](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
 
@@ -127,7 +127,7 @@ A proxy for GitHub raw, with faster update speed, but average reliability.
 
 - [GitHub Raw Subscription (240.0.0.1)](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
 
-- [Tianming CFCDN Proxy Subscription (240.0.0.1)](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
+- [Tianming CFCDN Proxy Subscription (240.0.0.1)](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
 
 - [jsDelivr(gcore) Proxy Subscription (240.0.0.1)](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
 
@@ -135,7 +135,7 @@ A proxy for GitHub raw, with faster update speed, but average reliability.
 
 - [GitHub Raw Subscription (Adlist)](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
 
-- [Tianming CFCDN Proxy Subscription (Adlist)](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
+- [Tianming CFCDN Proxy Subscription (Adlist)](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
 
 - [jsDelivr(gcore) Proxy Subscription (Adlist)](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
 
@@ -148,7 +148,7 @@ A proxy for GitHub raw, with faster update speed, but average reliability.
 
 - [GitHub Raw Subscription](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
 
-- [Tianming CFCDN Proxy Subscription](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
+- [Tianming CFCDN Proxy Subscription](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
 
 - [jsDelivr(gcore) Proxy Subscription](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox.json)
 
@@ -156,7 +156,7 @@ A proxy for GitHub raw, with faster update speed, but average reliability.
 
 - [GitHub Raw Subscription (REGEX)](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
 
-- [Tianming CFCDN Proxy Subscription (REGEX)](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
+- [Tianming CFCDN Proxy Subscription (REGEX)](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
 
 - [jsDelivr(gcore) Proxy Subscription (REGEX)](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
 
