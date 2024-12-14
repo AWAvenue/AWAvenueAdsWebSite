@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "秋风广告规则"
   text: "干掉所有无良广告"
-  tagline: 使用Adblock语法，从网络层面对抗Android应用中的各种广告sdk，阻止其加载
+  tagline: 从网络层面对抗应用中的各种流氓广告SDK与服务器交互，阻止其正常加载，从而达到去广告的目的。
   image:
     src: /logo.png
     alt: 秋风广告规则
