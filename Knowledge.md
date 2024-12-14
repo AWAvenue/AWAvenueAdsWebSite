@@ -4,18 +4,19 @@
 
 - (**推荐使用**) 复制可用的[订阅链接](./Sub.md)，将其导入到 AdGuard Home 的 DNS黑名单 中，即可生效。
 - 本规则已经加入了 AdGuard Home 的官方规则列表，您只需要点击“选择黑名单”然后找到“AWAvenue Ads Rule”勾选确认即可。
+> Tips：从 AdGuard HostlistsRegistry 获取的订阅链接会删除一些“可能会影响利益”的域名，若非必须，我们仍旧建议您从我们的官方仓库获取订阅链接以获得最佳的过滤效果。
 
 ### AdGuard DNS
 
 规则列表中直接找到“AWAvenue Ads Rule”勾选订阅即可。
 
-### AdGuard
+### AdGuard 及 与代理软件共存教程
 
 复制可用的订阅链接，将其导入到 AdGuard 的 自定义过滤名单中，即可生效。
 
 [详细教程（含操作视频和共存教程）](./AdGuard.md)
 
-### 蓝猫
+### Mihomo Meta
 
 简单地举个例子，自行配置，反馈交流群不接受此类型的询问。
 
@@ -173,4 +174,4 @@ huantv.cn
 <br />
 6、为什么 AdGuard for Magisk 模块更新版本后会断网？
 
-A：模块脚本问题，同时我们强烈建议您“就近”使用现成的工具进行广告过滤，例如您已经为您的 Android 设备刷入了 mihomo 系列代理模块，那么您完全可以使用我们为 mohomo 准备的广告规则而不是再刷写一份 AdGuard for Magisk。
+A：top版模块脚本问题，建议更换为[twoone版AdGuard Home for Magisk](https://github.com/twoone-3/AdGuardHomeForMagisk)。同时，我们强烈建议您“就近”使用现成的工具进行广告过滤，例如您已经为您的 Android 设备刷入了 mihomo 系列代理模块，那么您完全可以使用我们为 mihomo 准备的广告规则而不是再刷写一份 AdGuard for Magisk。
