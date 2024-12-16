@@ -14,7 +14,7 @@ export default defineConfig( {
     themeConfig: {
         footer: {
             message: 'CC BY-NC-SA 4.0 Licensed',
-            copyright: 'Copyright © 2022-2023 秋风のとおり道'
+            copyright: 'Copyright © 2022-2025 秋风のとおり道'
         },
         socialLinks: [
             { icon: 'github', link: 'https://github.com/TG-Twilight/AWAvenue-Ads-Rule' }
