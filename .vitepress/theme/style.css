@@ -91,3 +91,13 @@
 body {
   font-family: MiSans;
 }
+
+@font-face {
+  font-family: ZhuFeng;
+  src: url("./ZhuFeng.subset.woff2");
+}
+
+.VPHome .main .name,
+.VPHome .main .text {
+  font-family: ZhuFeng, MiSans;
+}
