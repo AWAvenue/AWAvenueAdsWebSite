@@ -30,7 +30,7 @@
    dns:
       enable: false
    ```
-见[虚空终端文档](https://wiki.metacubex.one/config/dns/#enable)
+   见[虚空终端文档](https://wiki.metacubex.one/config/dns/#enable)
 
 4. **本地导入修改后的配置文件**
 
