@@ -9,11 +9,7 @@
 ## **Adguard 的设置**
 
 1. **设置 DNS 服务器**  
-   在 `防护 -> DNS 保护功能 -> DNS 服务器 -> 自定义服务器` 中添加一个或多个可用的 DoH：
-   - `https://dns.alidns.com/dns-query`
-   - `https://doh.pub/dns-query`
-   - `https://1.1.1.1/dns-query`
-   - `https://8.8.8.8/dns-query`
+   使用 `防护 -> DNS 保护功能 -> DNS 服务器 -> 自动 DNS`
 
 2. **排除对 Clash Meta For Android 或 Sing-Box 的路由**
 
@@ -34,6 +30,7 @@
    dns:
       enable: false
    ```
+见[虚空终端文档](https://wiki.metacubex.one/config/dns/#enable)
 
 4. **本地导入修改后的配置文件**
 
