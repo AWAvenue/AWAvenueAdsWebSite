@@ -21,11 +21,11 @@ Github 官方的文件直链，实时更新，可靠性最高。
 
 - jsDelivr：
 
-jsDriver官方的加速订阅，访问速度快，三天到一周左右更新一次。
+jsDriver官方的加速订阅，访问速度快，且比较稳定，缺点更新慢，三到七天左右更新一次。
 
  - ghproxy-gci反代：
 
-ghproxy-gci反代订阅地址，更新速度较快。
+ghproxy反代订阅地址，更新速度较快，稳定性欠佳。~~牢gitProxy，域名天天被墙，下次再被墙直接弃用。~~
 
 ## AdGuard (iOS/Android)/Home/DNS 订阅链接
 
@@ -37,7 +37,7 @@ ghproxy-gci反代订阅地址，更新速度较快。
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Ads-Rule.txt)
 
-- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
+- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
 
 
 ## hosts 订阅链接
@@ -50,7 +50,7 @@ ghproxy-gci反代订阅地址，更新速度较快。
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-hosts.txt)
 
-- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt)
+- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt)
 
 
 ## Clash 规则订阅链接
@@ -63,7 +63,7 @@ ghproxy-gci反代订阅地址，更新速度较快。
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.yaml)
 
-- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml)
+- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml)
 
 > *具体语法格式请参考[使用教程](./Knowledge#蓝猫)*
 
@@ -77,7 +77,7 @@ ghproxy-gci反代订阅地址，更新速度较快。
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Surge.list)
 
-- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.list)
+- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.list)
 
 <details>
   <summary>RULE-SET 版本订阅链接</summary>
@@ -89,7 +89,7 @@ ghproxy-gci反代订阅地址，更新速度较快。
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
 
-- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
+- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
 
 </details>
 
@@ -104,7 +104,7 @@ ghproxy-gci反代订阅地址，更新速度较快。
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Replenish.txt)
 
-- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Replenish.txt)
+- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Replenish.txt)
 
   *Tips：“秋风广告规则-补充规则” 仅提供适用于“AdGuard Home/DNS”的订阅链接，若需要其他格式请自行转换*
 </details>
@@ -119,7 +119,7 @@ ghproxy-gci反代订阅地址，更新速度较快。
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-AdClose.rule)
 
-- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.rule)
+- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.rule)
 
 </details>
 
@@ -134,7 +134,7 @@ ghproxy-gci反代订阅地址，更新速度较快。
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
 
-- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
+- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-QuantumultX.list)
 
 </details>
 
@@ -147,7 +147,7 @@ ghproxy-gci反代订阅地址，更新速度较快。
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
 
-- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
+- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Mosdns_v5.txt)
 
 </details>
 
@@ -160,7 +160,7 @@ ghproxy-gci反代订阅地址，更新速度较快。
 
 - [jsDelivr(gcore)反代订阅地址 (240.0.0.1)](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
 
-- [ghproxy-gci反代订阅地址 (240.0.0.1)](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
+- [ghproxy反代订阅地址 (240.0.0.1)](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS.txt)
 
 - [GitHub Raw 订阅 (Adlist)](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
 
@@ -168,7 +168,7 @@ ghproxy-gci反代订阅地址，更新速度较快。
 
 - [jsDelivr(gcore)反代订阅地址 (Adlist)](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
 
-- [ghproxy-gci反代订阅地址 (Adlist)](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
+- [ghproxy反代订阅地址 (Adlist)](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-RouterOS-Adlist.txt)
 
 </details>
 
@@ -181,7 +181,7 @@ ghproxy-gci反代订阅地址，更新速度较快。
 
 - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox.json)
 
-- [ghproxy-gci反代订阅地址](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
+- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json)
 
 - [GitHub Raw 订阅（REGEX）](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
 
@@ -189,7 +189,7 @@ ghproxy-gci反代订阅地址，更新速度较快。
 
 - [jsDelivr(gcore)反代订阅地址（REGEX）](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
 
-- [ghproxy-gci反代订阅地址（REGEX）](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
+- [ghproxy反代订阅地址（REGEX）](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json)
 
 </details>
 
