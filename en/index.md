@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "AWAvenue Ads Rule"
   text: "Eliminate All Malicious Ads"
-  tagline: "UCounteract various malicious ad SDKs and their interactions with servers at the network layer, preventing them from loading normally, in order to achieve ad-blocking."
+  tagline: "Use Adblock syntax to fight against various advertising SDKs in Android applications from the network level , prevent them from loading."
   image:
     src: /logo.png
     alt: 秋风广告规则
