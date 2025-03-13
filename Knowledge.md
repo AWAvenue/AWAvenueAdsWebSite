@@ -20,6 +20,10 @@
 
 简单地举个例子，自行配置，反馈交流群不接受此类型的询问。
 
+这里提供一份由baka维护的懒人配置，原理与下方配置一致，更加简单开箱即用。
+
+[点击查看](https://gist.github.com/liuran001/5ca84f7def53c70b554d3f765ff86a33)
+
 ```yaml
 rule-providers:  
   秋风广告规则:
