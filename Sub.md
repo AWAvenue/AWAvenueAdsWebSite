@@ -4,6 +4,8 @@
 
 ::: danger 注意
 **订阅本规则前请务必完整阅读[用户协议](./Protocol.md)和[使用教程](./Knowledge)并您确认自己有解决一定问题的能力。**
+<br />
+由于现有的去广告和代理工具种类繁多，我们难以面面俱到。如果您未找到适合的规则或教程，还请谅解。若您有余力，欢迎参与完善工作，共同提升体验。
 
 :::
 
@@ -23,7 +25,7 @@ Github 官方的文件直链，实时更新，可靠性最高。
 
 jsDriver官方的加速订阅，访问速度快，且比较稳定，缺点更新慢，三到七天左右更新一次。
 
- - ghproxy-gci反代：
+ - ghproxy反代：
 
 ghproxy反代订阅地址，更新速度较快，稳定性欠佳。~~牢gitProxy，域名天天被墙，下次再被墙直接弃用。~~
 
@@ -42,7 +44,9 @@ ghproxy反代订阅地址，更新速度较快，稳定性欠佳。~~牢gitProxy
 
 ## hosts 订阅链接
 
-> AdAway、x圣净化等支持hosts的工具皆可订阅。
+> 这是一种最通用的格式，写法简单，但理论上只要能修改系统hosts，你就可以使用此格式的规则，这里推荐[AdAway](https://adaway.org/)。
+
+> 对于使用KelnelSU的AdAway用户，你应该额外刷入[systemless-hosts-KernelSU-module](https://github.com/symbuzzer/systemless-hosts-KernelSU-module?tab=readme-ov-file)这个模块。
 
 - [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt)
 
