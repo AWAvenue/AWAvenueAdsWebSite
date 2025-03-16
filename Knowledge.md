@@ -172,7 +172,6 @@ pay.sboot.cn
 scs.openspeech.cn
 sdkauth.hpplay.cn
 itv2-up.openspeech.cn
-mdp-appconf-in.heytapdl.com
 gslb.hpplay.cn
 rp.hpplay.cn
 tvapp.hpplay.cn
