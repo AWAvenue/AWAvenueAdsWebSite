@@ -4,27 +4,27 @@ layout: home
 
 hero:
   name: "秋風廣告規則"
-  text: "幹掉所有無良廣告"
-  tagline: 使用Adblock語法，攔截Android應用程式中各種廣告sdk的網路請求，阻止其載入
+  text: "消除所有不良廣告"
+  tagline: 從網路層面對抗應用程式中的各種流氓廣告SDK與伺服器交互，阻止其正常加載，從而達到去廣告的目的。
   image:
     src: /logo.png
-    alt: 秋风广告规则
+    alt: 秋風廣告規則
   actions:
     - theme: brand
       text: 快速開始
-      link: /zh_TW/Start.html
+      link: /Start
     - theme: alt
       text: 訂閱規則
-      link: /zh_TW/Sub.html
+      link: /Sub
     - theme: alt
       text: 贊助我們
-      link: /zh_TW//Donate.html
+      link: /Donate
 
 features:
-  - title: 專注
-    details: 一直致力於阻擋廣告sdk載入，同時阻擋一些不可接受的追蹤
-  - title: 開源
-    details: 本專案所有內容皆開放原始碼，歡迎您隨時前往 Github 查閱
-  - title: 免費
-    details: 您無需向開發者支付任何費用，即可獲得清爽的網路體驗
+  - title: 極致的體積控制
+    details: 與其他動輒數萬行、十幾兆的規則相比，我們的700行規則擁有極致的體積控制。
+  - title: 超高的命中率
+    details: 相較於其他臃腫的廣告規則，我們的700多行規則擁有超高的命中率。
+  - title: 極低的硬體需求
+    details: 非常適合在性能不強的設備上使用，完美滿足大多數人的輕量過濾需求。
 ---
