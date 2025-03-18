@@ -3,8 +3,7 @@
 ## 訂閱須知
 
 ::: danger 注意
-**在訂閱本規則之前，請務必完整閱讀[用戶協議](./Protocol.md)和[使用教程](./Knowledge) ，並確認您有解決一定問題的能力。**
-
+**在訂閱本規則之前，請務必完整閱讀[用戶協議](./Protocol.md)和[使用教程](./Knowledge)，並確認您具備解決相關問題的能力。**
 :::
 
 **以下訂閱連結均為秋風廣告規則正式版本的訂閱連結，其中：**
@@ -19,9 +18,9 @@ GitHub 官方的文件直鏈，訪問速度最快，可靠性最高。
 
 - jsDelivr：
 
-jsDriver官方的加速訂閱，訪問速度快，一周左右更新一次，可靠性較高。
+jsDelivr 官方的加速訂閱，訪問速度快，一周左右更新一次，可靠性較高。
 
- - ghproxy反代：
+- ghproxy反代：
 
 為 Github raw 的反代，更新速度較快，但可靠性一般。
 
@@ -35,8 +34,7 @@ jsDriver官方的加速訂閱，訪問速度快，一周左右更新一次，可
 
 - [ghproxy反代訂閱地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
 
-
-## hosts 訂閱連結 （x圣淨化可用）
+## hosts 訂閱連結 （x聖淨化可用）
 
 - [GitHub Raw 訂閱](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt)
 
@@ -45,7 +43,6 @@ jsDriver官方的加速訂閱，訪問速度快，一周左右更新一次，可
 - [jsDelivr(gcore)反代訂閱地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-hosts.txt)
 
 - [ghproxy反代訂閱地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt)
-
 
 ## 藍貓 訂閱連結
 
@@ -69,8 +66,6 @@ jsDriver官方的加速訂閱，訪問速度快，一周左右更新一次，可
 
 - [ghproxy反代訂閱地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.txt)
 
-
-## 更多格式的規則
 ## 更多格式的規則
 
 <details>
@@ -84,7 +79,7 @@ jsDriver官方的加速訂閱，訪問速度快，一周左右更新一次，可
 
 - [ghproxy反代訂閱地址](https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Replenish.txt)
 
-  *Tips：“秋風廣告規則-補充規則” 僅提供適用於“AdGuard Home/DNS”的訂閱連結，若需要其他格式請自行轉換*
+  *提示：“秋風廣告規則-補充規則”僅提供適用於“AdGuard Home/DNS”的訂閱連結，若需要其他格式請自行轉換*
 </details>
 
 <details>
