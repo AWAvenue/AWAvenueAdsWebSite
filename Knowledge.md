@@ -114,6 +114,10 @@ rules:
 
 [自行查看文档](./ShadowRocket.md)
 
+### Loon
+
+[自行查看文档](./Loon.md)
+
 ### Surge
 
 Just a moment(咕咕咕)
