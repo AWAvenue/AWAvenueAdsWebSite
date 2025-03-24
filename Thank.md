@@ -32,3 +32,5 @@
 - [「过去式」 Telegram秋风广告规则官方群组志愿者](https://t.me/s/jam_of_fruits)
 - [「Linho」 秋风广告规则官方网站维护者](https://github.com/Linho1219)
 - [「Truenoja」 社区志愿者](https://t.me/Truenoja/)
+- 「CXPLAY」 社区志愿者 提供镜像订阅服务
+- 「王富贵」 社区志愿者 提供镜像订阅服务
