@@ -131,7 +131,26 @@ ghproxy反代订阅地址，更新速度较快，稳定性欠佳。~~牢gitProxy
 </details>
 
 <details>
-  <summary>Surge/Surfboard 订阅链接格式订阅链接</summary>
+  <summary>Surge 模块链接（.sgmodule格式）</summary>
+
+- [【点此一键安装】](surge://install-module?url=https%3A%2F%2Fraw.githubusercontent.com%2FTG-Twilight%2FAWAvenue-Ads-Rule%2Fmain%2FFilters%2FAWAvenue-Ads-Rule-Surge-module.sgmodule) - [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-module.sgmodule)
+
+- [【点此一键安装】](surge://install-module?url=https%3A%2F%2Fgithub.boki.moe%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2FTG-Twilight%2FAWAvenue-Ads-Rule%2Fmain%2FFilters%2FAWAvenue-Ads-Rule-Surge-module.sgmodule) - [天命CFCDN反代订阅地址](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-module.sgmodule)
+
+- [【点此一键安装】](surge://install-module?url=https%3A%2F%2Fgcore.jsdelivr.net%2Fgh%2FTG-Twilight%2FAWAvenue-Ads-Rule%40main%2FFilters%2FAWAvenue-Ads-Rule-Surge-module.sgmodule) - [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Surge-module.sgmodule)
+
+- [【点此一键安装】](surge://install-module?url=https%3A%2F%2Fghfast.top%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2FTG-Twilight%2FAWAvenue-Ads-Rule%2Fmain%2FFilters%2FAWAvenue-Ads-Rule-Surge-module.sgmodule) - [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-module.sgmodule)
+
+- [【点此一键安装】](surge://install-module?url=https%3A%2F%2Fscript.cx.ms%2Fawavenue%2FAWAvenue-Ads-Rule-Surge-module.sgmodule) - [CXPLAY镜像订阅](https://script.cx.ms/awavenue/AWAvenue-Ads-Rule-Surge-module.sgmodule)
+
+- [【点此一键安装】](surge://install-module?url=https%3A%2F%2Fcdn.uura.cn%2FAWAvenue%2FAWAvenue-Ads-Rule-Surge-module.sgmodule) - [王富贵镜像订阅](https://cdn.uura.cn/AWAvenue/AWAvenue-Ads-Rule-Surge-module.sgmodule)
+
+</details>
+
+<details>
+  <summary>Surge/Surfboard 格式订阅链接</summary>
+
+  *Tips：上方订阅为 DOMAIN-SET，下方 REGEX 订阅为 RULE-SET，推荐使用 REGEX 订阅效果更好*
 
 - [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.list)
 
