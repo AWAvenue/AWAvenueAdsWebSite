@@ -93,38 +93,6 @@ ghproxy反代订阅地址，更新速度较快，稳定性欠佳。~~牢gitProxy
 
 > *没有root且同时使用Clash与AdGuard for Android的枫叶们请参考[AdGuard共存使用教程](https://awavenue.top/Coexist.html)*
 
-## Surge/Surfboard 订阅链接
-
-- [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.list)
-
-- [天命CFCDN反代订阅地址](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.list)
-
-- [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Surge.list)
-
-- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.list)
-
-- [CXPLAY镜像订阅](https://script.cx.ms/awavenue/AWAvenue-Ads-Rule-Surge.list)
-
-- [王富贵镜像订阅](https://cdn.uura.cn/AWAvenue/AWAvenue-Ads-Rule-Surge.list)
-
-<details>
-  <summary>RULE-SET 版本订阅链接</summary>
-
-
-- [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
-
-- [天命CFCDN反代订阅地址](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
-
-- [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
-
-- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
-
-- [CXPLAY镜像订阅](https://script.cx.ms/awavenue/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
-
-- [王富贵镜像订阅](https://cdn.uura.cn/AWAvenue/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
-
-</details>
-
 
 ## 更多格式的规则
 <details>
@@ -146,20 +114,48 @@ ghproxy反代订阅地址，更新速度较快，稳定性欠佳。~~牢gitProxy
 </details>
 
 <details>
-  <summary>AdClose rule格式订阅链接（目前处于测试阶段，但可以自定义导入了）</summary>
+  <summary>Dnsmasq格式订阅链接（.conf格式）</summary>
 
+- [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Dnsmasq.conf)
 
-- [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.rule)
+- [天命CFCDN反代订阅地址](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Dnsmasq.conf)
 
-- [天命CFCDN反代订阅地址](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.rule)
+- [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Dnsmasq.conf)
 
-- [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-AdClose.rule)
+- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Dnsmasq.conf)
 
-- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.rule)
+- [CXPLAY镜像订阅](https://script.cx.ms/awavenue/AWAvenue-Ads-Rule-Dnsmasq.conf)
 
-- [CXPLAY镜像订阅](https://script.cx.ms/awavenue/AWAvenue-Ads-Rule-AdClose.rule)
+- [王富贵镜像订阅](https://cdn.uura.cn/AWAvenue/AWAvenue-Ads-Rule-Dnsmasq.conf)
 
-- [王富贵镜像订阅](https://cdn.uura.cn/AWAvenue/AWAvenue-Ads-Rule-AdClose.rule)
+</details>
+
+<details>
+  <summary>Surge/Surfboard 订阅链接格式订阅链接</summary>
+
+- [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.list)
+
+- [天命CFCDN反代订阅地址](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.list)
+
+- [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Surge.list)
+
+- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.list)
+
+- [CXPLAY镜像订阅](https://script.cx.ms/awavenue/AWAvenue-Ads-Rule-Surge.list)
+
+- [王富贵镜像订阅](https://cdn.uura.cn/AWAvenue/AWAvenue-Ads-Rule-Surge.list)
+
+- [GitHub Raw 订阅（REGEX）](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
+
+- [天命CFCDN反代订阅地址（REGEX）](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
+
+- [jsDelivr(gcore)反代订阅地址（REGEX）](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
+
+- [ghproxy反代订阅地址（REGEX）](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
+
+- [CXPLAY镜像订阅（REGEX）](https://script.cx.ms/awavenue/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
+
+- [王富贵镜像订阅（REGEX）](https://cdn.uura.cn/AWAvenue/AWAvenue-Ads-Rule-Surge-RULE-SET.list)
 
 </details>
 
@@ -196,6 +192,24 @@ ghproxy反代订阅地址，更新速度较快，稳定性欠佳。~~牢gitProxy
 - [CXPLAY镜像订阅](https://script.cx.ms/awavenue/AWAvenue-Ads-Rule-Mosdns_v5.txt)
 
 - [王富贵镜像订阅](https://cdn.uura.cn/AWAvenue/AWAvenue-Ads-Rule-Mosdns_v5.txt)
+
+</details>
+
+<details>
+  <summary>AdClose rule格式订阅链接（目前处于测试阶段，但可以自定义导入了）</summary>
+
+
+- [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.rule)
+
+- [天命CFCDN反代订阅地址](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.rule)
+
+- [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-AdClose.rule)
+
+- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-AdClose.rule)
+
+- [CXPLAY镜像订阅](https://script.cx.ms/awavenue/AWAvenue-Ads-Rule-AdClose.rule)
+
+- [王富贵镜像订阅](https://cdn.uura.cn/AWAvenue/AWAvenue-Ads-Rule-AdClose.rule)
 
 </details>
 
