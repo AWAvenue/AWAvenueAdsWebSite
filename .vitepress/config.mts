@@ -1,23 +1,29 @@
 import { defineConfig } from 'vitepress'
 import locales from './locales'
 
-export default defineConfig( {
-    ignoreDeadLinks: true,
-    title: '秋风广告规则',
-    locales: locales.locales,
-    srcExclude: ['README.md'],
-    head: [
-        ['meta', { name: 'theme-color', content: '#ea668d' }],
-        ['link', { rel: 'stylesheet', href: 'https://font.sec.miui.com/font/css?family=MiSans:200,300,400,450,500,600,650,700:Chinese_Simplify,Latin&display=swap' }],
-        ['link', { rel: 'stylesheet', href: 'https://font.sec.miui.com/font/css?family=MiSans:200,300,400,450,500,600,650,700:Chinese_Traditional,Latin&display=swap' }]
-      ],
-    themeConfig: {
-        footer: {
-            message: 'CC BY-NC-SA 4.0 Licensed',
-            copyright: 'Copyright © 2022-2025 秋风のとおり道'
-        },
-        socialLinks: [
-            { icon: 'github', link: 'https://github.com/TG-Twilight/AWAvenue-Ads-Rule' }
-        ]
-    }
+export default defineConfig({
+  ignoreDeadLinks: true, // 忽略死链
+  title: '秋风广告规则', // 网站标题
+  locales: locales.locales, // 国际化配置
+  srcExclude: ['README.md'], // 排除 README.md 文件
+  head: [
+    // 设置主题颜色
+    ['meta', { name: 'theme-color', content: '#0A3FAC' }],
+    // 引入 MiSans 简体中文/拉丁字体
+    ['link', { rel: 'stylesheet', href: 'https://font.sec.miui.com/font/css?family=MiSans:200,300,400,450,500,600,650,700:Chinese_Simplify,Latin&display=swap' }],
+    // 引入 MiSans 繁体中文/拉丁字体
+    ['link', { rel: 'stylesheet', href: 'https://font.sec.miui.com/font/css?family=MiSans:200,300,400,450,500,600,650,700:Chinese_Traditional,Latin&display=swap' }],
+    // 谷歌分析 (Google Analytics) 代码
+    ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-N86HQ8Z06L' }],
+    ['script', {}, "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-N86HQ8Z06L');"]
+  ],
+  themeConfig: {
+    footer: {
+      message: 'CC BY-NC-SA 4.0 Licensed', // 页脚消息
+      copyright: 'Copyright © 2022-2025 秋风のとおり道' // 版权信息
+    },
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/TG-Twilight/AWAvenue-Ads-Rule' } // GitHub 社交链接
+    ]
+  }
 })
