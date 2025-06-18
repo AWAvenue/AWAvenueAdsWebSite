@@ -58,7 +58,7 @@ ghproxy反代订阅地址，更新速度较快，稳定性欠佳。~~牢gitProxy
 
 > 这是一种最通用的格式，写法简单，但理论上只要能修改系统hosts，你就可以使用此格式的规则，这里推荐[AdAway](https://adaway.org/)。
 
-> 对于使用KelnelSU的AdAway用户，你应该额外刷入[systemless-hosts-KernelSU-module](https://github.com/symbuzzer/systemless-hosts-KernelSU-module?tab=readme-ov-file)这个模块。
+> 对于使用KelnelSU的AdAway用户，你应该额外刷入[Systemless-hosts-KernelSU](https://github.com/symbuzzer/systemless-hosts-KernelSU-module)这个模块。
 
 - [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt)
 
@@ -88,6 +88,23 @@ ghproxy反代订阅地址，更新速度较快，稳定性欠佳。~~牢gitProxy
 - [CXPLAY镜像订阅](https://script.cx.ms/awavenue/AWAvenue-Ads-Rule-Clash.yaml)
 
 - [王富贵镜像订阅](https://cdn.uura.cn/AWAvenue/AWAvenue-Ads-Rule-Clash.yaml)
+
+<details>
+  <summary>Classical格式订阅链接</summary>
+
+- [GitHub Raw 订阅](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash-Classical.yaml)
+
+- [天命CFCDN反代订阅地址](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash-Classical.yaml)
+
+- [jsDelivr(gcore)反代订阅地址](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash-Classical.yaml)
+
+- [ghproxy反代订阅地址](https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash-Classical.yaml)
+
+- [CXPLAY镜像订阅](https://script.cx.ms/awavenue/AWAvenue-Ads-Rule-Clash-Classical.yaml)
+
+- [王富贵镜像订阅](https://cdn.uura.cn/AWAvenue/AWAvenue-Ads-Rule-Clash-Classical.yaml)
+
+</details>
 
 > *具体语法格式请参考[使用教程](./Knowledge#蓝猫)*
 
