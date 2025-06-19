@@ -5,7 +5,7 @@
 （排名順序不分先後）
 
 
-### 项目/组织/企业
+### 項目/組織/企業
 - [「GitHub」- 一切的一切，代码托管，自动化都以此为基础](http://github.com/)
 - [「CLOUDFLARE」- 提供多项可靠的云服务](https://www.cloudflare.com/)
 - [「Vercel」- 曾经的自动化云服务商，尽管现在已经不使用了](https://vercel.com/)
@@ -19,7 +19,7 @@
 - [「原神」 by mihomo](https://ys.mihoyo.com/)
 
 
-### 开发者/志愿者/画师
+### 開發者/志願者/畫師
 - [「Andrey Meshkov」 by AdguardTeam](https://github.com/ameshkov)
 - [「heinu」 by Elysiaの日常](https://github.com/heinu123)
 - [「笨蛋ovo」 by 搞机助手 R](https://github.com/liuran001)
@@ -32,3 +32,13 @@
 - [「过去式」 Telegram秋风广告规则官方群组志愿者](https://t.me/s/jam_of_fruits)
 - [「Linho」 秋风广告规则官方网站维护者](https://github.com/Linho1219)
 - [「Truenoja」 社区志愿者](https://t.me/Truenoja/)
+- 「CXPLAY」 社区志愿者 提供镜像订阅服务
+- 「王富贵」 社区志愿者 提供镜像订阅服务
+
+### 特別感謝的贊助用戶❤️
+- **爱发电用户_79db3**
+- 爱发电用户_d2538
+- 爱发电用户_ad127
+- 爱发电用户_d9c01
+- CA
+- yclxio
