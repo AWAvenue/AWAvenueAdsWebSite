@@ -1,6 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
+pageClass: homepage
 
 hero:
   name: "秋风广告规则"

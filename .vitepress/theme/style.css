@@ -101,3 +101,46 @@ body {
 .VPHome .main .text {
   font-family: ZhuFeng, MiSans;
 }
+
+.Layout.homepage {
+  position: relative;
+  overflow: hidden;
+  --vp-c-divider: var(--vp-c-default-soft);
+}
+
+.Layout.homepage .main .name{
+  text-shadow: #0005 0 10px 15px;
+}
+
+.Layout.homepage::before {
+  --margin: -20px;
+  content: "";
+  position: fixed;
+  top: var(--margin);
+  right: var(--margin);
+  bottom: var(--margin);
+  left: var(--margin);
+  background-image: url(./homepage-background-bright.png);
+  opacity: 0.4;
+  filter: blur(10px);
+  background-size: cover;
+  background-position: center;
+}
+.dark .Layout.homepage::before{
+  background-image: url(./homepage-background.jpg);
+  opacity: 1;
+  filter: blur(10px) brightness(0.85);
+}
+
+.Layout.homepage footer {
+  background: transparent;
+  border-color: var(--vp-c-default-soft);
+}
+
+.Layout.homepage .VPFeature {
+  background-color: #fff5;
+  border-color: var(--vp-c-default-soft);
+}
+.dark .Layout.homepage .VPFeature{
+  background-color: var(--vp-c-default-soft);
+}
