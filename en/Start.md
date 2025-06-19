@@ -1,42 +1,51 @@
 # Quick Start
 
-*Tips: If you are familiar with and understand the subscription and usage rules, and have read and agreed to the [User Agreement](./Protocol.md), confirming your "voluntary waiver of the right to view ads benefits," then it is recommended to directly [subscribe to the rules](./Sub.md).*
+*Tip: If you are familiar with and understand how to subscribe to and use the related rules, and after reading and agreeing to the [User Agreement](./Protocol.md), confirming that you "voluntarily give up your rights to watch ads," then we recommend you directly [subscribe to the rules](./Sub.md).*
 
-## What are the AWAvenue Ads Rule?
+## What is the AWAvenue Ads Rule?
 
-The AWAvenue Ads Rule primarily use Adblock syntax to combat various ad SDKs in Android applications at the network level, preventing their loading and providing you with a clear and comfortable online experience!
+One of the best ad filter lists in the open-source community, implementing excellent ad blocking, privacy protection, and data savings. It supports various common network-layer ad-blocking tools and proxy tools¹. Compared to other ad rules that contain thousands of entries, the AWAvenue Ads Rule has exceptional size control, an ultra-high hit rate, and low hardware requirements.
+
+After subscribing to this rule, you will immediately notice the annoying shake-to-skip ads disappear, subscription lists and in-article ads won't load, autoplay video ads are eradicated, boot-up ads on TV boxes/smart TVs vanish, and you'll have more available space on your phone (because ad files are blocked from being delivered).
+
+Compared to other ad-blocking methods, this network-layer filtering approach is low-cost, easy to use, fast, and widely applicable (such as router deployment). You don’t need to configure individual apps, and it filters ads without affecting the normal use of your apps.
 
 <br />
 
-**As of January 2024, we can intercept over 90% of the existing ad SDKs on the Tivat Continent.**
+**As of December 2024, we can block over 90% of ad SDKs currently used in Teyvat.**
 
-## What are the Advantages?
+**This rule does not consider scenarios where users need to access ad rewards. Additionally, we always believe that your privacy is more important than "some small conveniences." So, please consider carefully whether to use it.**
 
-The advantages are evident when compared to the other two filtering methods:
+## What are the advantages?
 
-### Network-Level Filtering:
-AdGuard series (AdGuard, AdGuard Home, AdGuard DNS, etc.), AdAway, Blue Cat, Surge, etc.
+The advantages are clear. Here’s a comparison with other filtering methods:
 
-### Accessibility Interception:
-XJump, GKD, One Finger Zen, etc.
+### Network Layer Filtering:
 
-### Xposed Interception:
-Great Sage Purification, XWall Module, various enhanced modules that intercept ads in specific applications/systems, etc.
+AdGuard series (AdGuard, AdGuard Home, AdGuard DNS, etc.), AdAway, BlueCat, Surge, etc.
 
-| Feature/Filtering Method | Network-Level Filtering | Accessibility Interception | Xposed Interception |
-| ------------------------ | ----------------------- | -------------------------- | ------------------- |
-| Stability               | 💯 Best                 | Average, but severe background killing on domestic systems | Average             |
-| Compatibility           | 💯 Best, and can be hot-updated | Average, needs adaptation, and has false positives, but almost all Android devices can use it | Poor, relies on Xposed framework (root) and requires adaptation, plus a considerable number of applications have hook detection, making it challenging to start |
-| Interception Capability  | Blocks all intercepted ads across all platforms | Does not intercept, ~~like masturbation~~, ads still cache on the device, and incurs corresponding data usage | 💯 Powerful, can hook and intercept various tricky ads |
-| Response Speed           | 💯 Excellent, everything happens in milliseconds | Slow, visible ads are commonplace | 💯 Fastest, as it directly loads with the code |
-| Applicability Range      | 💯 Universal across all platforms | Limited to Android devices | Limited to Android devices |
-| Learning Curve           | Low                     | 💯 Minimal               | High, requires root+Xposed framework, demands a certain level of modding experience |
-| Power Consumption        | 💯 Low, if hosted on a router/server, does not consume mobile device battery | High, and requires keeping the application active in the background, with a "considerable" power consumption | Depends on the situation, more hooks mean more power consumption |
+### Accessibility Layer Blocking:
 
-## Good! So... How Do I Use It?
+x跳跳, GKD, One-Finger Zen, etc.
 
-Please check the [Usage Tutorial](./Knowledge.md) and then choose the appropriate tool to [subscribe to the rules](./Sub.md).
+### Xposed Blocking:
 
-## Want to Provide Feedback/Communicate?
+x圣净化, x壁模块, various enhanced modules that block ads in specific apps/systems, etc.
 
-Please visit [User Communication](./Support.md) and choose the method that suits you for feedback/communication.
+| Feature/Blocking Method | Network Layer Filtering                                                        | Accessibility Layer Blocking                                                                | Xposed Blocking                                                                                                |
+| ----------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Stability               | 💯 Best                                                                        | Average, but Chinese systems kill background processes severely                             | Average                                                                                                        |
+| Compatibility           | 💯 Best, can be updated in real-time                                           | Average, needs adaptation, may have false clicks, but almost all Android devices can use it | Poor, depends on Xposed framework (root), needs adaptation, many apps have hook detection, difficult to bypass |
+| Blocking Ability        | Blocks ads on all platforms                                                    | Does not block, ~~manual ad-blocking~~, ads still cached on the device, consuming data      | 💯 Powerful, can hook and block various tricky ads                                                             |
+| Response Speed          | 💯 Excellent, in milliseconds                                                  | Slow, visible ads are common                                                                | 💯 Fastest, because it follows code loading                                                                    |
+| Applicable Range        | 💯 Universal across all platforms                                              | Limited to Android devices                                                                  | Limited to Android devices                                                                                     |
+| Ease of Use             | Low                                                                            | 💯 Easiest                                                                                  | High, requires root + Xposed framework, assumes some advanced usage experience                                 |
+| Power Consumption       | 💯 Low, if hosted on a router/server, it doesn’t consume mobile device battery | High, needs to keep apps alive in the background, significant power usage                   | Depends, more hooks consume more power                                                                         |
+
+## Great! So... how do I use it?
+
+Please refer to the [Usage Guide](./Knowledge.md), and then choose the appropriate tool to [subscribe to the rules](./Sub.md).
+
+## Want to give feedback or engage in discussions?
+
+Please go to the [User Support](./Support.md) page and choose the method that suits you best to provide feedback or engage in discussions.
