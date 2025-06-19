@@ -109,7 +109,7 @@ body {
 }
 
 .Layout.homepage .main .name{
-  text-shadow: #0005 0 10px 15px;
+  text-shadow: #0003 0 10px 15px;
 }
 
 .Layout.homepage::before {
