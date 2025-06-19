@@ -2,9 +2,9 @@
 
 ## 捐款須知
 
-\::: danger 注意
+::: danger 注意
 捐款行為完全自願，未成年者請在監護人同意及監督下進行捐款。
-\:::
+:::
 
 ## 非常感謝您的支持！
 
@@ -16,7 +16,7 @@
 
 <br>
 
-## 愛發電（支持支付寶、微信）
+## 愛發電（支持支付寶、微信支付）
 
 <iframe id="afdian_leaflet_AdsRule" src="https://afdian.com/leaflet?slug=AdsRule" width="100%" scrolling="no" height="200" frameborder="0"></iframe>
 
