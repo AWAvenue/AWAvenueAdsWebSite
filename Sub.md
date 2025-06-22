@@ -320,5 +320,7 @@ import FetchInfo from '/.vitepress/components/FetchInfo.vue'
 
 ## 总访问数
 
-![:访问数](https://moe-counter.glitch.me/get/@TG-Twiligh?theme=gelbooru)
+<p align="left">
+  <img src="https://count.getloli.com/get/@TG-Twiligh?theme=booru-helltaker" alt="Profile Views" width="666"/>
+</p>
 2024年6月开始统计，统计偶尔会寄......
