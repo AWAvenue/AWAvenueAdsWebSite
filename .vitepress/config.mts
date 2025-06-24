@@ -20,7 +20,7 @@ export default defineConfig({
   themeConfig: {
     footer: {
       message: 'CC BY-NC-SA 4.0 Licensed', // 页脚消息
-      copyright: 'Copyright © 2022-2025 秋风のとおり道' // 版权信息
+      copyright: 'Copyright © 2022-2025 <a href="https://zyc.su/" target="_blank" rel="noopener">秋风のとおり道</a>' // 版权信息
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/TG-Twilight/AWAvenue-Ads-Rule' } // GitHub 社交链接
