@@ -15,7 +15,11 @@ export default defineConfig({
     ['link', { rel: 'stylesheet', href: 'https://font.sec.miui.com/font/css?family=MiSans:200,300,400,450,500,600,650,700:Chinese_Traditional,Latin&display=swap' }],
     // 谷歌分析 (Google Analytics) 代码
     ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-N86HQ8Z06L' }],
-    ['script', {}, "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-N86HQ8Z06L');"]
+    [
+      'script',
+      {},
+      "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-N86HQ8Z06L');"
+    ]
   ],
   themeConfig: {
     footer: {

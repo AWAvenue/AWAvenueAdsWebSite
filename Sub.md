@@ -305,18 +305,13 @@ ghproxy反代订阅地址，更新速度较快，稳定性欠佳。~~牢gitProxy
 
 ## 最新版本
 
-<span id="hidden">更新日志由 GitHub 提供，如果持续无法加载，请更换网络环境。</span>
+<Version hidden>更新日志由 GitHub 提供，如果持续无法加载，请更换网络环境。</Version>
 
-版本号: <span id="version">少女祈祷中...</span>
+版本号: <Version version>少女祈祷中...</Version>
 
-更新日期: <span id="date">少女祈祷中...</span> (UTC)
+更新日期: <Version date>少女祈祷中...</Version> (UTC)
 
-<p id="info">少女祈祷中...</p>
-
-<script setup>
-import FetchInfo from '/.vitepress/components/FetchInfo.vue'
-</script>
-<FetchInfo/>
+<Version info>少女祈祷中...</Version>
 
 ## 总访问数
 

@@ -248,20 +248,13 @@
 
 ## 最新版本
 
-<span id="hidden">更新日誌由 GitHub 提供，如長時間無法載入請更換網路環境。</span>
+<Version hidden>更新日誌由 GitHub 提供，如長時間無法載入請更換網路環境。</Version>
 
-**版本號**：<span id="version">少女祈禱中…</span>
-**更新日期**：<span id="date">少女祈禱中…</span> (UTC)
+**版本號**：<Version version>少女祈禱中…</Version>
 
-<p id="info">少女祈禱中…</p>
+**更新日期**：<Version date>少女祈禱中…</Version> (UTC)
 
-<script setup>  
-import FetchInfo from '/.vitepress/components/FetchInfo.vue'  
-</script>  
-
-<FetchInfo/>
-
----
+<Version info>少女祈禱中…</Version>
 
 ## 總訪問數
 
