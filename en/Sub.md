@@ -191,18 +191,13 @@
 
 ## Latest Version
 
-<span id="hidden">The update log is provided by GitHub. If it continues to fail to load, please change your network environment.</span>
+<Version hidden>The update log is provided by GitHub. If it continues to fail to load, please change your network environment.</Version>
 
-版本号: <span id="version">Reimu Hakurei is praying...</span>
+版本号: <Version version>Reimu Hakurei is praying...</Version>
 
-更新日期: <span id="date">Reimu Hakurei is praying...</span> (UTC)
+更新日期: <Version date>Reimu Hakurei is praying...</Version> (UTC)
 
-<p id="info">Reimu Hakurei is praying...</p>
-
-<script setup>
-import FetchInfo from '/.vitepress/components/FetchInfo.vue'
-</script>
-<FetchInfo/>
+<Version info>Reimu Hakurei is praying...</Version>
 
 ## Total Visits
 
