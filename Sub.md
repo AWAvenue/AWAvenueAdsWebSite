@@ -85,11 +85,11 @@ pageClass: subscription-page
   <!-- ### 工具信息 ### -->
 
   <!-- AdGuard -->
-  <template #adguard> AdGuard 系 </template>
+  <template #adguard> AdGuard 订阅链接 </template>
   <template #adguardInfo> AdGuard 家族系列除AdGuard for Chrome之外皆可订阅，支持/部分支持 adblock 语法的你也可以试试，例如DNS去广告。 </template>
 
   <!-- AdGuard 补充规则 -->
-  <template #adguardReplenish>AdGuard 补充规则订阅链接</template>
+  <template #adguardReplenish> AdGuard 补充规则 </template>
   <template #adguardReplenishInfo>
   Tips：“秋风广告规则-补充规则” 仅提供适用于“AdGuard Home/DNS”的订阅链接，若需要其他格式请自行转换。
 
@@ -97,7 +97,7 @@ pageClass: subscription-page
   </template>
 
   <!-- hosts -->
-  <template #hosts> hosts </template>
+  <template #hosts> hosts 订阅链接 </template>
   <template #hostsInfo>
 
   这是一种最通用的格式，写法简单，但理论上只要能修改系统hosts，你就可以使用此格式的规则，这里推荐[AdAway](https://adaway.org/)。
@@ -106,7 +106,7 @@ pageClass: subscription-page
   </template>
 
   <!-- Clash -->
-  <template #clash> Clash </template>
+  <template #clash> Clash 订阅链接 </template>
   <template #clashInfo>
   官核无法使用。仅限Premium或者Meta版本的Clash，QuantumultX经过配置后亦可使用，但同时我们也为QuantumultX提供了“.list”格式的订阅链接，请自行在下方查看。
 
@@ -116,7 +116,7 @@ pageClass: subscription-page
   </template>
 
   <!-- Clash Classical -->
-  <template #clashClassical> Clash Classical </template>
+  <template #clashClassical> Clash Classical 订阅链接 </template>
   <template #clashClassicalInfo>
   官核无法使用。仅限Premium或者Meta版本的Clash，QuantumultX经过配置后亦可使用，但同时我们也为QuantumultX提供了“.list”格式的订阅链接，请自行在下方查看。
 
@@ -126,37 +126,37 @@ pageClass: subscription-page
   </template>
 
   <!-- dnsmasq -->
-  <template #dnsmasq> Dnsmasq（.conf格式） </template>
+  <template #dnsmasq> Dnsmasq.conf 订阅链接 </template>
 
   <!-- Surge 模块 -->
-  <template #surgeModule>Surge（.sgmodule）</template>
+  <template #surgeModule>Surge.sgmodule 订阅链接 </template>
 
   <!-- Surge/Surfboard DOAMIN-SET -->
-  <template #surgeSomainSet>Surge/Surfboard（DOMAIN-SET）</template>
+  <template #surgeSomainSet>Surge/Surfboard DOMAIN-SET 订阅链接 </template>
   <template #surgeSomainSetInfo> 推荐使用 RULE-SET 格式订阅链接，效果更好。 </template>
 
   <!-- Surge/Surfboard RULE-SET -->
-  <template #surgeRuleSet>Surge/Surfboard（RULE-SET）</template>
+  <template #surgeRuleSet>Surge/Surfboard RULE-SET 订阅链接 </template>
 
-  <template #quantumultX> QuantumultX 订阅链接（.list） </template>
+  <template #quantumultX> QuantumultX.list 订阅链接 </template>
   <template #quantumultXInfo> 如果你不清楚 QuantumultX 如何配置，请自行前往 <a href="./QuantumultX.html">QuantumultX使用指南</a> 查看使用教程。 </template>
 
   <!-- Mosdns V5 -->
   <template #mosdns> Mosdns V5 </template>
 
   <!-- AdClose rule -->
-  <template #adclose> AdClose rule </template>
+  <template #adclose> AdClose 订阅链接 </template>
   <template #adcloseInfo> 目前处于测试阶段，但可以自定义导入了 </template>
 
   <!-- RouterOS -->
-  <template #routeros> RouterOS </template>
+  <template #routeros> RouterOS 订阅链接 </template>
 
   <!-- RouterOS AdList -->
-  <template #routerosAdlist> RouterOS AdList </template>
+  <template #routerosAdlist> RouterOS AdList 订阅链接 </template>
 
   <!-- Singbox -->
-  <template #singbox> Singbox </template>
+  <template #singbox> Singbox 订阅链接 </template>
 
   <!-- Singbox REGEX -->
-  <template #singboxReg> Singbox REGEX </template>
+  <template #singboxReg> Singbox REGEX 订阅链接 </template>
 </SubscribeLinks>
