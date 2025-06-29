@@ -4,6 +4,7 @@ export const subTools = [
   'adguardReplenish',
   'hosts',
   'clash',
+  'clashClassical',
   'dnsmasq',
   'surgeModule',
   'surgeSomainSet',
@@ -24,12 +25,13 @@ const paths: Record<(typeof subSources)[number], string> = {
   ghproxy: `https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main`,
   cxplay: `https://script.cx.ms/awavenue`,
   uura: `https://cdn.uura.cn/AWAvenue`
-}
+} as const
 const names: Record<(typeof subTools)[number], string> = {
   adguard: `AWAvenue-Ads-Rule.txt`,
   adguardReplenish: `AWAvenue-Ads-Rule-Replenish.txt`,
   hosts: `AWAvenue-Ads-Rule-hosts.txt`,
   clash: `AWAvenue-Ads-Rule-Clash.yaml`,
+  clashClassical: `AWAvenue-Ads-Rule-Clash-Classical.yaml`,
   dnsmasq: `AWAvenue-Ads-Rule-Dnsmasq.conf`,
   surgeModule: `AWAvenue-Ads-Rule-Surge-module.sgmodule`,
   surgeSomainSet: `AWAvenue-Ads-Rule-Surge.list`,
@@ -41,7 +43,7 @@ const names: Record<(typeof subTools)[number], string> = {
   routerosAdlist: `AWAvenue-Ads-Rule-RouterOS-Adlist.txt`,
   singbox: `AWAvenue-Ads-Rule-Singbox.json`,
   singboxReg: `AWAvenue-Ads-Rule-Singbox-regex.json`
-}
+} as const
 
 type SubLinkList = {
   [T in (typeof subTools)[number]]: {
@@ -80,6 +82,14 @@ export const subLinkList: SubLinkList = {
     ghproxy: `${paths.ghproxy}/Filters/${names.clash}`,
     cxplay: `${paths.cxplay}/${names.clash}`,
     uura: `${paths.uura}/${names.clash}`
+  },
+  clashClassical: {
+    ghraw: `${paths.ghraw}/Filters/${names.clashClassical}`,
+    tmby: `${paths.tmby}/Filters/${names.clashClassical}`,
+    jsdelivr: `${paths.jsdelivr}/Filters/${names.clashClassical}`,
+    ghproxy: `${paths.ghproxy}/Filters/${names.clashClassical}`,
+    cxplay: `${paths.cxplay}/${names.clashClassical}`,
+    uura: `${paths.uura}/${names.clashClassical}`
   },
   dnsmasq: {
     ghraw: `${paths.ghraw}/Filters/${names.dnsmasq}`,

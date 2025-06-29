@@ -1,28 +1,47 @@
 <template>
-  <aside class="sub-aside">
-    <ul class="sub-aside-list">
-      <li v-for="tool in subTools" :key="tool" @click="currentTool = tool" class="sub-aside-item" :class="{ activated: currentTool === tool }">
-        <slot :name="tool">{{ tool }}</slot>
-      </li>
-    </ul>
-  </aside>
-  <article>
-    <template v-if="!currentSubList">
-      <h2><slot name="defaultHeading">请选择订阅格式</slot></h2>
-      <p><slot name="defaultInfo">不同的工具接受不同的订阅格式</slot></p>
-    </template>
-    <template v-else>
-      <h2><slot :name="currentTool">{{ currentTool }}</slot></h2>
-      <section v-for="source in subSources" class="sub-link">
-        <h3><slot :name="source">{{ source }}</slot></h3>
-        <p><slot :name="source + 'Info'">{{ source }}</slot></p>
-        <div class="link-container">
-          <span class="link">{{ currentSubList[source] }}</span>
-          <button class="copy-link"></button>
-        </div>
-      </section>
-    </template>
-  </article>
+  <div class="sub-component">
+    <aside class="sub-aside">
+      <h2 class="sub-aside-title" @click="currentTool = undefined">选择你使用的订阅格式</h2>
+      <ul class="sub-aside-list">
+        <li v-for="tool in subTools" :key="tool" @click="currentTool = tool" class="sub-aside-list-item" :class="{ activated: currentTool === tool }">
+          <slot :name="tool">{{ tool }}</slot>
+        </li>
+      </ul>
+    </aside>
+    <main class="sub-pane">
+      <Transition name="toogle-content">
+        <article class="sub-content vp-doc" :key="currentTool">
+          <template v-if="!currentSubList">
+            <h2><slot name="nosrc">请选择订阅格式</slot></h2>
+            <div><slot name="nosrcInfo">不同的工具接受不同的订阅格式</slot></div>
+          </template>
+          <template v-else>
+            <h2>
+              <slot :name="currentTool">{{ currentTool }}</slot>
+            </h2>
+            <div>
+              <slot :name="currentTool + 'Info'"></slot>
+            </div>
+            <section v-for="source in subSources" class="sub-link custom-block info">
+              <h3>
+                <slot :name="source">{{ source }}</slot>
+              </h3>
+              <div>
+                <slot :name="source + 'Info'"></slot>
+              </div>
+              <div v-if="currentSubList[source]" class="link-container">
+                <pre class="link">{{ currentSubList[source] }}</pre>
+                <button class="copy-link"></button>
+              </div>
+              <div v-else class="no-link">
+                <span class="no-link-text"><slot name="nolink">暂无链接</slot></span>
+              </div>
+            </section>
+          </template>
+        </article>
+      </Transition>
+    </main>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -35,3 +54,161 @@ const currentSubList = computed<Record<(typeof subSources)[number], string> | nu
   return subLinkList[currentTool.value] || null
 })
 </script>
+
+<style>
+.subscription-page .VPContent {
+  height: 100vh;
+  overflow-y: hidden;
+  position: relative;
+}
+.subscription-page .VPPage,
+.subscription-page .VPPage > div,
+.subscription-page .VPPage > div > div {
+  height: 100%;
+}
+.subscription-page .VPFooter {
+  display: none;
+}
+.sub-component {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  /* box-shadow: #f00 0 0 0 3px inset; */
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.sub-aside {
+  width: 30%;
+  min-width: 300px;
+  flex-grow: 0;
+  overflow-y: auto;
+  background-color: var(--vp-c-bg-alt);
+  padding-bottom: 5em;
+  user-select: none;
+}
+.sub-aside-title {
+  padding: 1em;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+.sub-aside-list-item {
+  padding: 1em 1.5em;
+  transition: background-color 0.1s ease;
+  cursor: pointer;
+  position: relative;
+  font-size: 14px;
+}
+.sub-aside-list-item:hover {
+  background-color: var(--vp-c-default-soft);
+}
+
+@keyframes fromleft {
+  from {
+    transform: translateX(-100%);
+  }
+}
+.sub-aside-list-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  transition: background-color 0.2s;
+}
+.sub-aside-list-item.activated::before {
+  background-color: var(--vp-c-brand-soft);
+  animation: fromleft 0.5s cubic-bezier(0, 1, 0, 1);
+  transition: none;
+}
+
+.sub-pane {
+  width: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+  position: relative;
+}
+
+.sub-content {
+  padding: 3em;
+}
+
+.link-container {
+  display: flex;
+  background-color: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 5px;
+  margin: 8px 0;
+  overflow: hidden;
+}
+
+.link-container .link {
+  margin: 0;
+  padding: 0 15px;
+  line-height: 45px;
+  font-size: 16px;
+  overflow-x: auto;
+  flex-grow: 1;
+  width: 0;
+}
+
+.link-container .copy-link {
+  width: 45px;
+  padding-right: 3px;
+  background-color: var(--vp-c-bg-alt);
+  border-left: 1px solid var(--vp-c-border);
+  background-image: var(--vp-icon-copy);
+  background-position: 50%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+</style>
+
+<style>
+.toogle-content-enter-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: clip-path 0.3s;
+  background-color: var(--vp-c-bg);
+  z-index: 3;
+}
+.toogle-content-enter-to {
+  clip-path: inset(0 0 0 0);
+}
+.toogle-content-enter-from {
+  clip-path: inset(0 100% 0 0);
+}
+.toogle-content-leave-active {
+  transition: opacity 0.2s;
+}
+.toogle-content-leave-to {
+  opacity: 0;
+}
+</style>
+
+<style>
+.sub-content .header-anchor {
+  display: none;
+}
+
+.sub-content h2 {
+  line-height: 60px;
+  font-size: 28px;
+  border-bottom: 2px solid var(--vp-c-divider);
+  margin: 0 0 16px;
+  padding: 0;
+  border-top: none;
+}
+
+.sub-content h3 {
+  margin: 0 0 10px;
+  line-height: 28px;
+  font-size: 20px;
+}
+</style>
