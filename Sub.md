@@ -142,7 +142,7 @@ pageClass: subscription-page
   <template #quantumultXInfo> 如果你不清楚 QuantumultX 如何配置，请自行前往 <a href="./QuantumultX.html">QuantumultX使用指南</a> 查看使用教程。 </template>
 
   <!-- Mosdns V5 -->
-  <template #mosdns> Mosdns V5 </template>
+  <template #mosdns> Mosdns V5 订阅链接 </template>
 
   <!-- AdClose rule -->
   <template #adclose> AdClose 订阅链接 </template>
