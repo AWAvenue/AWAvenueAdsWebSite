@@ -1,7 +1,7 @@
 <template>
   <div class="sub-component" :class="{ mobile: isMobile, desktop: !isMobile, inmenu: inMenu, incontent: !inMenu }">
     <aside class="sub-aside">
-      <h2 class="sub-aside-title" @click="chooseTool(undefined)">选择你使用的订阅格式</h2>
+      <h2 class="sub-aside-title" @click="chooseTool(undefined)"><slot name="nosrc">请选择订阅格式</slot></h2>
       <ul class="sub-aside-list">
         <li v-for="tool in subTools" :key="tool" @click="chooseTool(tool)" class="sub-aside-list-item" :class="{ activated: currentTool === tool }">
           <slot :name="tool">{{ tool }}</slot>
