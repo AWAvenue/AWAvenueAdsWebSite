@@ -83,6 +83,10 @@ function goBackToMenu() {
 </script>
 
 <style>
+.subscription-page h1 {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .subscription-page .VPContent {
     height: 100vh;

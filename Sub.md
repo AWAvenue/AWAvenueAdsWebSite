@@ -3,6 +3,8 @@ layout: page
 pageClass: subscription-page
 ---
 
+# 订阅规则
+
 <SubscribeLinks>
   <!-- ### 订阅源信息 ### -->
 
