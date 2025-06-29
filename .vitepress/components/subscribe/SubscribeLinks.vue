@@ -114,7 +114,6 @@ function goBackToMenu() {
   flex-grow: 0;
   overflow-y: auto;
   background-color: var(--vp-c-bg-alt);
-  padding-bottom: 5em;
   user-select: none;
 }
 
