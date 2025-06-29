@@ -3,8 +3,8 @@
     <pre class="link">{{ props.link }}</pre>
     <button class="copy-link" :class="{ copyactive }" @click="handleButtonClick"></button>
   </div>
-  <div v-else class="no-link">
-    <span class="no-link-text"><slot name="nolink">暂无链接</slot></span>
+  <div v-else class="no-link link-container">
+    <pre class="link">N/A</pre>
   </div>
 </template>
 

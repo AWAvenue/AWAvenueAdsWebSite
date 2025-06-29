@@ -67,7 +67,7 @@ const inMenu = ref(true)
 const backBtnCaption = {
   'zh-CN': '选择其他格式',
   'zh-TW': '選擇其他格式',
-  'en-US': 'Choose another format',
+  'en-US': 'Choose another format'
 }[useData().lang.value]
 
 function chooseTool(tool: (typeof subTools)[number] | undefined) {
@@ -83,15 +83,17 @@ function goBackToMenu() {
 </script>
 
 <style>
-.desktop .subscription-page .VPContent {
-  height: 100vh;
-  overflow-y: hidden;
-  position: relative;
-}
-.desktop .subscription-page .VPPage,
-.desktop .subscription-page .VPPage > div,
-.desktop .subscription-page .VPPage > div > div {
-  height: 100%;
+@media screen and (min-width: 768px) {
+  .subscription-page .VPContent {
+    height: 100vh;
+    overflow-y: hidden;
+    position: relative;
+  }
+  .subscription-page .VPPage,
+  .subscription-page .VPPage > div,
+  .subscription-page .VPPage > div > div {
+    height: 100%;
+  }
 }
 .subscription-page .VPFooter {
   display: none;
@@ -136,7 +138,7 @@ function goBackToMenu() {
   position: relative;
   font-size: 14px;
 }
-.desktop .sub-aside-list-item:hover {
+.sub-aside-list-item:hover {
   background-color: var(--vp-c-default-soft);
 }
 
