@@ -1,14 +1,14 @@
 <template>
-  <div class="sub-component">
+  <div class="sub-component" :class="{ mobile: isMobile, desktop: !isMobile, inmenu: inMenu, incontent: !inMenu }">
     <aside class="sub-aside">
-      <h2 class="sub-aside-title" @click="currentTool = undefined">选择你使用的订阅格式</h2>
+      <h2 class="sub-aside-title" @click="chooseTool(undefined)">选择你使用的订阅格式</h2>
       <ul class="sub-aside-list">
-        <li v-for="tool in subTools" :key="tool" @click="currentTool = tool" class="sub-aside-list-item" :class="{ activated: currentTool === tool }">
+        <li v-for="tool in subTools" :key="tool" @click="chooseTool(tool)" class="sub-aside-list-item" :class="{ activated: currentTool === tool }">
           <slot :name="tool">{{ tool }}</slot>
         </li>
       </ul>
     </aside>
-    <main class="sub-pane">
+    <main class="sub-pane" v-if="!isMobile || !inMenu">
       <Transition name="toogle-content">
         <article class="sub-content vp-doc" :key="currentTool">
           <template v-if="!currentSubList">
@@ -29,15 +29,10 @@
               <div>
                 <slot :name="source + 'Info'"></slot>
               </div>
-              <div v-if="currentSubList[source]" class="link-container">
-                <pre class="link">{{ currentSubList[source] }}</pre>
-                <button class="copy-link"></button>
-              </div>
-              <div v-else class="no-link">
-                <span class="no-link-text"><slot name="nolink">暂无链接</slot></span>
-              </div>
+              <LinkContainer :link="currentSubList[source]" />
             </section>
           </template>
+          <button v-if="isMobile" class="backtomenu" @click="goBackToMenu">{{ backBtnCaption }}</button>
         </article>
       </Transition>
     </main>
@@ -45,25 +40,57 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { subSources, subTools, subLinkList } from '../../../SubData.ts'
+import LinkContainer from './linkContainer.vue'
+import { useData } from 'vitepress'
 
 const currentTool = ref<(typeof subTools)[number] | undefined>(undefined)
 const currentSubList = computed<Record<(typeof subSources)[number], string> | null>(() => {
   if (!currentTool.value) return null
   return subLinkList[currentTool.value] || null
 })
+
+const screenWidth = ref(window.innerWidth)
+const listener = () => {
+  screenWidth.value = window.innerWidth
+}
+onMounted(() => {
+  window.addEventListener('resize', listener)
+})
+onUnmounted(() => {
+  window.removeEventListener('resize', listener)
+})
+const isMobile = computed(() => screenWidth.value < 768)
+const inMenu = ref(true)
+
+const backBtnCaption = {
+  'zh-CN': '选择其他格式',
+  'zh-TW': '選擇其他格式',
+  'en-US': 'Choose another format',
+}[useData().lang.value]
+
+function chooseTool(tool: (typeof subTools)[number] | undefined) {
+  currentTool.value = tool
+  inMenu.value = false
+  scrollTo(0, 0)
+}
+function goBackToMenu() {
+  inMenu.value = true
+  currentTool.value = undefined
+  scrollTo(0, 0)
+}
 </script>
 
 <style>
-.subscription-page .VPContent {
+.desktop .subscription-page .VPContent {
   height: 100vh;
   overflow-y: hidden;
   position: relative;
 }
-.subscription-page .VPPage,
-.subscription-page .VPPage > div,
-.subscription-page .VPPage > div > div {
+.desktop .subscription-page .VPPage,
+.desktop .subscription-page .VPPage > div,
+.desktop .subscription-page .VPPage > div > div {
   height: 100%;
 }
 .subscription-page .VPFooter {
@@ -88,6 +115,14 @@ const currentSubList = computed<Record<(typeof subSources)[number], string> | nu
   padding-bottom: 5em;
   user-select: none;
 }
+
+.mobile .sub-aside {
+  width: 100%;
+}
+.mobile.incontent .sub-aside {
+  display: none;
+}
+
 .sub-aside-title {
   padding: 1em;
   font-size: 18px;
@@ -101,7 +136,7 @@ const currentSubList = computed<Record<(typeof subSources)[number], string> | nu
   position: relative;
   font-size: 14px;
 }
-.sub-aside-list-item:hover {
+.desktop .sub-aside-list-item:hover {
   background-color: var(--vp-c-default-soft);
 }
 
@@ -122,54 +157,28 @@ const currentSubList = computed<Record<(typeof subSources)[number], string> | nu
 }
 .sub-aside-list-item.activated::before {
   background-color: var(--vp-c-brand-soft);
-  animation: fromleft 0.5s cubic-bezier(0, 1, 0, 1);
   transition: none;
 }
-
+.desktop .sub-aside-list-item.activated::before {
+  animation: fromleft 0.5s cubic-bezier(0, 1, 0, 1);
+}
 .sub-pane {
   width: 0;
   flex-grow: 1;
   overflow-y: auto;
   position: relative;
 }
-
 .sub-content {
   padding: 3em;
 }
-
-.link-container {
-  display: flex;
-  background-color: var(--vp-c-bg);
-  border: 1px solid var(--vp-c-border);
-  border-radius: 5px;
-  margin: 8px 0;
-  overflow: hidden;
-}
-
-.link-container .link {
-  margin: 0;
-  padding: 0 15px;
-  line-height: 45px;
-  font-size: 16px;
-  overflow-x: auto;
-  flex-grow: 1;
-  width: 0;
-}
-
-.link-container .copy-link {
-  width: 45px;
-  padding-right: 3px;
-  background-color: var(--vp-c-bg-alt);
-  border-left: 1px solid var(--vp-c-border);
-  background-image: var(--vp-icon-copy);
-  background-position: 50%;
-  background-size: 20px;
-  background-repeat: no-repeat;
+.mobile .sub-content {
+  padding: 1em;
+  padding-bottom: 5em;
 }
 </style>
 
 <style>
-.toogle-content-enter-active {
+.desktop .toogle-content-enter-active {
   position: absolute;
   top: 0;
   left: 0;
@@ -178,17 +187,35 @@ const currentSubList = computed<Record<(typeof subSources)[number], string> | nu
   background-color: var(--vp-c-bg);
   z-index: 3;
 }
-.toogle-content-enter-to {
+.desktop .toogle-content-enter-to {
   clip-path: inset(0 0 0 0);
 }
-.toogle-content-enter-from {
+.desktop .toogle-content-enter-from {
   clip-path: inset(0 100% 0 0);
 }
-.toogle-content-leave-active {
+.desktop .toogle-content-leave-active {
   transition: opacity 0.2s;
 }
-.toogle-content-leave-to {
+.desktop .toogle-content-leave-to {
   opacity: 0;
+}
+
+.backtomenu {
+  background-color: var(--vp-c-divider);
+  color: var(--vp-c-brand-1);
+  padding: 0.6em 1em;
+  border: var(--vp-c-border) 1px solid;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: block;
+  position: fixed;
+  bottom: 0rem;
+  left: 1rem;
+  right: 1rem;
+  backdrop-filter: blur(6px);
+  box-shadow: #0003 0 0 15px;
 }
 </style>
 
@@ -198,11 +225,11 @@ const currentSubList = computed<Record<(typeof subSources)[number], string> | nu
 }
 
 .sub-content h2 {
-  line-height: 60px;
+  line-height: 1.5;
   font-size: 28px;
   border-bottom: 2px solid var(--vp-c-divider);
   margin: 0 0 16px;
-  padding: 0;
+  padding: 0 0 10px;
   border-top: none;
 }
 
