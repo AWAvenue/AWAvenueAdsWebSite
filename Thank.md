@@ -8,6 +8,7 @@
 ### 项目/组织/企业
 - [「GitHub」- 一切的一切，代码托管，自动化都以此为基础](http://github.com/)
 - [「CLOUDFLARE」- 提供多项可靠的云服务](https://www.cloudflare.com/)
+- [「Tencent EdgeOne」- 提供多项可靠的加速与防护服务](https://edgeone.ai/zh?from=github)
 - [「Vercel」- 曾经的自动化云服务商，尽管现在已经不使用了](https://vercel.com/)
 - [「svnc host」 by svnc](https://gitee.com/svnc/host)
 - [「AdGuardHome」 by AdguardTeam](https://github.com/AdguardTeam/AdGuardHome)
