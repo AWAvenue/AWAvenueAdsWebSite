@@ -33,3 +33,13 @@ npm run docs:build
 ```
 
 提出 PR 后若长时间无人审核，可前往[社区](https://awavenue.top/Support.html#%E7%94%A8%E6%88%B7%E4%BA%A4%E6%B5%81)提出。
+
+<br />
+
+### 本项目官方文档赞助商：
+*本项目 CDN 加速及安全防护由 Tencent EdgeOne 赞助*
+<br />
+<a href="https://edgeone.ai/zh?from=github" target="_blank">
+  <img src="https://edgeone.ai/media/34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b.png" alt="Tencent Edge One" width="220"/>
+</a>
+
