@@ -37,7 +37,7 @@ npm run docs:build
 <br />
 
 ### 本项目官方文档赞助商：
-* CDN 加速及安全防护由 Tencent EdgeOne 提供*
+*CDN 加速及安全防护由 Tencent EdgeOne 提供*
 <br />
 <a href="https://edgeone.ai/zh?from=github" target="_blank">
   <img src="https://edgeone.ai/media/34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b.png" alt="Tencent Edge One" width="220"/>
