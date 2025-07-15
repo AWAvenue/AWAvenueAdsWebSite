@@ -5,27 +5,27 @@ pageClass: homepage
 
 hero:
   name: "AWAvenue Ads Rule"
-  text: "Eliminate All Malicious Ads"
-  tagline: "Use Adblock syntax to fight against various advertising SDKs in Android applications from the network level , prevent them from loading."
+  text: "Eliminate All Unscrupulous Ads"
+  tagline: One of the finest ad filter lists from the open-source community, upstream for many excellent ad rules. Optimized for major ad-blocking and proxy tools.
   image:
     src: /logo.png
-    alt: 秋风广告规则
+    alt: AWAvenue Ads Rule
   actions:
     - theme: brand
-      text: Start
-      link: /en/Start.html
+      text: Get Started
+      link: /Start
     - theme: alt
-      text: Subscription
-      link: /en/Sub.html
+      text: Subscribe Rules
+      link: /Sub
     - theme: alt
-      text: Donate
-      link: /en/Donate.html
+      text: Sponsor Us
+      link: /Donate
 
 features:
-  - title: Focus
-    details: Committed to blocking the loading of ad SDKs and intercepting unacceptable tracking.
-  - title: Open Source
-    details: All content is open source on GitHub, and you can access it anytime.
-  - title: Free
-    details: You don't need to pay any fees to the developer for a clean internet experience.
+  - title: Ultra-Compact Size
+    details: Compared to other rule lists spanning tens of thousands of entries and megabytes in size, ours is meticulously optimized for minimal footprint.
+  - title: Exceptional Accuracy
+    details: Unlike bloated and redundant ad rules, we deliver outstanding blocking performance with precise targeting.
+  - title: Low Hardware Requirements
+    details: Perfect for low-powered devices, our lightweight solution meets most users’ filtering needs with ease.
 ---
