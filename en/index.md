@@ -5,7 +5,6 @@ pageClass: homepage
 
 hero:
   name: "AWAvenue Ads Rule"
-  text: "Eliminate All Unscrupulous Ads"
   tagline: One of the finest ad filter lists from the open-source community, upstream for many excellent ad rules. Optimized for major ad-blocking and proxy tools.
   image:
     src: /logo.png
@@ -13,13 +12,13 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /Start
+      link: /en/Start
     - theme: alt
       text: Subscribe Rules
-      link: /Sub
+      link: /en/Sub
     - theme: alt
       text: Sponsor Us
-      link: /Donate
+      link: /en/Donate
 
 features:
   - title: Ultra-Compact Size
