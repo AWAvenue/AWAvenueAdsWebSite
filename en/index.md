@@ -5,7 +5,7 @@ pageClass: homepage
 
 hero:
   name: "AWAvenue Ads Rule"
-  tagline: One of the finest ad filter lists from the open-source community, upstream for many excellent ad rules. Optimized for major ad-blocking and proxy tools.
+  tagline: An upstream source for numerous excellent ad-blocking rules and one of the best ad filter lists in the open-source community, compatible with a variety of mainstream ad-blocking and proxy tools.
   image:
     src: /logo.png
     alt: AWAvenue Ads Rule
