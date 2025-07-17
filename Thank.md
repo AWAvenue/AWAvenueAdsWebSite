@@ -6,21 +6,18 @@
 
 
 ### 项目/组织/企业
-- [「GitHub」- 一切的一切，代码托管，自动化都以此为基础](http://github.com/)
 - [「CLOUDFLARE」- 随时随地连⁠接、保⁠护、构建](https://www.cloudflare.com/)
 - [「Tencent EdgeOne」- 提供多项可靠的加速与防护服务](https://edgeone.ai/zh?from=github)
-- [「zmto」- 一切皆可连接](https://zmto.com/)
+- [「zmto Enterprise Cloud」- 可靠的企业级云服务商，一切皆可连接](https://zmto.com/)
 - [「Vercel」- 曾经的自动化云服务商，尽管现在已经不使用了](https://vercel.com/)
-- [「svnc host」 by svnc](https://gitee.com/svnc/host)
 - [「AdGuardHome」 by AdguardTeam](https://github.com/AdguardTeam/AdGuardHome)
-- [「AdGuardDNS」 by AdguardTeam](https://github.com/AdguardTeam/AdGuardDNS)
-- [「科技圈🎗在花频道」 Telegram 知名新闻频道](https://t.me/zaihuanews/)
-- [「原神」 by mihomo](https://ys.mihoyo.com/)
+- [「在花新闻频道」 Telegram 中文圈知名的新闻频道](https://t.me/zaihuanews/)
+- [「原神」 by mihomo，本项目基于原神开发](https://ys.mihoyo.com/)
 
 
 ### 开发者/志愿者/画师
 - [「Andrey Meshkov」 by AdguardTeam](https://github.com/ameshkov)
-- [「heinu」 by Elysiaの日常](https://github.com/heinu123)
+- [「Elysia」 by akashaProxy](elysias123)
 - [「笨蛋ovo」 by 搞机助手 R](https://github.com/liuran001)
 - [「梦凛Official」 独立画师](https://t.me/menglin0204)
 - [「ZX GU」 独立开发者](https://i.pcbeta.com/space-uid-4880620.html)
