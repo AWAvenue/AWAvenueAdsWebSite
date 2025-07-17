@@ -5,21 +5,15 @@ During the development of **AWAvenue Ads Rule**, we have received help and suppo
 _(The order below does not indicate ranking)_
 
 ### Projects / Organizations / Companies
-- [**GitHub** – The foundation of everything: code hosting, automation, and more](http://github.com/)
 - [**CLOUDFLARE** – Connect, protect, and build everywhere](https://www.cloudflare.com/)
+- [**zmto Enterprise Cloud** – Reliable enterprise-level cloud service provider](https://zmto.com/)
 - [**Vercel** – Once our automated cloud provider, though we no longer use it today](https://vercel.com/)
-- [**svnc host** by svnc](https://gitee.com/svnc/host)
 - [**AdGuardHome** by AdguardTeam](https://github.com/AdguardTeam/AdGuardHome)
-- [**AdGuardDNS** by AdguardTeam](https://github.com/AdguardTeam/AdGuardDNS)
-- [**AdguardForAndroid** by AdguardTeam](https://github.com/AdguardTeam/AdGuardForAndroid)
-- [**AdguardFilters** by AdguardTeam](https://github.com/AdguardTeam/AdguardFilters)
-- [**Vitepress** by vuejs](https://vitepress.dev/)
-- [**Tech Circle 🎗 at Channel** – Well-known Telegram news channel](https://t.me/zaihuanews/)
-- [**Genshin Impact** by mihomo](https://ys.mihoyo.com/)
+- [**Zaihua News Channel** – Well-known Telegram news channel](https://t.me/zaihuanews/)
 
 ### Developers / Volunteers / Artists
 - [**Andrey Meshkov** by AdguardTeam](https://github.com/ameshkov)
-- [**heinu** by Elysia's Daily](https://github.com/heinu123)
+- [**Elysia** by akashaProxy](elysias123)
 - [**BenDanovo** by GaoJi Assistant R](https://github.com/liuran001)
 - [**MenglinOfficial** – Independent Artist](https://t.me/menglin0204)
 - [**ZX GU** – Independent Developer](https://i.pcbeta.com/space-uid-4880620.html)
