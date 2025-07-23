@@ -129,7 +129,7 @@ pageClass: subscription-page
   <template #dnsmasq> Dnsmasq.conf 订阅链接 </template>
 
   <!-- Surge 模块 -->
-  <template #surgeModule>Surge.sgmodule 订阅链接 </template>
+  <template #surgeModule>Surge(ShadowRocket).sgmodule 订阅链接 </template>
 
   <!-- Surge/Surfboard DOAMIN-SET -->
   <template #surgeSomainSet>Surge/Surfboard DOMAIN-SET 订阅链接 </template>
