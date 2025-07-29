@@ -50,51 +50,9 @@ Android 手机上有一些**基于无障碍**的广告跳过软件（李跳跳�
 
 正如其名，秋风广告规则**只是一个规则**，**本身并不具备广告拦截能力**。你需要**安装网络过滤软件之后导入（订阅）本规则**才能起到效果。
 
-我们针对许多网络过滤工具都做了适配并撰写了教程。这些工具按平台分类展示如下，你可以自行选择。
+我们针对许多网络过滤工具都做了适配并撰写了教程。你可以前往 [使用教程](./tutorial) 页面选择一个网络过滤工具并开始。
 
-如果你已经很熟悉其中的某个工具，也可以直接前往 [地址列表](./links) 找到你使用的软件然后导入订阅地址。
-
-### Android
-
-- AdGuard
-- AdAway（VPN 工作模式）
-- Clash Meta、Surfboard、大圣净化 等
-
-### Android（已获取 Root）
-
-- akashaProxy
-- Clash Mix
-- AdGuard Home for Magisk twoone3 版
-- AdAway（root 工作模式）
-- Singbox
-
-### iOS
-
-- AdGuard
-- QuantumultX
-- Surge
-- ShadowRocket
-- Loon
-
-### 桌面端（Windows / MacOS / Linux）
-
-- AdGuard
-- hosts 文件过滤
-
-### Linux 服务器
-
-- AdGuard Home
-- AdGuard DNS
-
-### OpenWrt 路由器
-
-- AdGuard Home
-- Dnsmasq、hosts、Mosdns
-- 广告屏蔽大师 Plus+ 等 DNS 去广告插件
-
-### RouterOS 路由器
-
-RouterOS 内置了网络过滤功能，直接导入链接即可。
+如果你已经很熟悉某个工具，也可以直接前往 [地址列表](./links) 找到你使用的软件然后导入订阅地址。
 
 ## 订阅之后……
 

@@ -26,7 +26,7 @@ function nav() {
     { text: '使用教程', link: '/tutorial/' },
     { text: '地址列表', link: '/links.html' },
     { text: '致谢列表', link: '/acknowledgements.html' },
-    { text: '交流社区', link: '/community.html' },
+    { text: '交流反馈', link: '/community.html' },
     { text: '用户协议', link: '/agreement.html' },
     { text: '仓库地址', link: 'https://github.com/TG-Twilight/AWAvenue-Ads-Rule' }
   ]
