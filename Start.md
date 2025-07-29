@@ -73,17 +73,18 @@
 
 ## 📥 订阅指南
 
-好了，让我们开始订阅秋风广告规则吧！
-目前使用的是哪种工具呢？下面按平台分类列出了支持的选项，点击平台标题即可跳转至 [订阅规则页面](https://awavenue.top/Sub.html)。
+好了，让我们开始订阅秋风广告规则吧！目前使用的是哪种工具呢？下面按平台分类列出了支持的选项，点击平台标题即可跳转至 [订阅规则页面](https://awavenue.top/Sub.html)。
+
+如果有疑问，请继续往下读。
 
 
 ### [📱 Android 用户](https://awavenue.top/Sub.html)
 <details>
   <summary>例如</summary>
 
-- AdGuard（App 与 DNS 模式）
+- AdGuard
 - AdAway（VPN 工作模式）
-- Clash Meta、Surfboard、大胜净化 等
+- Clash Meta、Surfboard、大x净化 等
 
 </details>
 
@@ -150,6 +151,8 @@
 ### [⚙️ RouterOS 路由器](https://awavenue.top/Sub.html)
 *此系统使用[专为其编写的规则订阅](https://awavenue.top/Sub.html)链接进行配置*
 
+<br />
+
 *以上工具均为兼容选项，您可根据实际环境选择合适的方式进行部署。*
 
 ---
@@ -158,7 +161,7 @@
 如果还没有……都看到这里了，不妨顺手点一下吧：[AWAvenue-Ads-Rule](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)  
 你的支持是我们持续优化的动力之一，不会让你失望的。
 
-我的 GitHub 主页还有一些有趣儿的东西，说不定你喜欢呢？
+我的 GitHub 主页还有一些有趣儿的内容，说不定你喜欢呢？
 
 所以，点波 [Follow](https://github.com/TG-Twilight) 吧！
 
@@ -178,7 +181,7 @@
 加入官方群组：秋風がく山道 👉 [https://t.me/AWAvenueAdsChat](https://t.me/AWAvenueAdsChat)
 
 **再次欢迎你使用秋风广告规则！**
-<p align="right">
+<p align="center">
   <img src="https://count.getloli.com/get/@TG-Twiligh?theme=booru-helltaker" alt="Profile Views" width="666"/>
 </p>
 
