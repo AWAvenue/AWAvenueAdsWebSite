@@ -12,14 +12,14 @@ hero:
     alt: 秋风广告规则
   actions:
     - theme: brand
-      text: 快速开始
-      link: /Start
+      text: 什么是秋风广告规则？
+      link: /intro
     - theme: alt
-      text: 订阅规则
-      link: /Sub
+      text: 使用教程
+      link: /tutorial/
     - theme: alt
       text: 赞助我们
-      link: /Donate
+      link: /donate
 
 features:
   - title: 极致的体积

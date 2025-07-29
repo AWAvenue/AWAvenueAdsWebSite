@@ -15,19 +15,19 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/TG-Twilight/AWAvenueAdsWebSite/edit/main/:path',
-      text: '在 GitHub 中编辑本页'
+      pattern: 'https://github.com/TG-Twilight/AWAvenueAdsWebSite/blob/main/:path',
+      text: '在 GitHub 中查看本页'
     }
   }
 })
 
 function nav() {
   return [
-    { text: '赞助我们', link: '/Donate.html' },
-    { text: '订阅规则', link: '/Sub.html' },
-    { text: '感谢列表', link: '/Thank.html' },
-    { text: '用户交流', link: '/Support.html' },
-    { text: '用户协议', link: '/Protocol.html' },
-    { text: '使用教程', link: '/Knowledge.html' }
+    { text: '使用教程', link: '/tutorial/' },
+    { text: '地址列表', link: '/links.html' },
+    { text: '致谢列表', link: '/acknowledgements.html' },
+    { text: '交流社区', link: '/community.html' },
+    { text: '用户协议', link: '/agreement.html' },
+    { text: '仓库地址', link: 'https://github.com/TG-Twilight/AWAvenue-Ads-Rule' }
   ]
 }

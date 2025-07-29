@@ -33,5 +33,8 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/TG-Twilight/AWAvenue-Ads-Rule' } // GitHub 社交链接
     ]
   },
-  cleanUrls: true
+  cleanUrls: true,
+  rewrites: {
+    'zh_CN/:path*': ':path*'
+  }
 })
