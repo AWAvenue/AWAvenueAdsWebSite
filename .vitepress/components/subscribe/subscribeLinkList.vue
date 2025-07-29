@@ -51,16 +51,15 @@ const currentSubList = computed<Record<(typeof subSources)[number], string> | nu
   return subLinkList[currentTool.value] || null
 })
 
-const screenWidth = ref(window.innerWidth)
-const listener = () => {
-  screenWidth.value = window.innerWidth
-}
+const screenWidth = ref(0)
+
 onMounted(() => {
+  const listener = () => (screenWidth.value = window.innerWidth)
+  listener()
   window.addEventListener('resize', listener)
+  onUnmounted(() => window.removeEventListener('resize', listener))
 })
-onUnmounted(() => {
-  window.removeEventListener('resize', listener)
-})
+
 const isMobile = computed(() => screenWidth.value < 768)
 const inMenu = ref(true)
 
