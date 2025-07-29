@@ -5,7 +5,7 @@ pageClass: subscription-page
 
 # Subscription Rules
 
-<SubscribeLinks>
+<SubscribeLinkList>
   <!-- ### Subscription Source Information ### -->
 
   <!-- Default -->
@@ -154,4 +154,4 @@ pageClass: subscription-page
 
   <!-- Singbox REGEX -->
   <template #singboxReg> Singbox REGEX Subscription Link </template>
-</SubscribeLinks>
+</SubscribeLinkList>

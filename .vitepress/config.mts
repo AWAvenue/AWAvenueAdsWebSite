@@ -18,16 +18,20 @@ export default defineConfig({
     [
       'script',
       {},
-      "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-N86HQ8Z06L');"
+      /* js */ `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-N86HQ8Z06L');`
     ]
   ],
   themeConfig: {
     footer: {
-  message: 'CC BY-NC-SA 4.0 Licensed', // 页脚消息
-  copyright: 'Copyright © 2025 <a href="https://zyc.su/?source=awavenue.top" target="_blank" rel="noopener">秋风のとおり道</a> & <a href="https://awads.cc/?source=awavenue.top" target="_blank" rel="noopener">秋风塬上</a>' // 版权信息
-},
+      message: 'CC BY-NC-SA 4.0 Licensed', // 页脚消息
+      copyright: /* html */ `Copyright © 2025 <a href="https://zyc.su/?source=awavenue.top" target="_blank" rel="noopener">秋风のとおり道</a> & <a href="https://awads.cc/?source=awavenue.top" target="_blank" rel="noopener">秋风塬上</a>` // 版权信息
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/TG-Twilight/AWAvenue-Ads-Rule' } // GitHub 社交链接
     ]
-  }
+  },
+  cleanUrls: true
 })

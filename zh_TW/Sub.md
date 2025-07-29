@@ -5,7 +5,7 @@ pageClass: subscription-page
 
 # 訂閱規則
 
-<SubscribeLinks>
+<SubscribeLinkList>
   <!-- ### 订阅源信息 ### -->
 
   <!-- Default -->
@@ -167,4 +167,4 @@ pageClass: subscription-page
 
   <!-- Singbox REGEX -->
   <template #singboxReg> Singbox REGEX 訂閱連結 </template>
-</SubscribeLinks>
+</SubscribeLinkList>

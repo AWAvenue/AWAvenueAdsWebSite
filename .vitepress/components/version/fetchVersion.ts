@@ -5,7 +5,7 @@ const versionInfo = reactive({
   version: '',
   date: '',
   info: '',
-  loaded:false,
+  loaded: false
 })
 
 const apiUrls = [
