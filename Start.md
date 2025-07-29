@@ -181,7 +181,7 @@
 加入官方群组：秋風がく山道 👉 [https://t.me/AWAvenueAdsChat](https://t.me/AWAvenueAdsChat)
 
 **再次欢迎你使用秋风广告规则！**
-<p align="center">
+<p align="left">
   <img src="https://count.getloli.com/get/@TG-Twiligh?theme=booru-helltaker" alt="Profile Views" width="666"/>
 </p>
 
