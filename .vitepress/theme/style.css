@@ -117,14 +117,14 @@ body {
   right: var(--margin);
   bottom: var(--margin);
   left: var(--margin);
-  background-image: url(./homepage-background-bright.png);
+  background-image: url(./homepage-background-bright.webp);
   opacity: 0.4;
   filter: blur(10px);
   background-size: cover;
   background-position: center;
 }
 .dark .Layout.homepage::before {
-  background-image: url(./homepage-background.jpg);
+  background-image: url(./homepage-background.webp);
   opacity: 1;
   filter: blur(10px) brightness(0.85);
 }
