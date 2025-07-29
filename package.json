@@ -1,6 +1,8 @@
 {
+  "name": "AWAvenueAdsWebSite",
   "devDependencies": {
     "prettier": "^3.6.2",
+    "vite": "^7.0.6",
     "vitepress": "^1.6.3"
   },
   "scripts": {
