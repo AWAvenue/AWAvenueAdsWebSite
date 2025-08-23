@@ -82,9 +82,15 @@ The following is a detailed list that will be updated periodically. Those who do
 |爱发电用户_q93U  |2025-05-14    |9.90 CNY|
 |爱发电用户_ad127 |2025-05-20    |100.00 CNY|
 |爱发电用户_79db3 |2025-06-04   |108.00 CNY|
+|爱发电用户_5mPv  | 2025-07-10  | 19.90 CNY|
+|周锦城           | 2025-07-22  | 5.00 CNY|
+|mrtree           | 2025-07-30  | 106.92 CNY|
+|爱发电用户_b96f0 | 2025-08-20  | 9.90 CNY|
+|爱发电用户_375a0 | 2025-08-23  | 50.00 CNY|
 
 # Finally, thank you for your support!
 
 ---
 
 Let me know if you need further adjustments!
+
