@@ -75,21 +75,29 @@ export const subLinkList: SubLinkList = {
     cxplay: `${paths.cxplay}/${names.hosts}`,
     uura: `${paths.uura}/${names.hosts}`
   },
-  clash: {
-    ghraw: `${paths.ghraw}/Filters/${names.clash}`,
-    tmby: `${paths.tmby}/Filters/${names.clash}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.clash}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.clash}`,
-    cxplay: `${paths.cxplay}/${names.clash}`,
-    uura: `${paths.uura}/${names.clash}`
+  Clash: {
+    ghraw: `${paths.ghraw}/Filters/${names.Clash}`,
+    tmby: `${paths.tmby}/Filters/${names.Clash}`,
+    jsdelivr: `${paths.jsdelivr}/Filters/${names.Clash}`,
+    ghproxy: `${paths.ghproxy}/Filters/${names.Clash}`,
+    cxplay: `${paths.cxplay}/${names.Clash}`,
+    uura: `${paths.uura}/${names.Clash}`
   },
-  clashClassical: {
-    ghraw: `${paths.ghraw}/Filters/${names.clashClassical}`,
-    tmby: `${paths.tmby}/Filters/${names.clashClassical}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.clashClassical}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.clashClassical}`,
-    cxplay: `${paths.cxplay}/${names.clashClassical}`,
-    uura: `${paths.uura}/${names.clashClassical}`
+  ClashClassical: {
+    ghraw: `${paths.ghraw}/Filters/${names.ClashClassical}`,
+    tmby: `${paths.tmby}/Filters/${names.ClashClassical}`,
+    jsdelivr: `${paths.jsdelivr}/Filters/${names.ClashClassical}`,
+    ghproxy: `${paths.ghproxy}/Filters/${names.ClashClassical}`,
+    cxplay: `${paths.cxplay}/${names.ClashClassical}`,
+    uura: `${paths.uura}/${names.ClashClassical}`
+  },
+  ClashhMrs: {
+    ghraw: `${paths.ghraw}/Filters/${names.ClashhMrs}`,
+    tmby: `${paths.tmby}/Filters/${names.ClashhMrs}`,
+    jsdelivr: `${paths.jsdelivr}/Filters/${names.ClashhMrs}`,
+    ghproxy: `${paths.ghproxy}/Filters/${names.ClashhMrs}`,
+    cxplay: `${paths.cxplay}/${names.ClashhMrs}`,
+    uura: `${paths.uura}/${names.ClashhMrs}`
   },
   dnsmasq: {
     ghraw: `${paths.ghraw}/Filters/${names.dnsmasq}`,
