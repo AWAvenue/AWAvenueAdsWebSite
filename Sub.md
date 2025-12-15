@@ -71,7 +71,7 @@ pageClass: subscription-page
   </template>
 
   <!-- CXPLAY -->
-  <template #cxplay> CXPLAY镜像订阅 </template>
+  <template #cxplay> CXPLAY 镜像订阅 </template>
   <template #cxplayInfo>
   由社区热心志愿者CXPLAY提供的即时镜像订阅服务，提瓦特大陆优化良好。
   </template>
@@ -106,8 +106,8 @@ pageClass: subscription-page
   </template>
 
   <!-- Clash -->
-  <template #Clash> Clash 订阅链接 </template>
-  <template #ClashInfo>
+  <template #clash> Clash 订阅链接 </template>
+  <template #clashInfo>
   仅限Premium或者Meta版本的Clash，QuantumultX经过配置后亦可使用，但同时我们也为QuantumultX提供了“.list”格式的订阅链接，请自行在下方查看。
 
   *具体语法格式请参考[使用教程](./Knowledge)*
@@ -116,8 +116,8 @@ pageClass: subscription-page
   </template>
 
   <!-- Clash Classical -->
-  <template #ClashClassical> Clash Classical 订阅链接 </template>
-  <template #ClashClassicalInfo>
+  <template #clashClassical> Clash Classical 订阅链接 </template>
+  <template #clashClassicalInfo>
   官核无法使用。仅限Premium或者Meta版本的Clash，QuantumultX经过配置后亦可使用，但同时我们也为QuantumultX提供了“.list”格式的订阅链接，请自行在下方查看。
 
   *具体语法格式请参考[使用教程](./Knowledge)*
@@ -125,10 +125,11 @@ pageClass: subscription-page
   *没有root且同时使用Clash与AdGuard for Android的枫叶们请参考[AdGuard共存使用教程](https://awavenue.top/Coexist.html)*
   </template>
 
-    <!-- Clash-Mrs -->
-  <template #ClashhMrs> Clash Mrs 订阅链接 </template>
-  <template #ClashMrsInfo>
- *建议跑在 shell 上的 Clash 使用，使用例同上。*
+  <!-- Clash-Mrs -->
+  <template #clashMrs> Clash Mrs 订阅链接 </template>
+  <template #clashMrsInfo>
+
+  *建议跑在 shell 上的 Clash 使用，使用例同上。*
   </template>
 
   <!-- dnsmasq -->

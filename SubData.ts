@@ -5,6 +5,7 @@ export const subTools = [
   'hosts',
   'clash',
   'clashClassical',
+  'clashMrs',
   'dnsmasq',
   'surgeModule',
   'surgeSomainSet',
@@ -32,6 +33,7 @@ const names: Record<(typeof subTools)[number], string> = {
   hosts: `AWAvenue-Ads-Rule-hosts.txt`,
   clash: `AWAvenue-Ads-Rule-Clash.yaml`,
   clashClassical: `AWAvenue-Ads-Rule-Clash-Classical.yaml`,
+  clashMrs: `AWAvenue-Ads-Rule-Clash.mrs`,
   dnsmasq: `AWAvenue-Ads-Rule-Dnsmasq.conf`,
   surgeModule: `AWAvenue-Ads-Rule-Surge-module.sgmodule`,
   surgeSomainSet: `AWAvenue-Ads-Rule-Surge.list`,
@@ -75,29 +77,29 @@ export const subLinkList: SubLinkList = {
     cxplay: `${paths.cxplay}/${names.hosts}`,
     uura: `${paths.uura}/${names.hosts}`
   },
-  Clash: {
-    ghraw: `${paths.ghraw}/Filters/${names.Clash}`,
-    tmby: `${paths.tmby}/Filters/${names.Clash}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.Clash}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.Clash}`,
-    cxplay: `${paths.cxplay}/${names.Clash}`,
-    uura: `${paths.uura}/${names.Clash}`
+  clash: {
+    ghraw: `${paths.ghraw}/Filters/${names.clash}`,
+    tmby: `${paths.tmby}/Filters/${names.clash}`,
+    jsdelivr: `${paths.jsdelivr}/Filters/${names.clash}`,
+    ghproxy: `${paths.ghproxy}/Filters/${names.clash}`,
+    cxplay: `${paths.cxplay}/${names.clash}`,
+    uura: `${paths.uura}/${names.clash}`
   },
-  ClashClassical: {
-    ghraw: `${paths.ghraw}/Filters/${names.ClashClassical}`,
-    tmby: `${paths.tmby}/Filters/${names.ClashClassical}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.ClashClassical}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.ClashClassical}`,
-    cxplay: `${paths.cxplay}/${names.ClashClassical}`,
-    uura: `${paths.uura}/${names.ClashClassical}`
+  clashClassical: {
+    ghraw: `${paths.ghraw}/Filters/${names.clashClassical}`,
+    tmby: `${paths.tmby}/Filters/${names.clashClassical}`,
+    jsdelivr: `${paths.jsdelivr}/Filters/${names.clashClassical}`,
+    ghproxy: `${paths.ghproxy}/Filters/${names.clashClassical}`,
+    cxplay: `${paths.cxplay}/${names.clashClassical}`,
+    uura: `${paths.uura}/${names.clashClassical}`
   },
-  ClashhMrs: {
-    ghraw: `${paths.ghraw}/Filters/${names.ClashhMrs}`,
-    tmby: `${paths.tmby}/Filters/${names.ClashhMrs}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.ClashhMrs}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.ClashhMrs}`,
-    cxplay: `${paths.cxplay}/${names.ClashhMrs}`,
-    uura: `${paths.uura}/${names.ClashhMrs}`
+  clashMrs: {
+    ghraw: `${paths.ghraw}/Filters/${names.clashMrs}`,
+    tmby: `${paths.tmby}/Filters/${names.clashMrs}`,
+    jsdelivr: `${paths.jsdelivr}/Filters/${names.clashMrs}`,
+    ghproxy: `${paths.ghproxy}/Filters/${names.clashMrs}`,
+    cxplay: `${paths.cxplay}/${names.clashMrs}`,
+    uura: `${paths.uura}/${names.clashMrs}`
   },
   dnsmasq: {
     ghraw: `${paths.ghraw}/Filters/${names.dnsmasq}`,
