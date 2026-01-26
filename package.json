@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "prettier": "^3.7.4",
+    "prettier": "^3.8.1",
     "vitepress": "^1.6.4"
   },
   "scripts": {
