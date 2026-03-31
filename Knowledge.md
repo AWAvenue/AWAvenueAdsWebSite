@@ -32,11 +32,11 @@
 rule-providers:  
   秋风广告规则:
     type: http
-    behavior: domain
+    behavior: classical
     format: yaml
     path: ./rule_providers/AWAvenue-Ads-Rule-Clash.yaml
     #此处“/rule_providers”自行参考
-    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Clash.yaml"
+    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash-Classical.yaml"
     interval: 86400
 rules:
   - RULE-SET,秋风广告规则,REJECT
