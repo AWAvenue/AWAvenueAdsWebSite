@@ -1,188 +1,100 @@
-# 🧭 快速开始
-
-欢迎使用秋风广告规则，本页面将带您了解并快速上手使用本规则，享受畅快干净的网络世界。
-
-  ::: danger 注意
-
-  如果你是第一次接触广告规则，**请务必完整认真阅读本页面和导流的页面**，这不仅能帮助你快速且正确地使用上秋风广告规则，还能减轻我们的负担。
-
-  如果你想支持我们的工作，欢迎[**赞助我们**](https://awavenue.top/Donate.html)，同时也欢迎感兴趣的小伙伴一起来维护本规则和这个文档。
-
-  :::
-
-> *推荐使用电脑阅读本页面以获得最佳阅读体验*
-
-## 🍃 什么是秋风广告规则
-
-秋风广告规则是一个高效、轻量的广告过滤器列表，具备强大的过滤能力，对绝大多数平台的大多数主流工具均进行了适配，亦是众多优秀广告规则的上游规则。
-其核心优势包括：
-- 📉 极致体积控制
-- 🎯 超高的命中率
-- ⚙️ 极低硬件要求
-- 🔒 注重隐私保护
-- 🔋 节省流量电量
-
-📌 它从“网络层面”进行拦截，意味着您无需针对每个应用逐一设置，也无需复杂操作，广告就会在到达设备前被屏蔽。  
-订阅本规则后，您将明显感受到：
-
-- 摇一摇广告不见了
-- 订阅号列表、文中文末广告流无法加载
-- 自动播放广告视频绝迹
-- 智能电视开机广告消失
-- 手机剩余空间增加（因广告资源不再下载）
-
-> 🗺️ 截至 2025 年 8 月，我们已能拦截提瓦特大陆九成以上的广告 SDK 内容。
-
-
-## ⚔️ 拦截对比
-
-### 三种广告拦截方式优劣势对照
-
-| 🧩 特点 / 拦截方式 | 🌐 网络过滤 | 🧼 无障碍 | 🧬 Xposed Hook |
-|------------------|-------------|-----------|----------------|
-| 🧱 稳定性       | ✅ 最佳     | ⚠️ 一般    | ⚠️ 一般         |
-| 🔄 适用范围     | ✅ 跨平台   | ⚠️ 仅安卓平台   | ❌ 需 root  |
-| 🛡️ 拦截能力     | ✅ 有效     | ⚠️ 会下载广告 | ✅ 强力拦截     |
-| ⚡ 响应速度     | ✅ 毫秒级   | ⚠️ 广告加载慢 | ✅ 随代码加载   |
-| 🎓 上手门槛     | ✅ 简单易用     | ✅ 最低     | ❌ 最高门槛       |
-| 🔋 电量消耗     | ✅ 视规则数   | ⚠️ 高耗电   | ⚠️ 视 Hook 数   |
-
-*由此可见，我们与无障碍广告跳过工具的**原理完全不同**，所以，真的烦请一些朋友**别来问本规则是否支持导入到 GxD、李x跳** 等工具中了，**完全不是一个东西**好伐？*
-
-
-### 秋风广告规则与其它规则对照
-
-| 🧩 特性     | 🍃 秋风广告规则      | 🪤 其他规则            |
-|------------|----------------------|------------------------|
-| 🎯 命中率   | 极高，单规则可拦截    | 一般，常需规则叠加使用  |
-| 📦 体积     | 极轻，仅数百条       | 成千上万，冗长不精简    |
-| 🌐 兼容性   | 多平台通用，广泛支持   | 限部分工具或环境        |
-
-
-## ⚠️ 注意事项
-
-在使用前，请注意：
-
-1. 🚫 本规则**不考虑广告奖励机制**（例如观看广告解锁内容）
-2. ❌ 可能会导致某些系统的特定功能失效，**我们在乎您的隐私** [#38](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/38)
-3. 🪶 本规则以**高命中率**和**体积可控**为目标，不可能涵盖所有广告域名，介意勿用
-
-> *事实上，没有任何广告规则可以做到涵盖所有广告域名，特别是一些百万级的规则，在其看似唬人的庞大规则数背后，是**臃肿至极的体积**和**超低的命中率**，不仅**大幅拖慢上网速度**，其**95%以上**的规则更是一年下来都无法命中，相信我。*
-> *—— Twilight*
-
-
-## 📥 订阅指南
-
-好了，让我们开始订阅秋风广告规则吧！目前使用的是哪种工具呢？下面按平台分类列出了支持的选项，点击平台标题即可跳转至 [订阅规则页面](https://awavenue.top/Sub.html)。
-
-如果有疑问，请继续往下读。
-
-
-### [📱 Android 用户](https://awavenue.top/Sub.html)
-<details>
-  <summary>例如</summary>
-
-- AdGuard
-- AdAway（VPN 工作模式）
-- Clash Meta、Surfboard、大x净化 等
-
-</details>
-
-
-### [📱 Android Root 用户](https://awavenue.top/Sub.html)
-<details>
-  <summary>例如</summary>
-
-- akashaProxy
-- Clash Mix
-- AdGuard Home for Magisk twoone3 版
-- AdAway（root 工作模式）
-- Singbox
-
-</details>
-
-
-### [🍎 iOS 用户](https://awavenue.top/Sub.html)
-<details>
-  <summary>例如</summary>
-
-- AdGuard
-- QuantumultX
-- Surge
-- ShadowRocket
-- Loon
-
-</details>
-
-
-### [💻 桌面用户](https://awavenue.top/Sub.html)
-<details>
-  <summary>例如</summary>
-
-- AdGuard
-- hosts 文件过滤
-
-**注意！我们不支持任何浏览器插件，即使是 AdGuard for Chrome ，感谢你的喜爱！但我们的规则不适用于浏览器插件工作的场景。**
-
-</details>
-
-
-### [🐧 Linux Server](https://awavenue.top/Sub.html)
-<details>
-  <summary>例如</summary>
-
-- AdGuard Home
-- AdGuard DNS
-
-</details>
-
-
-### [📶 OpenWrt 路由器](https://awavenue.top/Sub.html)
-<details>
-  <summary>例如</summary>
-
-- AdGuard Home
-- Dnsmasq、hosts、Mosdns
-- 广告屏蔽大师 Plus+ 等 DNS 去广告插件
-
-</details>
-
-
-### [⚙️ RouterOS 路由器](https://awavenue.top/Sub.html)
-*此系统使用[专为其编写的规则订阅](https://awavenue.top/Sub.html)链接进行配置*
-
-<br />
-
-*以上工具均为兼容选项，您可根据实际环境选择合适的方式进行部署。*
-
+---
+pageClass: start-page
 ---
 
-## 🌟 关注了吗？  
-如果还没有……都看到这里了，不妨顺手点一下吧：[AWAvenue-Ads-Rule](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)  
-你的支持是我们持续优化的动力之一，不会让你失望的。
+# 🧭 快速开始
 
-我的 GitHub 主页还有一些有趣儿的内容，说不定你喜欢呢？
+欢迎使用秋风广告规则。本页面帮你判断它是否适合自己，并用三个选择生成正确的订阅链接。
 
-所以，点波 [Follow](https://github.com/TG-Twilight) 吧！
+<div class="start-hero-actions">
+  <a class="start-primary-action" href="/Sub.html">开始生成订阅</a>
+  <a class="start-secondary-action" href="#选择你正在使用的工具">直接选择工具</a>
+</div>
 
-最后，也欢迎你访问我的博客——[**秋风塬上**](https://awads.cc/)
+::: tip 三步完成
 
-记录了不少我和我的朋友们瞎折腾的经验谈，和一些个人的思考与随笔。
+1. 选择准备导入规则的工具或格式。
+2. 决定是否拦截隐私遥测和不受欢迎的网络行为。
+3. 从国内镜像、官方源或备用线路中一键复制订阅。
 
+:::
 
-## 🛠️ 疑难解答
+## 选择你正在使用的工具
 
-使用过程中有任何问题？  
-广告遗漏、误杀、规则请求等，欢迎通过 [Issue 页面](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues) 提出，  
-或加入我们的官方群组反馈交流！
+已经知道自己使用什么工具？直接进入对应的订阅问答，选择会被自动带到下一页。
 
-想聊聊、提建议，或者只是想和大家聊聊天？  
-我们也非常欢迎！  
-加入官方群组：秋風がく山道 👉 [https://t.me/AWAvenueAdsChat](https://t.me/AWAvenueAdsChat)
+<div class="start-tool-grid">
+  <a href="/Sub.html?tool=adguard"><strong>AdGuard</strong><span>AdGuard、AdGuard Home、AdGuard DNS</span></a>
+  <a href="/Sub.html?tool=clashClassical"><strong>Clash / Mihomo</strong><span>推荐从 Classical 格式开始</span></a>
+  <a href="/Sub.html?tool=quantumultX"><strong>Quantumult X</strong><span>适用于 Quantumult X 的规则列表</span></a>
+  <a href="/Sub.html?tool=shadowrocket"><strong>Shadowrocket</strong><span>适用于 Shadowrocket 的模块格式</span></a>
+  <a href="/Sub.html?tool=loon"><strong>Loon</strong><span>适用于 Loon 的模块格式</span></a>
+  <a href="/Sub.html"><strong>其他工具或格式</strong><span>hosts、MosDNS、RouterOS、Surge、sing-box 等</span></a>
+</div>
 
-**再次欢迎你使用秋风广告规则！**
-<p align="left">
-  <img src="https://count.getloli.com/get/@TG-Twiligh?theme=booru-helltaker" alt="Profile Views" width="666"/>
-</p>
+::: details 还没有选择工具？
 
+- 希望在手机或电脑上直接使用：可以从 AdGuard 开始了解。
+- 已经在使用代理客户端：选择对应客户端支持的规则格式。
+- 希望为家庭网络统一过滤：查看 AdGuard Home、MosDNS、Dnsmasq 或 RouterOS。
+- 只想修改系统 hosts：选择 hosts / AdAway 格式。
 
+秋风广告规则不适用于 GKD、李跳跳等无障碍点击工具，也不适用于 AdGuard for Chrome 等浏览器扩展。
+
+:::
+
+## 当前版本与访问统计
+
+<StartStatus />
+
+## 秋风广告规则能做什么？
+
+秋风广告规则从网络层拦截广告及相关请求，不需要为每个应用单独编写点击规则。它兼顾命中率、规则体积与硬件负担，并适配多种常见过滤工具。
+
+| 可以帮助处理 | 无法保证解决 |
+|---|---|
+| 广告投放、竞价、素材和归因请求 | 与正常内容共用同一域名的广告 |
+| 统计、遥测、崩溃收集和设备指纹 | 应用界面中广告消失后留下的空白 |
+| 强制更新、P2P/PCDN、推送和云控下发 | 必须观看广告才能领取的奖励 |
+| 多设备或路由器上的统一网络过滤 | 所有应用、所有地区的每一条广告 |
+
+## 四种订阅方案
+
+订阅生成器不会要求你记忆技术文件名，而是通过两道问题自动选择：
+
+| 页面显示 | 包含内容 | 适合情况 |
+|---|---|---|
+| 完整防护 | 广告＋隐私＋不受欢迎 | 默认完整体验 |
+| 纯广告 | 仅广告 | 兼容与最小干预优先 |
+| 广告＋不受欢迎 | 不包含隐私规则 | 希望保留统计与遥测 |
+| 广告＋隐私 | 不包含不受欢迎规则 | 希望保留更新、推送和相关连接 |
+
+## 使用前请注意
+
+1. 秋风广告规则不考虑观看广告领取奖励的场景。
+2. 网络过滤无法移除应用界面元素，部分应用可能留下空白区域。
+3. 隐私或不受欢迎分类可能影响少数统计、更新、推送等功能；订阅生成器允许你自行取舍。
+4. 没有任何广告规则能够覆盖全部广告域名。发现误杀比漏拦更需要及时反馈。
+
+::: warning 订阅前
+
+请阅读[用户协议](./Protocol.md)和[使用教程](./Knowledge.md)。如果你使用的是 AdGuard、Quantumult X、Shadowrocket 或 Loon，也可以从生成结果直接进入对应教程。
+
+:::
+
+## 为什么采用网络层过滤？
+
+| 特点 | 网络层过滤 | 无障碍点击 | Xposed Hook |
+|---|---|---|---|
+| 跨平台与路由部署 | 支持 | 主要限 Android | 主要限 Android |
+| 广告资源是否仍会下载 | 通常不会 | 通常会 | 取决于实现 |
+| 上手要求 | 较低 | 最低 | 较高，通常需要 root |
+| 应用适配成本 | 较低 | 需要持续适配界面 | 需要持续适配代码 |
+
+网络层过滤、无障碍点击和 Hook 解决的是不同问题，可以根据设备环境组合使用，但规则订阅不能直接导入无障碍点击工具。
+
+## 遇到问题？
+
+- 广告遗漏、误杀或规则建议：前往 [GitHub Issues](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues)。
+- 订阅链接、工具使用和交流讨论：查看[用户交流与支持](./Support.md)。
+- 准备开始：进入[互动式订阅生成器](./Sub.md)。

@@ -1,10 +1,10 @@
 <template>
-  <div v-if="props.link" class="link-container">
-    <pre class="link">{{ props.link }}</pre>
-    <button class="copy-link" :class="{ copyactive }" @click="handleButtonClick"></button>
-  </div>
-  <div v-else class="no-link link-container">
-    <pre class="link">N/A</pre>
+  <div class="link-container">
+    <code class="link" :title="props.link">{{ props.link }}</code>
+    <button class="copy-link" :class="{ copyactive: copied }" type="button" :aria-label="copied ? props.copiedLabel : props.copyLabel" @click="copyLink">
+      {{ copied ? props.copiedLabel : props.copyLabel }}
+    </button>
+    <span class="sr-only" aria-live="polite">{{ liveMessage }}</span>
   </div>
 </template>
 
@@ -13,54 +13,88 @@ import { ref } from 'vue'
 
 const props = defineProps<{
   link: string
+  copyLabel: string
+  copiedLabel: string
+  copiedMessage: string
 }>()
-const copyactive = ref<number | undefined>(undefined)
 
-function handleButtonClick() {
-  if (copyactive.value) {
-    clearTimeout(copyactive.value)
-  }
-  navigator.clipboard.writeText(props.link)
-  copyactive.value = setTimeout(() => {
-    copyactive.value = undefined
+const copied = ref(false)
+const liveMessage = ref('')
+let timer: ReturnType<typeof setTimeout> | undefined
+
+async function copyLink() {
+  await navigator.clipboard.writeText(props.link)
+  copied.value = true
+  liveMessage.value = props.copiedMessage
+  if (timer) clearTimeout(timer)
+  timer = setTimeout(() => {
+    copied.value = false
+    liveMessage.value = ''
   }, 2000)
 }
 </script>
 
-<style>
+<style scoped>
 .link-container {
-  display: flex;
-  background-color: var(--vp-c-bg);
-  border: 1px solid var(--vp-c-border);
-  border-radius: 5px;
-  margin: 8px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  background: var(--vp-c-bg);
 }
 
-.link-container .link {
-  margin: 0;
-  padding: 0 15px;
-  line-height: 45px;
-  font-size: 16px;
+.link {
+  min-width: 0;
   overflow-x: auto;
-  flex-grow: 1;
-  width: 0;
+  padding: 12px 14px;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  line-height: 22px;
+  white-space: nowrap;
 }
 
-.link-container .copy-link {
-  width: 45px;
-  padding-right: 3px;
-  background-color: var(--vp-c-bg-alt);
-  border-left: 1px solid var(--vp-c-border);
-  background-image: var(--vp-icon-copy);
-  background-position: 50%;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  transition: background-color 0.1s;
+.copy-link {
+  min-width: 112px;
+  border-left: 1px solid var(--vp-c-divider);
+  padding: 10px 16px;
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
 }
 
-.link-container .copy-link.copyactive {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='rgb(41, 151, 100)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24'%3E%3Crect width='8' height='4' x='8' y='2' rx='1' ry='1'/%3E%3Cpath d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'/%3E%3Cpath d='m9 14 2 2 4-4'/%3E%3C/svg%3E");
-  background-color: var(--vp-c-success-soft);
+.copy-link:hover,
+.copy-link:focus-visible {
+  background: var(--vp-c-brand-soft);
+}
+
+.copy-link.copyactive {
+  color: var(--vp-c-success-1);
+  background: var(--vp-c-success-soft);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .link-container {
+    grid-template-columns: 1fr;
+  }
+
+  .copy-link {
+    min-height: 46px;
+    border-top: 1px solid var(--vp-c-divider);
+    border-left: 0;
+  }
 }
 </style>

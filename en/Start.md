@@ -1,51 +1,100 @@
-# Quick Start
+---
+pageClass: start-page
+---
 
-*Tip: If you are familiar with and understand how to subscribe to and use the related rules, and after reading and agreeing to the [User Agreement](./Protocol.md), confirming that you "voluntarily give up your rights to watch ads," then we recommend you directly [subscribe to the rules](./Sub.md).*
+# 🧭 Quick Start
 
-## What is the AWAvenue Ads Rule?
+Welcome to AWAvenue Ads Rule. This page helps you decide whether it fits your setup and builds the right subscription through three choices.
 
-One of the best ad filter lists in the open-source community, implementing excellent ad blocking, privacy protection, and data savings. It supports various common network-layer ad-blocking tools and proxy tools¹. Compared to other ad rules that contain thousands of entries, the AWAvenue Ads Rule has exceptional size control, an ultra-high hit rate, and low hardware requirements.
+<div class="start-hero-actions">
+  <a class="start-primary-action" href="/en/Sub.html">Build my subscription</a>
+  <a class="start-secondary-action" href="#choose-your-tool">Choose a tool</a>
+</div>
 
-After subscribing to this rule, you will immediately notice the annoying shake-to-skip ads disappear, subscription lists and in-article ads won't load, autoplay video ads are eradicated, boot-up ads on TV boxes/smart TVs vanish, and you'll have more available space on your phone (because ad files are blocked from being delivered).
+::: tip Finish in three steps
 
-Compared to other ad-blocking methods, this network-layer filtering approach is low-cost, easy to use, fast, and widely applicable (such as router deployment). You don’t need to configure individual apps, and it filters ads without affecting the normal use of your apps.
+1. Choose the tool or format that will import the rules.
+2. Decide whether to block privacy telemetry and unwanted network behavior.
+3. Copy a subscription from a mainland mirror, the official source, or a fallback route.
 
-<br />
+:::
 
-**As of December 2024, we can block over 90% of ad SDKs currently used in Teyvat.**
+## Choose your tool
 
-**This rule does not consider scenarios where users need to access ad rewards. Additionally, we always believe that your privacy is more important than "some small conveniences." So, please consider carefully whether to use it.**
+Already know what you use? Open its subscription questionnaire directly. Your choice carries over to the next page.
 
-## What are the advantages?
+<div class="start-tool-grid">
+  <a href="/en/Sub.html?tool=adguard"><strong>AdGuard</strong><span>AdGuard, AdGuard Home, and AdGuard DNS</span></a>
+  <a href="/en/Sub.html?tool=clashClassical"><strong>Clash / Mihomo</strong><span>Start with the recommended Classical format</span></a>
+  <a href="/en/Sub.html?tool=quantumultX"><strong>Quantumult X</strong><span>A rule list made for Quantumult X</span></a>
+  <a href="/en/Sub.html?tool=shadowrocket"><strong>Shadowrocket</strong><span>The module format for Shadowrocket</span></a>
+  <a href="/en/Sub.html?tool=loon"><strong>Loon</strong><span>The module format for Loon</span></a>
+  <a href="/en/Sub.html"><strong>Other tools and formats</strong><span>hosts, MosDNS, RouterOS, Surge, sing-box, and more</span></a>
+</div>
 
-The advantages are clear. Here’s a comparison with other filtering methods:
+::: details Have not chosen a tool yet?
 
-### Network Layer Filtering:
+- For direct use on a phone or computer, start by learning about AdGuard.
+- If you already use a proxy client, choose a format supported by that client.
+- For network-wide filtering, look at AdGuard Home, MosDNS, Dnsmasq, or RouterOS.
+- To modify the system hosts file, choose the hosts / AdAway format.
 
-AdGuard series (AdGuard, AdGuard Home, AdGuard DNS, etc.), AdAway, BlueCat, Surge, etc.
+AWAvenue Ads Rule is not designed for accessibility auto-click tools or browser extensions such as AdGuard for Chrome.
 
-### Accessibility Layer Blocking:
+:::
 
-x跳跳, GKD, One-Finger Zen, etc.
+## Current release and visit counter
 
-### Xposed Blocking:
+<StartStatus />
 
-x圣净化, x壁模块, various enhanced modules that block ads in specific apps/systems, etc.
+## What can AWAvenue Ads Rule do?
 
-| Feature/Blocking Method | Network Layer Filtering                                                        | Accessibility Layer Blocking                                                                | Xposed Blocking                                                                                                |
-| ----------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| Stability               | 💯 Best                                                                        | Average, but Chinese systems kill background processes severely                             | Average                                                                                                        |
-| Compatibility           | 💯 Best, can be updated in real-time                                           | Average, needs adaptation, may have false clicks, but almost all Android devices can use it | Poor, depends on Xposed framework (root), needs adaptation, many apps have hook detection, difficult to bypass |
-| Blocking Ability        | Blocks ads on all platforms                                                    | Does not block, ~~manual ad-blocking~~, ads still cached on the device, consuming data      | 💯 Powerful, can hook and block various tricky ads                                                             |
-| Response Speed          | 💯 Excellent, in milliseconds                                                  | Slow, visible ads are common                                                                | 💯 Fastest, because it follows code loading                                                                    |
-| Applicable Range        | 💯 Universal across all platforms                                              | Limited to Android devices                                                                  | Limited to Android devices                                                                                     |
-| Ease of Use             | Low                                                                            | 💯 Easiest                                                                                  | High, requires root + Xposed framework, assumes some advanced usage experience                                 |
-| Power Consumption       | 💯 Low, if hosted on a router/server, it doesn’t consume mobile device battery | High, needs to keep apps alive in the background, significant power usage                   | Depends, more hooks consume more power                                                                         |
+AWAvenue Ads Rule blocks advertising and related requests at the network layer. It does not require click rules for every app, and it balances hit rate, list size, and hardware overhead across many filtering tools.
 
-## Great! So... how do I use it?
+| It can help with | It cannot guarantee |
+|---|---|
+| Ad delivery, bidding, creative, and attribution requests | Ads served from the same domain as normal content |
+| Analytics, telemetry, crash reporting, and device fingerprinting | Removing empty spaces left in an app interface |
+| Forced updates, P2P/PCDN, push, and remote configuration | Rewards that require watching an advertisement |
+| Network-wide filtering across devices and routers | Every advertisement in every app and region |
 
-Please refer to the [Usage Guide](./Knowledge.md), and then choose the appropriate tool to [subscribe to the rules](./Sub.md).
+## Four subscription profiles
 
-## Want to give feedback or engage in discussions?
+The builder asks two plain-language questions instead of making you memorize technical filenames:
 
-Please go to the [User Support](./Support.md) page and choose the method that suits you best to provide feedback or engage in discussions.
+| Display name | Included content | Best for |
+|---|---|---|
+| Full protection | Ads + privacy + unwanted | The complete default experience |
+| Ads only | Advertising only | Compatibility and minimal intervention |
+| Ads + unwanted | No privacy category | Keeping analytics and telemetry |
+| Ads + privacy | No unwanted category | Keeping updates, push, and related connections |
+
+## Before you subscribe
+
+1. AWAvenue Ads Rule does not account for rewards that require watching ads.
+2. Network filtering cannot remove interface elements, so some apps may leave empty spaces.
+3. Privacy or unwanted categories may affect a few analytics, update, or push features; the builder lets you choose.
+4. No filter list covers every advertising domain. False positives are especially important to report quickly.
+
+::: warning Before subscribing
+
+Read the [User Protocol](./Protocol.md) and [Usage Guide](./Knowledge.md). Results for AdGuard, Quantumult X, Shadowrocket, and Loon also link to their specific guides.
+
+:::
+
+## Why network-layer filtering?
+
+| Feature | Network filtering | Accessibility clicking | Xposed Hook |
+|---|---|---|---|
+| Cross-platform and router use | Supported | Mainly Android | Mainly Android |
+| Whether ad assets still download | Usually no | Usually yes | Depends on implementation |
+| Setup difficulty | Lower | Lowest | Higher, usually requires root |
+| Ongoing app adaptation | Lower | Must follow interface changes | Must follow code changes |
+
+These methods solve different problems and can be combined, but a filter subscription cannot be imported directly into an accessibility auto-click tool.
+
+## Need help?
+
+- Missed ads, false positives, or rule requests: open a [GitHub Issue](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues).
+- Subscription links, tool usage, or community discussion: visit [Support](./Support.md).
+- Ready to begin: open the [interactive subscription builder](./Sub.md).

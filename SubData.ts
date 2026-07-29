@@ -1,192 +1,245 @@
-export const subSources = ['ghraw', 'tmby', 'jsdelivr', 'ghproxy', 'cxplay', 'uura'] as const
-export const subTools = [
-  'adguard',
-  'adguardReplenish',
-  'hosts',
-  'clash',
-  'clashClassical',
-  'clashMrs',
-  'dnsmasq',
-  'surgeModule',
-  'surgeSomainSet',
-  'surgeRuleSet',
-  'quantumultX',
-  'mosdns',
-  'adclose',
-  'routeros',
-  'routerosAdlist',
-  'singbox',
-  'singboxReg'
-] as const
+export type VariantId = 'full' | 'ads' | 'noPrivacy' | 'noUnwelcome'
+export type SourceId = 'tmby' | 'cxplay' | 'uura' | 'ghraw' | 'jsdelivr' | 'ghproxy'
+export type ToolGroup = 'popular' | 'proxy' | 'dns' | 'advanced'
 
-const paths: Record<(typeof subSources)[number], string> = {
-  ghraw: `https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main`,
-  tmby: `https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main`,
-  jsdelivr: `https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main`,
-  ghproxy: `https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main`,
-  cxplay: `https://script.cx.ms/awavenue`,
-  uura: `https://cdn.uura.cn/AWAvenue`
-} as const
-const names: Record<(typeof subTools)[number], string> = {
-  adguard: `AWAvenue-Ads-Rule.txt`,
-  adguardReplenish: `AWAvenue-Ads-Rule-Replenish.txt`,
-  hosts: `AWAvenue-Ads-Rule-hosts.txt`,
-  clash: `AWAvenue-Ads-Rule-Clash.yaml`,
-  clashClassical: `AWAvenue-Ads-Rule-Clash-Classical.yaml`,
-  clashMrs: `AWAvenue-Ads-Rule-Clash.mrs`,
-  dnsmasq: `AWAvenue-Ads-Rule-Dnsmasq.conf`,
-  surgeModule: `AWAvenue-Ads-Rule-Surge-module.sgmodule`,
-  surgeSomainSet: `AWAvenue-Ads-Rule-Surge.list`,
-  surgeRuleSet: `AWAvenue-Ads-Rule-Surge-RULE-SET.list`,
-  quantumultX: `AWAvenue-Ads-Rule-QuantumultX.list`,
-  mosdns: `AWAvenue-Ads-Rule-Mosdns_v5.txt`,
-  adclose: `AWAvenue-Ads-Rule-AdClose.rule`,
-  routeros: `AWAvenue-Ads-Rule-RouterOS.txt`,
-  routerosAdlist: `AWAvenue-Ads-Rule-RouterOS-Adlist.txt`,
-  singbox: `AWAvenue-Ads-Rule-Singbox.json`,
-  singboxReg: `AWAvenue-Ads-Rule-Singbox-regex.json`
-} as const
-
-type SubLinkList = {
-  [T in (typeof subTools)[number]]: {
-    [K in (typeof subSources)[number]]: string
-  }
+export type SubscriptionTool = {
+  id: string
+  label: string
+  group: ToolGroup
+  stem: string
+  extension: string
+  supportsVariants?: boolean
+  defaultFilename?: string
+  cxplayDefaultFilename?: string
+  unsupportedSources?: SourceId[]
 }
-export const subLinkList: SubLinkList = {
-  adguard: {
-    ghraw: `${paths.ghraw}/${names.adguard}`,
-    tmby: `${paths.tmby}/${names.adguard}`,
-    jsdelivr: `${paths.jsdelivr}/${names.adguard}`,
-    ghproxy: `${paths.ghproxy}/${names.adguard}`,
-    cxplay: `${paths.cxplay}/AWAvenue-Ads-Rule-Adguard.txt`,
-    uura: `${paths.uura}/${names.adguard}`
+
+export const variants: Record<VariantId, { tag: string }> = {
+  full: { tag: '' },
+  ads: { tag: '-Only.Ads' },
+  noPrivacy: { tag: '-No.Privacy' },
+  noUnwelcome: { tag: '-No.Unwelcome' }
+}
+
+export const tools: SubscriptionTool[] = [
+  {
+    id: 'adguard',
+    label: 'AdGuard / AdGuard Home',
+    group: 'popular',
+    stem: 'AWAvenue-Ads-Rule-Adguard',
+    extension: '.txt',
+    defaultFilename: 'AWAvenue-Ads-Rule.txt',
+    cxplayDefaultFilename: 'AWAvenue-Ads-Rule-Adguard.txt'
   },
-  adguardReplenish: {
-    ghraw: `${paths.ghraw}/Filters/${names.adguardReplenish}`,
-    tmby: `${paths.tmby}/Filters/${names.adguardReplenish}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.adguardReplenish}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.adguardReplenish}`,
-    cxplay: `${paths.cxplay}/${names.adguardReplenish}`,
-    uura: `${paths.uura}/${names.adguardReplenish}`
+  {
+    id: 'clashClassical',
+    label: 'Clash / Mihomo Classical',
+    group: 'popular',
+    stem: 'AWAvenue-Ads-Rule-Clash-Classical',
+    extension: '.yaml'
   },
-  hosts: {
-    ghraw: `${paths.ghraw}/Filters/${names.hosts}`,
-    tmby: `${paths.tmby}/Filters/${names.hosts}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.hosts}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.hosts}`,
-    cxplay: `${paths.cxplay}/${names.hosts}`,
-    uura: `${paths.uura}/${names.hosts}`
+  {
+    id: 'clashMrs',
+    label: 'Clash / Mihomo MRS',
+    group: 'popular',
+    stem: 'AWAvenue-Ads-Rule-Clash',
+    extension: '.mrs'
   },
-  clash: {
-    ghraw: `${paths.ghraw}/Filters/${names.clash}`,
-    tmby: `${paths.tmby}/Filters/${names.clash}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.clash}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.clash}`,
-    cxplay: `${paths.cxplay}/${names.clash}`,
-    uura: `${paths.uura}/${names.clash}`
+  {
+    id: 'quantumultX',
+    label: 'Quantumult X',
+    group: 'popular',
+    stem: 'AWAvenue-Ads-Rule-QuantumultX',
+    extension: '.list'
   },
-  clashClassical: {
-    ghraw: `${paths.ghraw}/Filters/${names.clashClassical}`,
-    tmby: `${paths.tmby}/Filters/${names.clashClassical}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.clashClassical}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.clashClassical}`,
-    cxplay: `${paths.cxplay}/${names.clashClassical}`,
-    uura: `${paths.uura}/${names.clashClassical}`
+  {
+    id: 'shadowrocket',
+    label: 'Shadowrocket',
+    group: 'popular',
+    stem: 'AWAvenue-Ads-Rule-Shadowrocket',
+    extension: '.module'
   },
-  clashMrs: {
-    ghraw: `${paths.ghraw}/Filters/${names.clashMrs}`,
-    tmby: `${paths.tmby}/Filters/${names.clashMrs}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.clashMrs}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.clashMrs}`,
-    cxplay: `${paths.cxplay}/${names.clashMrs}`,
-    uura: `${paths.uura}/${names.clashMrs}`
+  {
+    id: 'loon',
+    label: 'Loon',
+    group: 'popular',
+    stem: 'AWAvenue-Ads-Rule-Loon',
+    extension: '.module'
   },
-  dnsmasq: {
-    ghraw: `${paths.ghraw}/Filters/${names.dnsmasq}`,
-    tmby: `${paths.tmby}/Filters/${names.dnsmasq}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.dnsmasq}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.dnsmasq}`,
-    cxplay: `${paths.cxplay}/${names.dnsmasq}`,
-    uura: `${paths.uura}/${names.dnsmasq}`
+  {
+    id: 'clash',
+    label: 'Clash / Mihomo YAML',
+    group: 'proxy',
+    stem: 'AWAvenue-Ads-Rule-Clash',
+    extension: '.yaml'
   },
-  surgeModule: {
-    ghraw: `${paths.ghraw}/Filters/${names.surgeModule}`,
-    tmby: `${paths.tmby}/Filters/${names.surgeModule}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.surgeModule}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.surgeModule}`,
-    cxplay: `${paths.cxplay}/${names.surgeModule}`,
-    uura: `${paths.uura}/${names.surgeModule}`
+  {
+    id: 'surgeRuleSet',
+    label: 'Surge / Surfboard RULE-SET',
+    group: 'proxy',
+    stem: 'AWAvenue-Ads-Rule-Surge-RULE-SET',
+    extension: '.list'
   },
-  surgeSomainSet: {
-    ghraw: `${paths.ghraw}/Filters/${names.surgeSomainSet}`,
-    tmby: `${paths.tmby}/Filters/${names.surgeSomainSet}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.surgeSomainSet}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.surgeSomainSet}`,
-    cxplay: `${paths.cxplay}/${names.surgeSomainSet}`,
-    uura: `${paths.uura}/${names.surgeSomainSet}`
+  {
+    id: 'surgeDomainSet',
+    label: 'Surge / Surfboard DOMAIN-SET',
+    group: 'proxy',
+    stem: 'AWAvenue-Ads-Rule-Surge',
+    extension: '.list'
   },
-  surgeRuleSet: {
-    ghraw: `${paths.ghraw}/Filters/${names.surgeRuleSet}`,
-    tmby: `${paths.tmby}/Filters/${names.surgeRuleSet}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.surgeRuleSet}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.surgeRuleSet}`,
-    cxplay: `${paths.cxplay}/${names.surgeRuleSet}`,
-    uura: `${paths.uura}/${names.surgeRuleSet}`
+  {
+    id: 'surgeModule',
+    label: 'Surge Module',
+    group: 'proxy',
+    stem: 'AWAvenue-Ads-Rule-Surge-module',
+    extension: '.sgmodule'
   },
-  quantumultX: {
-    ghraw: `${paths.ghraw}/Filters/${names.quantumultX}`,
-    tmby: `${paths.tmby}/Filters/${names.quantumultX}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.quantumultX}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.quantumultX}`,
-    cxplay: `${paths.cxplay}/${names.quantumultX}`,
-    uura: `${paths.uura}/${names.quantumultX}`
+  {
+    id: 'singbox',
+    label: 'sing-box',
+    group: 'proxy',
+    stem: 'AWAvenue-Ads-Rule-Singbox',
+    extension: '.json'
   },
-  mosdns: {
-    ghraw: `${paths.ghraw}/Filters/${names.mosdns}`,
-    tmby: `${paths.tmby}/Filters/${names.mosdns}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.mosdns}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.mosdns}`,
-    cxplay: `${paths.cxplay}/${names.mosdns}`,
-    uura: `${paths.uura}/${names.mosdns}`
+  {
+    id: 'hosts',
+    label: 'hosts / AdAway',
+    group: 'dns',
+    stem: 'AWAvenue-Ads-Rule-hosts',
+    extension: '.txt'
   },
-  adclose: {
-    ghraw: `${paths.ghraw}/Filters/${names.adclose}`,
-    tmby: `${paths.tmby}/Filters/${names.adclose}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.adclose}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.adclose}`,
-    cxplay: `${paths.cxplay}/${names.adclose}`,
-    uura: `${paths.uura}/${names.adclose}`
+  {
+    id: 'dnsmasq',
+    label: 'Dnsmasq',
+    group: 'dns',
+    stem: 'AWAvenue-Ads-Rule-Dnsmasq',
+    extension: '.conf'
   },
-  routeros: {
-    ghraw: `${paths.ghraw}/Filters/${names.routeros}`,
-    tmby: `${paths.tmby}/Filters/${names.routeros}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.routeros}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.routeros}`,
-    cxplay: `${paths.cxplay}/${names.routeros}`,
-    uura: `${paths.uura}/${names.routeros}`
+  {
+    id: 'mosdns',
+    label: 'MosDNS v5',
+    group: 'dns',
+    stem: 'AWAvenue-Ads-Rule-Mosdns_v5',
+    extension: '.txt'
   },
-  routerosAdlist: {
-    ghraw: `${paths.ghraw}/Filters/${names.routerosAdlist}`,
-    tmby: `${paths.tmby}/Filters/${names.routerosAdlist}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.routerosAdlist}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.routerosAdlist}`,
-    cxplay: `${paths.cxplay}/${names.routerosAdlist}`,
-    uura: `${paths.uura}/${names.routerosAdlist}`
+  {
+    id: 'smartdns',
+    label: 'SmartDNS',
+    group: 'dns',
+    stem: 'AWAvenue-Ads-Rule-SmartDNS',
+    extension: '.conf'
   },
-  singbox: {
-    ghraw: `${paths.ghraw}/Filters/${names.singbox}`,
-    tmby: `${paths.tmby}/Filters/${names.singbox}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.singbox}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.singbox}`,
-    cxplay: ``,
-    uura: ``
+  {
+    id: 'routerosAdlist',
+    label: 'RouterOS AdList',
+    group: 'dns',
+    stem: 'AWAvenue-Ads-Rule-RouterOS-Adlist',
+    extension: '.txt'
   },
-  singboxReg: {
-    ghraw: `${paths.ghraw}/Filters/${names.singboxReg}`,
-    tmby: `${paths.tmby}/Filters/${names.singboxReg}`,
-    jsdelivr: `${paths.jsdelivr}/Filters/${names.singboxReg}`,
-    ghproxy: `${paths.ghproxy}/Filters/${names.singboxReg}`,
-    cxplay: ``,
-    uura: ``
+  {
+    id: 'routeros',
+    label: 'RouterOS Script',
+    group: 'dns',
+    stem: 'AWAvenue-Ads-Rule-RouterOS',
+    extension: '.txt'
+  },
+  {
+    id: 'adclose',
+    label: 'AdClose',
+    group: 'advanced',
+    stem: 'AWAvenue-Ads-Rule-AdClose',
+    extension: '.rule'
+  },
+  {
+    id: 'geosite',
+    label: 'Geosite',
+    group: 'advanced',
+    stem: 'AWAvenue-Ads-Rule-Geosite',
+    extension: '.txt'
+  },
+  {
+    id: 'adguardReplenish',
+    label: 'AdGuard Replenish',
+    group: 'advanced',
+    stem: 'AWAvenue-Ads-Rule-Replenish',
+    extension: '.txt',
+    supportsVariants: false
   }
+]
+
+export const sources: Array<{
+  id: SourceId
+  base: string
+  flat: boolean
+  domestic: boolean
+}> = [
+  {
+    id: 'tmby',
+    base: 'https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main',
+    flat: false,
+    domestic: true
+  },
+  {
+    id: 'cxplay',
+    base: 'https://script.cx.ms/awavenue',
+    flat: true,
+    domestic: true
+  },
+  {
+    id: 'uura',
+    base: 'https://cdn.uura.cn/AWAvenue',
+    flat: true,
+    domestic: true
+  },
+  {
+    id: 'ghraw',
+    base: 'https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main',
+    flat: false,
+    domestic: false
+  },
+  {
+    id: 'jsdelivr',
+    base: 'https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main',
+    flat: false,
+    domestic: false
+  },
+  {
+    id: 'ghproxy',
+    base: 'https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main',
+    flat: false,
+    domestic: false
+  }
+]
+
+export function getTool(toolId: string) {
+  return tools.find(tool => tool.id === toolId)
+}
+
+export function getVariantId(blockPrivacy: boolean, blockUnwelcome: boolean): VariantId {
+  if (blockPrivacy && blockUnwelcome) return 'full'
+  if (!blockPrivacy && blockUnwelcome) return 'noPrivacy'
+  if (blockPrivacy && !blockUnwelcome) return 'noUnwelcome'
+  return 'ads'
+}
+
+export function getFilename(tool: SubscriptionTool, variantId: VariantId) {
+  if (variantId === 'full' && tool.defaultFilename) return tool.defaultFilename
+  const tag = tool.supportsVariants === false ? '' : variants[variantId].tag
+  return `${tool.stem}${tag}${tool.extension}`
+}
+
+export function getSubscriptionLink(tool: SubscriptionTool, variantId: VariantId, sourceId: SourceId) {
+  if (tool.unsupportedSources?.includes(sourceId)) return ''
+
+  const source = sources.find(item => item.id === sourceId)
+  if (!source) return ''
+
+  let filename = getFilename(tool, variantId)
+  if (sourceId === 'cxplay' && variantId === 'full' && tool.cxplayDefaultFilename) {
+    filename = tool.cxplayDefaultFilename
+  }
+
+  const isRootDefault = tool.id === 'adguard' && variantId === 'full'
+  const path = source.flat || isRootDefault ? filename : `Filters/${filename}`
+  return `${source.base}/${path}`
 }

@@ -141,3 +141,104 @@ body {
 .dark .Layout.homepage .VPFeature {
   background-color: var(--vp-c-default-soft);
 }
+
+/**
+ * Quick Start
+ * -------------------------------------------------------------------------- */
+
+.start-page .vp-doc > h1 + p {
+  max-width: 760px;
+  color: var(--vp-c-text-2);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.start-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.start-hero-actions a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  padding: 0 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.start-hero-actions .start-primary-action {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-white);
+  background: var(--vp-c-brand-1);
+}
+
+.start-hero-actions .start-primary-action:hover {
+  color: var(--vp-c-white);
+  background: var(--vp-c-brand-2);
+}
+
+.start-hero-actions .start-secondary-action {
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-bg-soft);
+}
+
+.start-tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0 24px;
+}
+
+.start-tool-grid a {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 13px;
+  padding: 16px 18px;
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-bg-soft);
+  text-decoration: none;
+  transition:
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.start-tool-grid a:hover,
+.start-tool-grid a:focus-visible {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+}
+
+.start-tool-grid strong {
+  color: var(--vp-c-brand-1);
+  font-size: 16px;
+}
+
+.start-tool-grid span {
+  margin-top: 4px;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .start-tool-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .start-hero-actions a {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .start-tool-grid a {
+    transition: none;
+  }
+}
