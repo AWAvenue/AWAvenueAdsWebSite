@@ -17,7 +17,7 @@
 
 ### 开发者/志愿者/画师
 - [「Andrey Meshkov」 by AdguardTeam](https://github.com/ameshkov)
-- [「Elysia」 by akashaProxy](elysias123)
+- [「Elysia」 by akashaProxy](https://github.com/elysias123)
 - [「笨蛋ovo」 by 搞机助手 R](https://github.com/liuran001)
 - [「梦凛Official」 独立画师](https://t.me/menglin0204)
 - [「ZX GU」 独立开发者](https://i.pcbeta.com/space-uid-4880620.html)
