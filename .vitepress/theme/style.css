@@ -242,3 +242,26 @@ body {
     transition: none;
   }
 }
+
+/* Screenshots are kept with the instruction they illustrate. */
+.vp-doc .tutorial-screenshot {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.vp-doc .tutorial-screenshot img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+}
+
+.vp-doc .tutorial-screenshot figcaption {
+  max-width: min(100%, 32em);
+  margin: 8px auto 0;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  line-height: 1.7;
+}

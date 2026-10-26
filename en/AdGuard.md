@@ -21,7 +21,7 @@ Private AdGuard DNS is a separate cloud service. Your server dashboard supports 
 
 ## Keep the URL for your selected profile {#subscription}
 
-Open the [subscription generator](./Sub.md), select AdGuard and your preferred profile, then copy the resulting URL. Every reference to the **selected URL** below means that exact link. Keep the profile when updating or changing download sources; a full-list example elsewhere must not replace it.
+Open the [subscription generator](./Sub.md), select AdGuard and your preferred profile, and copy the **official GitHub Raw** URL as your first choice. This subscribes directly to files published by this project. If access is restricted, use an alternative source. Every reference to the **selected URL** below means that exact link. Keep the profile when updating or changing download sources; a full-list example elsewhere must not replace it.
 
 AdGuard files use text rules such as `||domain^`. This project blocks domains: it contains no cosmetic hiding rules and is neither a DNS server address nor a complete client configuration. Do not import Clash YAML, sing-box JSON, or a Surge module into this field. Compare the [published ads-only file](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Adguard-Only.Ads.txt) with the [DNS rule syntax](https://adguard-dns.io/kb/general/dns-filtering-syntax/).
 

@@ -174,6 +174,12 @@ export const sources: Array<{
   domestic: boolean
 }> = [
   {
+    id: 'ghraw',
+    base: 'https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main',
+    flat: false,
+    domestic: false
+  },
+  {
     id: 'jsdelivr',
     base: 'https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main',
     flat: false,
@@ -190,12 +196,6 @@ export const sources: Array<{
     base: 'https://cdn.uura.cn/AWAvenue',
     flat: true,
     domestic: true
-  },
-  {
-    id: 'ghraw',
-    base: 'https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main',
-    flat: false,
-    domestic: false
   },
   {
     id: 'ghproxy',

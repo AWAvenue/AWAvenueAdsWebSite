@@ -13,7 +13,7 @@ verificationScope: docs
 
 - [AdGuard](./AdGuard.md)：說明產品選擇、Android 匯入步驟與其他平台的 DNS 過濾入口。
 
-- [AdGuard Home](./AdGuardHome.md)：適用於路由器或伺服器的 DNS 過濾，涵蓋封鎖清單、查詢記錄、更新與還原。
+- [AdGuard Home](./AdGuardHome.md)：適用於路由器或伺服器的 DNS 過濾，優先從專案倉庫選擇方案訂閱，也可直接勾選內建的 **AWAvenue Ads Rule**（秋風廣告規則）；涵蓋查詢紀錄、更新與還原。
 
 - [Android 共存說明](./Coexist.md)：說明過濾與代理同時使用時的本機 VPN 衝突及可選連線方式。
 

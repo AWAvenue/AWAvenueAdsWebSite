@@ -21,7 +21,7 @@ verificationScope: docs
 
 ## 準備所選方案的訂閱 URL {#subscription}
 
-開啟[訂閱產生器](./Sub.md)，選擇 AdGuard 與需要的方案，複製最後的 URL。下文所有「所選 URL」都指這個連結；更新或切換來源時保留相同方案，別被網路上的完整版範例覆蓋。
+開啟[訂閱產生器](./Sub.md)，選擇 AdGuard 與需要的方案，優先複製**官方來源（GitHub Raw）**的 URL，直接訂閱專案倉庫發布的檔案；若存取受限，再更換備用來源。下文所有「所選 URL」都指這個連結；更新或切換來源時保留相同方案，別被網路上的完整版範例覆蓋。
 
 AdGuard 發布檔案使用 `||網域^` 等文字規則。本專案是網域阻擋清單，不含網頁元素隱藏規則，也不是 DNS 伺服器位址或完整用戶端設定。不要把 Clash YAML、sing-box JSON、Surge 模組貼進過濾器。可對照[目前僅廣告版檔案](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Adguard-Only.Ads.txt)與 [DNS 規則語法](https://adguard-dns.io/kb/general/dns-filtering-syntax/)。
 

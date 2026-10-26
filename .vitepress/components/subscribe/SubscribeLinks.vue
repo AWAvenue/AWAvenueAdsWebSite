@@ -293,12 +293,13 @@ const copySets: Record<string, CopySet> = {
     copyError: '复制失败，请长按或选中上方链接手动复制。',
     filename: '技术文件名',
     sourceTitle: '选择订阅源并一键复制',
-    sourceIntro: '默认使用 jsDelivr。CDN 缓存可能延迟更新；需要最新内容时可选择 GitHub Raw，连接失败时再换其他来源。',
+    sourceIntro:
+      '优先推荐规则仓库的 GitHub Raw 源，可选择本项目提供的格式与方案，无需等待第三方镜像另行同步。下载速度取决于网络；无法连接时可改用 jsDelivr 或其他备用源，CDN 缓存可能延迟更新。',
     sameRuleNote: '各来源分发秋风广告规则，但镜像同步和缓存可能导致内容版本不同。更换来源后，请检查下载是否成功及规则更新时间。',
     domesticSources: '社区镜像',
     domesticSourcesHelp: '由第三方维护，访问速度和内容新鲜度请分别确认。',
-    otherSources: '官方与备用线路',
-    otherSourcesHelp: '适合能够访问 GitHub 的环境，或作为镜像故障时的备用。',
+    otherSources: 'CDN 与代理备用',
+    otherSourcesHelp: '官方仓库源无法连接时可尝试以下线路，使用后仍需核对规则更新时间。',
     copyLink: '复制订阅链接',
     copied: '已复制',
     copiedMessage: '已复制：',
@@ -316,9 +317,13 @@ const copySets: Record<string, CopySet> = {
     sources: {
       cxplay: { name: 'CXPLAY 镜像', description: '社区提供的订阅镜像，无法直连 GitHub 时可尝试此来源。', badge: '社区镜像' },
       uura: { name: '王富贵镜像', description: '2026-10-26 检查发现部分格式内容落后于官方，另有压缩响应兼容问题；使用前请核对。', badge: '注意更新与兼容性' },
-      ghraw: { name: 'GitHub Raw', description: '官方文件直链，实时更新；部分国内网络可能无法访问。', badge: '官方实时' },
-      jsdelivr: { name: 'jsDelivr', description: 'CDN 加速线路，通常较稳定，但缓存可能导致更新延迟。', badge: 'CDN 备用' },
-      ghproxy: { name: 'ghproxy', description: 'GitHub 反向代理，更新通常较快，但服务稳定性可能波动。', badge: '备用线路' }
+      ghraw: {
+        name: 'GitHub Raw · 官方仓库',
+        description: '直接订阅秋风广告规则仓库的发布文件，无需第三方镜像另行同步；下载速度和可用性取决于网络。',
+        badge: '官方仓库'
+      },
+      jsdelivr: { name: 'jsDelivr', description: '官方仓库连接受限时可尝试的 CDN 备用源，缓存可能导致更新延迟。', badge: 'CDN 备用' },
+      ghproxy: { name: 'ghproxy', description: 'GitHub 反向代理，服务可用性与内容更新需分别核对。', badge: '备用线路' }
     }
   },
   'zh-TW': {
@@ -363,12 +368,13 @@ const copySets: Record<string, CopySet> = {
     copyError: '複製失敗，請長按或選取上方連結手動複製。',
     filename: '規則檔名',
     sourceTitle: '選擇其他訂閱來源',
-    sourceIntro: '預設使用 jsDelivr。CDN 快取可能延後更新；需要最新內容時可選擇 GitHub Raw，無法連線時再更換其他來源。',
+    sourceIntro:
+      '優先推薦規則儲存庫的 GitHub Raw 來源，可選擇本專案提供的格式與方案，不必等待第三方鏡像站另外同步。下載速度取決於網路；無法連線時可改用 jsDelivr 或其他備用來源，CDN 快取可能延後更新。',
     sameRuleNote: '各來源皆提供秋風廣告規則，但鏡像同步與快取可能造成版本不同。更換來源後，請確認下載成功，並檢查規則更新時間。',
     domesticSources: '社群鏡像站',
     domesticSourcesHelp: '由第三方維護，請分別確認連線速度與內容是否為最新版本。',
-    otherSources: '官方與備用線路',
-    otherSourcesHelp: '適合能夠存取 GitHub 的環境，或作為鏡像站無法連線時的備用。',
+    otherSources: 'CDN 與代理備用來源',
+    otherSourcesHelp: '官方儲存庫來源無法連線時，可嘗試以下來源，使用後仍須確認規則更新時間。',
     copyLink: '複製訂閱連結',
     copied: '已複製',
     copiedMessage: '已複製：',
@@ -386,9 +392,13 @@ const copySets: Record<string, CopySet> = {
     sources: {
       cxplay: { name: 'CXPLAY 鏡像', description: '社群提供的訂閱鏡像站，無法直接連線至 GitHub 時可嘗試此來源。', badge: '社群鏡像站' },
       uura: { name: '王富貴鏡像', description: '2026-10-26 檢查發現部分格式尚未跟上官方更新，另有壓縮回應相容性問題；使用前請先核對。', badge: '注意更新與相容性' },
-      ghraw: { name: 'GitHub Raw', description: '官方檔案直連， 即時更新；部分中國大陸網路可能無法存取。', badge: '官方即時' },
-      jsdelivr: { name: 'jsDelivr', description: 'CDN 加速線路，通常較穩定，但快取可能造成更新延遲。', badge: 'CDN 備用' },
-      ghproxy: { name: 'ghproxy', description: 'GitHub 反向代理，更新通常較快，但服務穩定性可能波動。', badge: '備用線路' }
+      ghraw: {
+        name: 'GitHub Raw · 官方儲存庫',
+        description: '直接訂閱秋風廣告規則儲存庫的發布檔案，不必等待第三方鏡像站另外同步；下載速度與可用性取決於網路。',
+        badge: '官方儲存庫'
+      },
+      jsdelivr: { name: 'jsDelivr', description: '官方儲存庫連線受限時可嘗試的 CDN 備用來源，快取可能造成更新延遲。', badge: 'CDN 備用' },
+      ghproxy: { name: 'ghproxy', description: 'GitHub 反向代理，服務可用性與內容更新須分別核對。', badge: '備用線路' }
     }
   },
   'en-US': {
@@ -434,13 +444,13 @@ const copySets: Record<string, CopySet> = {
     filename: 'Technical filename',
     sourceTitle: 'Choose a source and copy',
     sourceIntro:
-      'jsDelivr is the default. CDN caching may delay updates; use GitHub Raw for the latest published content, or try another source if a connection fails.',
+      'GitHub Raw from the rule repository is recommended first. Choose the formats and profiles published by this project without waiting for a third-party mirror to synchronize. Download speed depends on your network; try jsDelivr or another fallback if GitHub is unreachable. CDN caching may delay updates.',
     sameRuleNote:
       'Sources distribute AWAvenue Ads Rule, but mirror synchronization and caches can serve different versions. Check download success and the rule update time after switching.',
     domesticSources: 'Community mirrors',
     domesticSourcesHelp: 'Maintained by third parties. Check both connectivity and content freshness.',
-    otherSources: 'Official and fallback sources',
-    otherSourcesHelp: 'Best when GitHub is reachable, or as fallbacks when a mirror is unavailable.',
+    otherSources: 'CDN and proxy fallbacks',
+    otherSourcesHelp: 'Try these when the official repository source is unreachable, then check the rule update time.',
     copyLink: 'Copy subscription',
     copied: 'Copied',
     copiedMessage: 'Copied: ',
@@ -471,9 +481,18 @@ const copySets: Record<string, CopySet> = {
         description: 'Checks on 2026-10-26 found outdated content in some formats and compression compatibility issues. Verify before use.',
         badge: 'Check updates and compatibility'
       },
-      ghraw: { name: 'GitHub Raw', description: 'The official real-time file URL; it may be unreachable on some mainland networks.', badge: 'Official live' },
-      jsdelivr: { name: 'jsDelivr', description: 'A generally stable CDN route whose cache may delay updates.', badge: 'CDN fallback' },
-      ghproxy: { name: 'ghproxy', description: 'A GitHub proxy with usually fast updates but variable service stability.', badge: 'Fallback' }
+      ghraw: {
+        name: 'GitHub Raw · Official repository',
+        description:
+          'Subscribe directly to files published in the AWAvenue-Ads-Rule repository, without a third-party mirror synchronization step. Download speed and availability depend on your network.',
+        badge: 'Official repository'
+      },
+      jsdelivr: {
+        name: 'jsDelivr',
+        description: 'A CDN fallback when the official repository cannot be reached; caching may delay updates.',
+        badge: 'CDN fallback'
+      },
+      ghproxy: { name: 'ghproxy', description: 'A GitHub proxy; check availability and content updates separately.', badge: 'Fallback' }
     }
   }
 }

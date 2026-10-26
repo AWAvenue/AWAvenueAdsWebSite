@@ -13,7 +13,7 @@ Each guide states its coverage; documentation checks do not establish testing of
 
 - [AdGuard](./AdGuard.md): product selection, Android import steps, and DNS filtering references for other platforms.
 
-- [AdGuard Home](./AdGuardHome.md): DNS filtering on a router or server; blocklists, query logs, updates, and rollback.
+- [AdGuard Home](./AdGuardHome.md): DNS filtering on a router or server; prefer a selected profile from the project repository, or choose the built-in **AWAvenue Ads Rule** entry, then check query logs, updates, and rollback.
 
 - [Android coexistence](./Coexist.md): local VPN conflicts and connection options when filtering and a proxy run together.
 

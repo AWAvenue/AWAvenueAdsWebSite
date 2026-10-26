@@ -11,16 +11,53 @@ verificationScope: docs
 
 記錄原本的用戶端 DNS、路由器 DHCP DNS、上游 DNS 與既有允許規則；先在一台裝置試用，再決定是否擴及整個網路。管理介面位址不等於 DNS 服務位址，例如管理頁的 `3000` 連接埠不是 DNS 查詢連接埠。
 
-在[訂閱產生器](./Sub.md)選擇 **AdGuard** 與需要的方案，複製**所選 URL**。該 URL 是過濾規則文字，不能填入「上游 DNS 伺服器」。後續更新、切換來源與疑難排解都保留所選方案；不需要改成完整版。[發布檔案範例](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Adguard-Only.Ads.txt)是僅廣告版，使用 `||網域^` 語法，不能改用 Clash YAML、Surge 模組或 sing-box JSON。
+優先使用專案倉庫的訂閱來源：在產生器選擇所需方案，複製官方來源（GitHub Raw）連結；內建目錄則提供不必貼上 URL 的備用方式。
 
 ## 匯入 DNS blocklists {#import}
 
-1. 開啟「過濾器 / Filters → DNS 封鎖清單 / DNS blocklists」。
-2. 選擇「新增封鎖清單 / Add blocklist → 新增自訂清單 / Add a custom list」。填寫可辨識的名稱（如「秋風廣告規則 · 所選方案」），貼上**所選 URL**，儲存並啟用。
-3. 檢查下載沒有錯誤，規則數不為零；確認「設定 / Settings → 一般設定 / General settings」中的「使用過濾器與 hosts 檔案阻擋網域 / Block domains using filters and hosts files」已啟用。
-4. 如果用戶端設定覆寫全域過濾選項，也檢查測試裝置對應的用戶端設定。DNS allowlists 與自訂例外會影響結果。
+**優先從專案倉庫訂閱**，可選擇四種方案，並直接隨規則倉庫發布更新，不經過 AdGuard 散布副本的額外同步流程。也可以使用下方內建目錄的便利入口；兩種方式擇一即可。
 
-功能與選單依據 [AdGuard Home FAQ](https://adguard-dns.io/kb/adguard-home/faq/)及[官方介面原始碼](https://github.com/AdguardTeam/AdGuardHome/blob/master/client/src/__locales/en.json)。顯示筆數受清單去重、解析與版本影響，不以某個固定數字作為唯一成功標準。
+### 方式一：訂閱專案倉庫（建議） {#custom-list}
+
+1. 在[訂閱產生器](./Sub.md)選擇 **AdGuard** 與需要的方案。
+2. 優先複製**官方來源（GitHub Raw）**連結；若存取受限，再更換備用來源，並保留相同方案。更新是否即時與下載速度是兩回事，官方來源不保證在所有網路中下載最快。
+3. 開啟「過濾器 / Filters → DNS 封鎖清單 / DNS blocklists」，選擇「新增封鎖清單 → 新增一個自訂的清單 / Add a custom list」。
+4. 填入容易辨識的名稱，貼上**所選 URL**，儲存並等待下載。這是過濾規則文字，不能填入「上游 DNS 伺服器」，也不能換成 Clash YAML、Surge 模組或 sing-box JSON。
+
+<figure class="tutorial-screenshot">
+  <a href="/tutorials/adguard-home/zh-TW-custom.png" target="_blank" rel="noopener">
+    <img src="/tutorials/adguard-home/zh-TW-custom.png" width="561" height="444" loading="lazy" alt="AdGuard Home 自訂清單表單中填入了秋風廣告規則僅廣告版的名稱與訂閱連結。">
+  </a>
+  <figcaption>範例透過官方來源（GitHub Raw）訂閱僅廣告版；輸入欄位僅顯示部分 URL，請從產生器複製實際選擇的連結。點選圖片可檢視原圖。</figcaption>
+</figure>
+
+若已使用內建訂閱，改用倉庫來源時請先停用或移除原項目，避免重複啟用。尤其改成僅廣告版時，若仍啟用完整版，原本的阻擋範圍也會保留。後續更新、更換來源與排錯請保留所選方案，不必改回完整版。
+
+### 方式二：直接選取內建清單 {#built-in}
+
+1. 開啟「過濾器 / Filters → DNS 封鎖清單 / DNS blocklists」。
+2. 選擇「新增封鎖清單 / Add blocklist → 從該清單中選擇 / Choose from the list」。
+3. 在「一般 / General」分類勾選 **AWAvenue Ads Rule**，儲存並等待下載。**這就是秋風廣告規則**，不必手動貼上 URL。
+
+<details>
+<summary>檢視內建清單入口截圖</summary>
+
+<figure class="tutorial-screenshot">
+  <a href="/tutorials/adguard-home/zh-TW-catalog.png" target="_blank" rel="noopener">
+    <img src="/tutorials/adguard-home/zh-TW-catalog.png" width="561" height="152" loading="lazy" alt="AdGuard Home 內建清單中的 AWAvenue Ads Rule 已勾選。">
+  </a>
+  <figcaption>內建清單中的名稱為 AWAvenue Ads Rule，選取並儲存即可訂閱秋風廣告規則。點選圖片可檢視原圖。</figcaption>
+</figure>
+
+</details>
+
+內建項目使用 [AdGuard HostlistsRegistry](https://github.com/AdguardTeam/HostlistsRegistry/blob/main/assets/filters.json) 編譯及散布的專案完整版副本，請見[此版本的內建目錄](https://github.com/AdguardTeam/AdGuardHome/blob/v0.107.79/client/src/helpers/filters/filters.ts)。它不提供四方案切換，處理、同步與筆數也可能不同；需要選擇其他方案或優先取得專案倉庫發布的檔案時，請使用上方的建議方式。
+
+### 兩種方式都要檢查
+
+下載後確認項目已啟用、沒有錯誤，且規則筆數不是零。確認「設定 / Settings → 一般設定 / General settings」中的「使用過濾器和 hosts 檔案封鎖網域 / Block domains using filters and hosts files」已啟用。若用戶端設定覆寫全域過濾選項，也要檢查測試裝置的用戶端設定；DNS allowlists 與自訂例外會影響結果。
+
+功能與選單依據 [AdGuard Home FAQ](https://adguard-dns.io/kb/adguard-home/faq/)及[官方介面原始碼](https://github.com/AdguardTeam/AdGuardHome/blob/master/client/src/__locales/en.json)。顯示筆數會受清單去重、解析與版本影響，不以某個固定數字作為唯一成功標準。
 
 ## 更新清單 {#update}
 
@@ -53,6 +90,17 @@ nslookup example.org 192.168.1.2
 ```
 
 `ad.doubleclick.net` 是核驗日僅廣告版包含的範例；未來若移除，以目前清單為準。查詢紀錄應顯示第一條已阻擋，詳細資料列出命中規則與秋風廣告規則清單；第二條用於正常解析對照。若對照網域被你自己的其他規則阻擋，換一個已知正常網域。被其他清單或上游先阻擋不能證明本訂閱命中，必要時僅在測試用戶端隔離其他過濾層再比較。
+
+在截圖版本的桌面介面中，將滑鼠移到該筆記錄「回應」欄的問號，即可檢視「回應細節」。請核對狀態、命中規則與所屬清單；自訂清單顯示的是你填入的名稱。
+
+<figure class="tutorial-screenshot">
+  <a href="/tutorials/adguard-home/zh-TW-hit.png" target="_blank" rel="noopener">
+    <img src="/tutorials/adguard-home/zh-TW-hit.png" width="452" height="408" loading="lazy" alt="AdGuard Home 回應細節顯示已封鎖，命中規則為 ||ad.doubleclick.net^，所屬清單是自訂的秋風廣告規則僅廣告版，回覆 0.0.0.0。">
+  </a>
+  <figcaption>真實倉庫來源訂閱命中：同時核對已封鎖狀態、實際規則與自訂清單名稱「秋风广告规则 · 仅广告」。只看 0.0.0.0 或 NOERROR 都不足以證明命中本訂閱。點選圖片可檢視原圖。</figcaption>
+</figure>
+
+截圖於 2026-10-27 擷取，軟體為 **AdGuard Home v0.107.79**、正體中文（台灣）介面，表單使用手機檢視區，命中細節使用桌面檢視區。本機隔離執行個體已實際驗證專案倉庫來源與內建清單兩種訂閱方式的下載，並分別核對廣告網域命中與正常解析對照；僅向回環監聽連接埠發送測試查詢，未驗證系統預設 DNS、路由器、NAS、Docker 或其他裝置的 DNS 路徑。軟體介面與商標權利歸各自權利人。
 
 阻擋回覆可能是 `0.0.0.0`、`::`、`NXDOMAIN` 或 `REFUSED` 等，取決於阻擋模式；只看回覆或網站打不開並不夠。更新、放行後仍異常時，清除 AdGuard Home 與測試用戶端的 DNS 快取、重新啟動相關應用程式或等待 TTL，避免舊快取與連線影響判斷。原理見 [DNS 規則語法](https://adguard-dns.io/kb/general/dns-filtering-syntax/)與[設定文件](https://adguard-dns.io/kb/adguard-home/configuration/)。
 

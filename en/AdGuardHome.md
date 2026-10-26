@@ -11,14 +11,51 @@ Scope: an installed AdGuard Home 0.107.x instance with an accessible web interfa
 
 Record the existing client DNS, router DHCP DNS, upstream resolvers, and allow rules. Try one device before changing the whole network. The web interface address is not the DNS service address: a management port such as `3000` is not the DNS query port.
 
-In the [subscription generator](./Sub.md), choose **AdGuard** and your preferred profile, then copy the **selected URL**. It contains filter text and must not be entered as an upstream DNS server. Keep the same profile for updates, source changes, and troubleshooting; switching to the full list is unnecessary. The [published file example](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Adguard-Only.Ads.txt) is the ads-only profile using `||domain^` rules, not Clash YAML, a Surge module, or sing-box JSON.
+Prefer a subscription from this project’s repository: select a profile in the generator and copy the official GitHub Raw URL. The built-in catalog offers an alternative that needs no pasted URL.
 
 ## Import DNS blocklists {#import}
 
+**Prefer subscribing from this project’s repository.** It offers four profiles and follows releases in the rule repository without the additional synchronization of AdGuard’s distributed copy. The built-in catalog below is a convenient alternative; choose one method.
+
+### Option 1: subscribe from the project repository (recommended) {#custom-list}
+
+1. In the [subscription generator](./Sub.md), choose **AdGuard** and your preferred profile.
+2. Prefer the **official GitHub Raw** URL. If access is restricted, use an alternative source while keeping the same profile. Update freshness and download speed are different; the official source is not guaranteed to download fastest on every network.
+3. Open **Filters → DNS blocklists**, then choose **Add blocklist → Add a custom list**.
+4. Enter a recognizable name, paste the **selected URL**, save, and wait for the download. It contains filter text and must not be entered as an upstream DNS server or replaced with Clash YAML, a Surge module, or sing-box JSON.
+
+<figure class="tutorial-screenshot">
+  <a href="/tutorials/adguard-home/en-custom.png" target="_blank" rel="noopener">
+    <img src="/tutorials/adguard-home/en-custom.png" width="561" height="444" loading="lazy" alt="The AdGuard Home custom list form contains the AWAvenue-Ads-Rule ads-only name and subscription URL.">
+  </a>
+  <figcaption>This example subscribes to the ads-only profile through the official GitHub Raw source. The input only displays part of the URL; copy your actual selection from the generator. Open the image to view the original size.</figcaption>
+</figure>
+
+If you already use the built-in subscription, disable or remove it before switching to a repository URL to avoid duplicates. In particular, leaving the full list enabled retains its filtering coverage even after you add an ads-only list. Keep the same selected profile for updates, source changes, and troubleshooting; switching back to the full list is unnecessary.
+
+### Option 2: choose the built-in list {#built-in}
+
 1. Open **Filters → DNS blocklists**.
-2. Choose **Add blocklist → Add a custom list**. Enter a recognizable name, such as “AWAvenue-Ads-Rule · selected profile”, paste the **selected URL**, save, and enable it.
-3. Check for download errors and a nonzero rule count. Enable **Settings → General settings → Block domains using filters and hosts files**.
-4. If per-client settings override global filtering, also check the test device's client configuration. DNS allowlists and custom exceptions affect results.
+2. Choose **Add blocklist → Choose from the list**.
+3. Under **General**, select **AWAvenue Ads Rule**, save, and wait for the download. **This is the AWAvenue-Ads-Rule project**; no URL needs to be pasted.
+
+<details>
+<summary>Show the built-in list screenshot</summary>
+
+<figure class="tutorial-screenshot">
+  <a href="/tutorials/adguard-home/en-catalog.png" target="_blank" rel="noopener">
+    <img src="/tutorials/adguard-home/en-catalog.png" width="561" height="153" loading="lazy" alt="AWAvenue Ads Rule is checked in the AdGuard Home built-in list catalog.">
+  </a>
+  <figcaption>The catalog name is AWAvenue Ads Rule. Select it and save to subscribe. Open the image to view the original size.</figcaption>
+</figure>
+
+</details>
+
+The built-in entry uses a copy of the project’s full list compiled and distributed by [AdGuard HostlistsRegistry](https://github.com/AdguardTeam/HostlistsRegistry/blob/main/assets/filters.json); see [this version’s built-in catalog](https://github.com/AdguardTeam/AdGuardHome/blob/v0.107.79/client/src/helpers/filters/filters.ts). It does not switch between the four profiles, and processing, synchronization, and counts may differ. Use the recommended method above to choose another profile or prioritize files published by the project repository.
+
+### Check either method
+
+After downloading, confirm that the entry is enabled, has no errors, and has a nonzero rule count. Enable **Settings → General settings → Block domains using filters and hosts files**. If per-client settings override global filtering, also check the test device's client configuration. DNS allowlists and custom exceptions affect results.
 
 These features and labels follow the [AdGuard Home FAQ](https://adguard-dns.io/kb/adguard-home/faq/) and [official interface source](https://github.com/AdguardTeam/AdGuardHome/blob/master/client/src/__locales/en.json). Parsing, deduplication, and versions can affect counts; one exact number is not a reliable success criterion.
 
@@ -53,6 +90,17 @@ nslookup example.org 192.168.1.2
 ```
 
 The ads-only list contained `ad.doubleclick.net` on the verification date; if it is removed later, use a current entry. Query log should show the first request blocked, with the matching rule and this list in its details. The second is a normal-resolution control. If another local rule blocks the control, choose a known working domain. A hit from another list or an upstream resolver does not verify this subscription; isolate other filtering layers for the test client when needed.
+
+In the pictured desktop version, hover over the question mark in the entry's **Response** column to open **Response details**. Check the status, matching rule, and filter list. A custom subscription displays the name you entered.
+
+<figure class="tutorial-screenshot">
+  <a href="/tutorials/adguard-home/en-hit.png" target="_blank" rel="noopener">
+    <img src="/tutorials/adguard-home/en-hit.png" width="539" height="408" loading="lazy" alt="AdGuard Home response details show Blocked, rule ||ad.doubleclick.net^, the custom AWAvenue-Ads-Rule ads-only list, and answer 0.0.0.0.">
+  </a>
+  <figcaption>A real hit from the repository subscription: check Blocked, the matching rule, and the custom list name “秋风广告规则 · 仅广告” together. Neither 0.0.0.0 nor NOERROR alone proves attribution. Open the image to view the original size.</figcaption>
+</figure>
+
+Screenshots were captured on 2026-10-27 using **AdGuard Home v0.107.79** in English, with mobile viewports for the forms and a desktop viewport for the hit details. An isolated local instance verified downloads through both repository and built-in subscriptions, with an attributed blocked domain and a normal-resolution control for each. Queries targeted only its loopback listener; system default DNS, routers, NAS, Docker, and other devices' DNS paths were not tested. Software interface and trademark rights belong to their respective holders.
 
 Blocked answers can be `0.0.0.0`, `::`, `NXDOMAIN`, or `REFUSED`, depending on the blocking mode. Neither the answer alone nor a failed page proves attribution. After updating or allowing a domain, clear AdGuard Home and client DNS caches, restart relevant apps, or wait for TTL expiry. See [DNS rule syntax](https://adguard-dns.io/kb/general/dns-filtering-syntax/) and [configuration](https://adguard-dns.io/kb/adguard-home/configuration/).
 

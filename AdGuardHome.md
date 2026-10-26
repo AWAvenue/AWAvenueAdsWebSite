@@ -11,14 +11,51 @@ verificationScope: docs
 
 记录原先的客户端 DNS、路由器 DHCP DNS、上游 DNS 和已有允许规则；先在一台设备试用，再决定是否扩展至全网。管理界面地址不等于 DNS 服务地址，例如管理页的 `3000` 端口不是 DNS 查询端口。
 
-在[订阅生成器](./Sub.md)选择 **AdGuard** 和需要的方案，复制**所选 URL**。该 URL 是过滤规则文本，不能填入“上游 DNS 服务器”。后续更新、换源和排错始终保留所选方案；不需要改成完整版。[发布文件示例](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Adguard-Only.Ads.txt)是仅广告版，使用 `||域名^` 语法，不能改用 Clash YAML、Surge 模块或 sing-box JSON。
+优先使用项目仓库的订阅源：在生成器选择所需方案并复制官方源（GitHub Raw）链接；内置目录提供免粘贴 URL 的备选方式。
 
 ## 导入 DNS blocklists {#import}
 
+**优先从项目仓库订阅**，可选择四种方案，并直接跟随规则仓库的发布，不经过 AdGuard 分发副本的同步流程。也可以使用下方内置目录的便捷入口；两种方式择一即可。
+
+### 方式一：订阅项目仓库（推荐） {#custom-list}
+
+1. 在[订阅生成器](./Sub.md)选择 **AdGuard** 和需要的方案。
+2. 优先复制**官方源（GitHub Raw）**链接；访问受限时再换备用来源，并保留同一方案。更新是否及时与下载速度是两回事，官方源不保证在所有网络中下载最快。
+3. 打开“过滤器 / Filters → DNS 黑名单 / DNS blocklists”，选择“添加黑名单 → 添加一个自定义列表 / Add a custom list”。
+4. 填写可识别的名称，粘贴**所选 URL**，保存并等待下载。该链接是过滤规则文本，不能填入“上游 DNS 服务器”，也不能换成 Clash YAML、Surge 模块或 sing-box JSON。
+
+<figure class="tutorial-screenshot">
+  <a href="/tutorials/adguard-home/zh-CN-custom.png" target="_blank" rel="noopener">
+    <img src="/tutorials/adguard-home/zh-CN-custom.png" width="561" height="444" loading="lazy" alt="AdGuard Home 自定义列表表单中填写了秋风广告规则仅广告版的名称和订阅链接。">
+  </a>
+  <figcaption>示例通过官方源（GitHub Raw）订阅仅广告版；输入框仅显示部分 URL，请从生成器复制实际选择的链接。点击图片可查看原图。</figcaption>
+</figure>
+
+如果已有内置订阅，改用仓库源时先停用或移除原条目，避免重复启用。尤其是改为仅广告版时，继续启用完整版仍会保留原有拦截范围。后续更新、换源和排错保留所选方案，不必改回完整版。
+
+### 方式二：直接选择内置列表 {#built-in}
+
 1. 打开“过滤器 / Filters → DNS 黑名单 / DNS blocklists”。
-2. 选择“添加黑名单 / Add blocklist → 添加自定义列表 / Add a custom list”。填写可识别的名称（如“秋风广告规则 · 所选方案”），粘贴**所选 URL**，保存并启用。
-3. 检查下载没有报错，规则数不为零；确认“设置 / Settings → 常规设置 / General settings”中的“使用过滤器和 hosts 文件拦截域名 / Block domains using filters and hosts files”启用。
-4. 如果客户端设置覆盖全局过滤选项，也检查测试设备对应的客户端配置。DNS allowlists 和自定义例外会改变结果。
+2. 选择“添加黑名单 / Add blocklist → 从列表中选择 / Choose from the list”。
+3. 在“常规 / General”分类勾选 **AWAvenue Ads Rule**，保存并等待下载。**这就是秋风广告规则**，不需要手动粘贴 URL。
+
+<details>
+<summary>查看内置列表入口截图</summary>
+
+<figure class="tutorial-screenshot">
+  <a href="/tutorials/adguard-home/zh-CN-catalog.png" target="_blank" rel="noopener">
+    <img src="/tutorials/adguard-home/zh-CN-catalog.png" width="561" height="152" loading="lazy" alt="AdGuard Home 内置列表中的 AWAvenue Ads Rule 已被勾选。">
+  </a>
+  <figcaption>内置列表里的名称是 AWAvenue Ads Rule，选中后保存即可订阅秋风广告规则。点击图片可查看原图。</figcaption>
+</figure>
+
+</details>
+
+内置项使用 [AdGuard HostlistsRegistry](https://github.com/AdguardTeam/HostlistsRegistry/blob/main/assets/filters.json) 编译分发的项目完整版副本，见[此版本的内置目录](https://github.com/AdguardTeam/AdGuardHome/blob/v0.107.79/client/src/helpers/filters/filters.ts)。它不提供四方案切换，处理、同步与条数也可能不同；需要选择其他方案或优先取得项目仓库发布的文件时，请使用上面的推荐方式。
+
+### 两种方式都要检查
+
+下载后检查条目已启用、没有报错且规则数不为零。确认“设置 / Settings → 常规设置 / General settings”中的“使用过滤器和 hosts 文件拦截域名 / Block domains using filters and hosts files”启用。如果客户端设置覆盖全局过滤选项，也检查测试设备对应的客户端配置；DNS allowlists 和自定义例外会改变结果。
 
 功能与菜单依据 [AdGuard Home FAQ](https://adguard-dns.io/kb/adguard-home/faq/)及[官方界面源码](https://github.com/AdguardTeam/AdGuardHome/blob/master/client/src/__locales/en.json)。显示条数受列表去重、解析与版本影响，不以某个固定数字作为唯一成功标准。
 
@@ -53,6 +90,17 @@ nslookup example.org 192.168.1.2
 ```
 
 `ad.doubleclick.net` 是核验日仅广告版包含的示例；将来若移除，以当前列表为准。查询日志应显示第一条被拦截，详情列出命中规则及秋风广告规则列表；第二条用于正常解析对照。若对照域名被你自己的其他规则拦截，换一个已知正常域名。被其他列表或上游先拦截不能证明本订阅命中，必要时仅在测试客户端隔离其他过滤层再比较。
+
+截图版本的桌面界面中，将鼠标移到该条记录“响应”列的问号，可查看“响应细节”。核对状态、具体命中规则和所属列表；自定义列表显示的是你填写的名称。
+
+<figure class="tutorial-screenshot">
+  <a href="/tutorials/adguard-home/zh-CN-hit.png" target="_blank" rel="noopener">
+    <img src="/tutorials/adguard-home/zh-CN-hit.png" width="476" height="408" loading="lazy" alt="AdGuard Home 响应细节显示已拦截，命中规则为 ||ad.doubleclick.net^，所属清单为自定义的秋风广告规则仅广告版，返回 0.0.0.0。">
+  </a>
+  <figcaption>真实仓库源订阅命中：同时核对“已拦截”、具体规则和自定义的列表名称“秋风广告规则 · 仅广告”。单看 0.0.0.0 或 NOERROR 都不足以证明命中本订阅。点击图片可查看原图。</figcaption>
+</figure>
+
+截图采集于 2026-10-27，软件为 **AdGuard Home v0.107.79**、简体中文界面，表单使用手机视口，命中详情使用桌面视口。本机隔离实例实际验证了项目仓库源与内置列表两条订阅路径的下载，并分别核对广告域名命中及正常解析对照；仅向回环监听端口发送测试查询，未验证系统默认 DNS、路由器、NAS、Docker 或其他设备接管。软件界面及商标权利归相应权利人。
 
 阻断答案可能是 `0.0.0.0`、`::`、`NXDOMAIN` 或 `REFUSED` 等，取决于阻断模式；单看答案或网站打不开不够。更新、放行后仍异常时，清理 AdGuard Home 与测试客户端的 DNS 缓存、重启相关应用或等待 TTL，避免旧缓存和连接影响判断。原理见 [DNS 规则语法](https://adguard-dns.io/kb/general/dns-filtering-syntax/)与[配置文档](https://adguard-dns.io/kb/adguard-home/configuration/)。
 
