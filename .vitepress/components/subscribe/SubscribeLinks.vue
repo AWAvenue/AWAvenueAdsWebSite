@@ -1,6 +1,6 @@
 <template>
   <section class="subscribe-wizard">
-    <header class="wizard-header">
+    <header v-if="step !== 'result'" class="wizard-header">
       <p class="eyebrow">{{ copy.eyebrow }}</p>
       <h2>{{ copy.title }}</h2>
       <p>{{ copy.intro }}</p>
@@ -83,10 +83,21 @@
         <div class="result-summary">
           <div>
             <p class="eyebrow">{{ copy.resultEyebrow }}</p>
-            <h3>{{ selectedTool.label }} · {{ profileCopy.title }}</h3>
-            <p>{{ profileCopy.description }}</p>
+            <h2 ref="resultHeading" tabindex="-1">{{ selectedTool.label }} · {{ profileCopy.title }}</h2>
           </div>
           <button class="secondary-button" type="button" @click="editAnswers">{{ copy.changeAnswers }}</button>
+        </div>
+
+        <div v-if="recommendedLink" class="recommended-source">
+          <p class="recommended-source-label">{{ copy.recommendedSource }} · {{ copy.sources[recommendedLink.source.id].name }}</p>
+          <LinkContainer
+            :link="recommendedLink.link"
+            :copy-label="copy.copyLink"
+            :copied-label="copy.copied"
+            :copied-message="`${copy.copiedMessage}${copy.sources[recommendedLink.source.id].name}`"
+            :copy-error-label="copy.copyError"
+          />
+          <a class="tutorial-link" :href="tutorialLink">{{ copy.viewTutorial }}</a>
         </div>
 
         <ul v-if="selectedTool.supportsVariants !== false" class="coverage-list" :aria-label="copy.coverageLabel">
@@ -95,68 +106,71 @@
           <li :class="{ enabled: blockUnwelcome }">{{ copy.unwelcome }}</li>
         </ul>
 
-        <div class="result-actions">
-          <a class="tutorial-link" :href="tutorialLink">{{ copy.viewTutorial }}</a>
-          <span
-            >{{ copy.filename }}：<code>{{ resultFilename }}</code></span
-          >
-        </div>
+        <p class="profile-description">{{ profileCopy.description }}</p>
 
-        <div class="source-intro">
-          <h3>{{ copy.sourceTitle }}</h3>
-          <p>{{ copy.sourceIntro }}</p>
-          <div class="source-note">{{ copy.sameRuleNote }}</div>
-        </div>
-
-        <section class="source-section">
-          <div class="source-section-heading">
-            <h4>{{ copy.domesticSources }}</h4>
-            <p>{{ copy.domesticSourcesHelp }}</p>
+        <details class="more-sources">
+          <summary>{{ copy.moreSources }}</summary>
+          <div class="source-intro">
+            <h3>{{ copy.sourceTitle }}</h3>
+            <p>{{ copy.sourceIntro }}</p>
+            <div class="source-note">{{ copy.sameRuleNote }}</div>
+            <p class="result-filename">
+              {{ copy.filename }}：<code>{{ resultFilename }}</code>
+            </p>
           </div>
-          <div class="source-grid">
-            <article v-for="item in domesticLinks" :key="item.source.id" class="source-card domestic-card">
-              <div class="source-card-heading">
-                <div>
-                  <h5>{{ copy.sources[item.source.id].name }}</h5>
-                  <p>{{ copy.sources[item.source.id].description }}</p>
+
+          <section v-if="domesticLinks.length" class="source-section">
+            <div class="source-section-heading">
+              <h4>{{ copy.domesticSources }}</h4>
+              <p>{{ copy.domesticSourcesHelp }}</p>
+            </div>
+            <div class="source-grid">
+              <article v-for="item in domesticLinks" :key="item.source.id" class="source-card domestic-card">
+                <div class="source-card-heading">
+                  <div>
+                    <h5>{{ copy.sources[item.source.id].name }}</h5>
+                    <p>{{ copy.sources[item.source.id].description }}</p>
+                  </div>
+                  <span class="source-badge">{{ copy.sources[item.source.id].badge }}</span>
                 </div>
-                <span class="source-badge">{{ copy.sources[item.source.id].badge }}</span>
-              </div>
-              <LinkContainer
-                :link="item.link"
-                :copy-label="copy.copyLink"
-                :copied-label="copy.copied"
-                :copied-message="`${copy.copiedMessage}${copy.sources[item.source.id].name}`"
-              />
-            </article>
-          </div>
-        </section>
+                <LinkContainer
+                  :link="item.link"
+                  :copy-label="copy.copyLink"
+                  :copied-label="copy.copied"
+                  :copied-message="`${copy.copiedMessage}${copy.sources[item.source.id].name}`"
+                  :copy-error-label="copy.copyError"
+                />
+              </article>
+            </div>
+          </section>
 
-        <section class="source-section">
-          <div class="source-section-heading">
-            <h4>{{ copy.otherSources }}</h4>
-            <p>{{ copy.otherSourcesHelp }}</p>
-          </div>
-          <div class="source-grid">
-            <article v-for="item in otherLinks" :key="item.source.id" class="source-card">
-              <div class="source-card-heading">
-                <div>
-                  <h5>{{ copy.sources[item.source.id].name }}</h5>
-                  <p>{{ copy.sources[item.source.id].description }}</p>
+          <section v-if="otherLinks.length" class="source-section">
+            <div class="source-section-heading">
+              <h4>{{ copy.otherSources }}</h4>
+              <p>{{ copy.otherSourcesHelp }}</p>
+            </div>
+            <div class="source-grid">
+              <article v-for="item in otherLinks" :key="item.source.id" class="source-card">
+                <div class="source-card-heading">
+                  <div>
+                    <h5>{{ copy.sources[item.source.id].name }}</h5>
+                    <p>{{ copy.sources[item.source.id].description }}</p>
+                  </div>
+                  <span class="source-badge">{{ copy.sources[item.source.id].badge }}</span>
                 </div>
-                <span class="source-badge">{{ copy.sources[item.source.id].badge }}</span>
-              </div>
-              <LinkContainer
-                :link="item.link"
-                :copy-label="copy.copyLink"
-                :copied-label="copy.copied"
-                :copied-message="`${copy.copiedMessage}${copy.sources[item.source.id].name}`"
-              />
-            </article>
-          </div>
-        </section>
+                <LinkContainer
+                  :link="item.link"
+                  :copy-label="copy.copyLink"
+                  :copied-label="copy.copied"
+                  :copied-message="`${copy.copiedMessage}${copy.sources[item.source.id].name}`"
+                  :copy-error-label="copy.copyError"
+                />
+              </article>
+            </div>
+          </section>
 
-        <p v-if="availableLinks.length < sources.length" class="availability-note">{{ copy.unavailableNote }}</p>
+          <p v-if="availableLinks.length < sources.length" class="availability-note">{{ copy.unavailableNote }}</p>
+        </details>
       </div>
     </div>
 
@@ -171,7 +185,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { useData } from 'vitepress'
 import { getFilename, getSubscriptionLink, getTool, getVariantId, sources, tools, type SourceId, type ToolGroup, type VariantId } from '../../../SubData'
 import LinkContainer from './linkContainer.vue'
@@ -213,6 +227,9 @@ type CopySet = {
   privacy: string
   unwelcome: string
   viewTutorial: string
+  recommendedSource: string
+  moreSources: string
+  copyError: string
   filename: string
   sourceTitle: string
   sourceIntro: string
@@ -270,12 +287,15 @@ const copySets: Record<string, CopySet> = {
     privacy: '隐私与遥测',
     unwelcome: '强更、PCDN、推送与云控',
     viewTutorial: '查看导入教程',
+    recommendedSource: '推荐来源',
+    moreSources: '更多来源与方案说明',
+    copyError: '复制失败，请长按或选中上方链接手动复制。',
     filename: '技术文件名',
     sourceTitle: '选择订阅源并一键复制',
-    sourceIntro: '国内网络建议优先尝试前三条镜像线路；如果某条线路无法更新，直接替换为另一条即可。',
-    sameRuleNote: '所有线路提供的是同一份秋风广告规则，仅访问路径和同步速度不同。社区镜像由第三方提供。',
-    domesticSources: '国内网络推荐',
-    domesticSourcesHelp: '针对国内访问环境优化，按推荐顺序排列。',
+    sourceIntro: '默认使用 jsDelivr。CDN 缓存可能延迟更新；需要最新内容时可选择 GitHub Raw，连接失败时再换其他来源。',
+    sameRuleNote: '各来源分发秋风广告规则，但镜像同步和缓存可能导致内容版本不同。更换来源后，请检查下载是否成功及规则更新时间。',
+    domesticSources: '社区镜像',
+    domesticSourcesHelp: '由第三方维护，访问速度和内容新鲜度请分别确认。',
     otherSources: '官方与备用线路',
     otherSourcesHelp: '适合能够访问 GitHub 的环境，或作为镜像故障时的备用。',
     copyLink: '复制订阅链接',
@@ -293,9 +313,8 @@ const copySets: Record<string, CopySet> = {
       independent: { title: '独立规则', description: '这个格式目前不参与四种分类方案，下面提供它现有的独立订阅。' }
     },
     sources: {
-      tmby: { name: '天命 CFCDN', description: '维护者提供的 GitHub Raw 反向代理，更新及时，适合国内网络。', badge: '国内推荐' },
-      cxplay: { name: 'CXPLAY 镜像', description: '社区提供的即时镜像服务，针对国内网络优化。', badge: '即时镜像' },
-      uura: { name: '王富贵镜像', description: '社区镜像，约每小时同步一次，适合日常稳定订阅。', badge: '约一小时同步' },
+      cxplay: { name: 'CXPLAY 镜像', description: '社区提供的订阅镜像，无法直连 GitHub 时可尝试此来源。', badge: '社区镜像' },
+      uura: { name: '王富贵镜像', description: '2026-10-26 检查发现部分格式内容落后于官方，另有压缩响应兼容问题；使用前请核对。', badge: '注意更新与兼容性' },
       ghraw: { name: 'GitHub Raw', description: '官方文件直链，实时更新；部分国内网络可能无法访问。', badge: '官方实时' },
       jsdelivr: { name: 'jsDelivr', description: 'CDN 加速线路，通常较稳定，但缓存可能导致更新延迟。', badge: 'CDN 备用' },
       ghproxy: { name: 'ghproxy', description: 'GitHub 反向代理，更新通常较快，但服务稳定性可能波动。', badge: '备用线路' }
@@ -318,16 +337,16 @@ const copySets: Record<string, CopySet> = {
     noTools: '找不到符合的工具，可以換個關鍵字試試。',
     backToTools: '← 重新選擇工具',
     previous: '← 上一步',
-    privacyQuestion: '是否攔截隱私統計與遙測？',
-    privacyHelp: '包括統計埋點、遙測、崩潰收集和裝置指紋。攔截後隱私更強，但少數功能可能受影響。',
+    privacyQuestion: '是否攔截使用情況統計與遙測？',
+    privacyHelp: '包括使用情況統計、遙測、當機回報與裝置指紋。攔截後可加強隱私權保護，但少數功能可能受影響。',
     blockPrivacy: '攔截，減少追蹤',
-    blockPrivacyHelp: '加入隱私類規則，降低統計、遙測與裝置指紋請求。',
+    blockPrivacyHelp: '加入隱私權保護規則，降低統計、遙測與裝置指紋請求。',
     keepPrivacy: '保留，相容優先',
-    keepPrivacyHelp: '不加入隱私類規則，只處理其他已選擇的內容。',
+    keepPrivacyHelp: '不加入隱私權保護規則，只處理其他已選擇的內容。',
     unwelcomeQuestion: '是否攔截不受歡迎的網路行為？',
-    unwelcomeHelp: '包括強制更新、P2P/PCDN、推送和雲端控制下發。請依照裝置用途選擇。',
+    unwelcomeHelp: '包括強制更新、P2P/PCDN、推播和雲端設定派送。請依照裝置用途選擇。',
     blockUnwelcome: '攔截，干預更強',
-    blockUnwelcomeHelp: '加入不受歡迎類規則，減少強更、PCDN、推送和雲端控制請求。',
+    blockUnwelcomeHelp: '加入不受歡迎類規則，減少強制更新、PCDN、推播和雲端控制請求。',
     keepUnwelcome: '保留，減少影響',
     keepUnwelcomeHelp: '不加入不受歡迎類規則，保留這些連線。',
     recommended: '推薦',
@@ -335,36 +354,38 @@ const copySets: Record<string, CopySet> = {
     changeAnswers: '修改選擇',
     coverageLabel: '方案包含內容',
     ads: '廣告',
-    privacy: '隱私與遙測',
-    unwelcome: '強更、PCDN、推送與雲端控制',
+    privacy: '隱私權與遙測',
+    unwelcome: '強制更新、PCDN、推播與雲端控制',
     viewTutorial: '查看匯入教學',
-    filename: '技術檔案名稱',
-    sourceTitle: '選擇訂閱源並一鍵複製',
-    sourceIntro: '國內網路建議優先嘗試前三條鏡像線路；如果某條線路無法更新，直接替換另一條即可。',
-    sameRuleNote: '所有線路提供的是同一份秋風廣告規則，只有存取路徑和同步速度不同。社群鏡像由第三方提供。',
-    domesticSources: '國內網路推薦',
-    domesticSourcesHelp: '針對國內存取環境最佳化，依推薦順序排列。',
+    recommendedSource: '推薦來源',
+    moreSources: '更多來源與方案說明',
+    copyError: '複製失敗，請長按或選取上方連結手動複製。',
+    filename: '規則檔名',
+    sourceTitle: '選擇其他訂閱來源',
+    sourceIntro: '預設使用 jsDelivr。CDN 快取可能延後更新；需要最新內容時可選擇 GitHub Raw，無法連線時再更換其他來源。',
+    sameRuleNote: '各來源皆提供秋風廣告規則，但鏡像同步與快取可能造成版本不同。更換來源後，請確認下載成功，並檢查規則更新時間。',
+    domesticSources: '社群鏡像站',
+    domesticSourcesHelp: '由第三方維護，請分別確認連線速度與內容是否為最新版本。',
     otherSources: '官方與備用線路',
-    otherSourcesHelp: '適合能夠存取 GitHub 的環境，或作為鏡像故障時的備用。',
+    otherSourcesHelp: '適合能夠存取 GitHub 的環境，或作為鏡像站無法連線時的備用。',
     copyLink: '複製訂閱連結',
     copied: '已複製',
     copiedMessage: '已複製：',
-    unavailableNote: '目前格式有少量鏡像尚未提供，因此只顯示確認可用的線路。',
-    footer: '訂閱前請閱讀使用者協議；遇到誤殺、漏攔或連結故障，歡迎回報。',
+    unavailableNote: '目前格式有少量鏡像尚未提供，因此只顯示已設定的來源。',
+    footer: '訂閱前請閱讀使用者協議；遇到誤擋、漏攔或連結故障，歡迎回報。',
     protocol: '使用者協議',
     feedback: '回報管道',
     profiles: {
-      full: { title: '完整防護', description: '同時攔截廣告、隱私追蹤與不受歡迎的網路行為，保留秋風廣告規則的預設完整體驗。' },
+      full: { title: '完整防護', description: '同時攔截廣告、追蹤行為與不受歡迎的網路行為，保留秋風廣告規則的預設完整體驗。' },
       ads: { title: '純廣告', description: '只攔截廣告相關請求，干預最少，適合更重視功能相容的環境。' },
-      noPrivacy: { title: '廣告＋不受歡迎', description: '攔截廣告、強更、PCDN、推送與雲端控制，不攔截隱私統計與遙測。' },
-      noUnwelcome: { title: '廣告＋隱私', description: '攔截廣告、統計遙測與裝置指紋，保留強更、PCDN、推送和雲端控制連線。' },
-      independent: { title: '獨立規則', description: '此格式目前不參與四種分類方案，下方提供既有的獨立訂閱。' }
+      noPrivacy: { title: '廣告＋不受歡迎', description: '攔截廣告、強制更新、PCDN、推播與雲端控制，不攔截使用情況統計與遙測。' },
+      noUnwelcome: { title: '廣告＋隱私權保護', description: '攔截廣告、統計遙測與裝置指紋，保留強制更新、PCDN、推播和雲端控制連線。' },
+      independent: { title: '獨立規則', description: '此格式目前不參與四種分類方案，這裡提供既有的獨立訂閱。' }
     },
     sources: {
-      tmby: { name: '天命 CFCDN', description: '維護者提供的 GitHub Raw 反向代理，更新即時，適合國內網路。', badge: '國內推薦' },
-      cxplay: { name: 'CXPLAY 鏡像', description: '社群提供的即時鏡像服務，針對國內網路最佳化。', badge: '即時鏡像' },
-      uura: { name: '王富貴鏡像', description: '社群鏡像，約每小時同步一次，適合日常穩定訂閱。', badge: '約一小時同步' },
-      ghraw: { name: 'GitHub Raw', description: '官方檔案直連， 即時更新；部分國內網路可能無法存取。', badge: '官方即時' },
+      cxplay: { name: 'CXPLAY 鏡像', description: '社群提供的訂閱鏡像站，無法直接連線至 GitHub 時可嘗試此來源。', badge: '社群鏡像站' },
+      uura: { name: '王富貴鏡像', description: '2026-10-26 檢查發現部分格式尚未跟上官方更新，另有壓縮回應相容性問題；使用前請先核對。', badge: '注意更新與相容性' },
+      ghraw: { name: 'GitHub Raw', description: '官方檔案直連， 即時更新；部分中國大陸網路可能無法存取。', badge: '官方即時' },
       jsdelivr: { name: 'jsDelivr', description: 'CDN 加速線路，通常較穩定，但快取可能造成更新延遲。', badge: 'CDN 備用' },
       ghproxy: { name: 'ghproxy', description: 'GitHub 反向代理，更新通常較快，但服務穩定性可能波動。', badge: '備用線路' }
     }
@@ -406,12 +427,17 @@ const copySets: Record<string, CopySet> = {
     privacy: 'Privacy and telemetry',
     unwelcome: 'Forced updates, PCDN, push, and remote control',
     viewTutorial: 'View import guide',
+    recommendedSource: 'Recommended source',
+    moreSources: 'More sources and profile details',
+    copyError: 'Copy failed. Select or long-press the link above to copy it manually.',
     filename: 'Technical filename',
     sourceTitle: 'Choose a source and copy',
-    sourceIntro: 'For mainland networks, try the first three mirrors. If one source stops updating, replace it with another.',
-    sameRuleNote: 'Every source delivers the same AWAvenue Ads Rule. Only the access route and sync timing differ. Community mirrors are third-party services.',
-    domesticSources: 'Recommended for mainland networks',
-    domesticSourcesHelp: 'Optimized for access from mainland networks, in recommended order.',
+    sourceIntro:
+      'jsDelivr is the default. CDN caching may delay updates; use GitHub Raw for the latest published content, or try another source if a connection fails.',
+    sameRuleNote:
+      'Sources distribute AWAvenue Ads Rule, but mirror synchronization and caches can serve different versions. Check download success and the rule update time after switching.',
+    domesticSources: 'Community mirrors',
+    domesticSourcesHelp: 'Maintained by third parties. Check both connectivity and content freshness.',
     otherSources: 'Official and fallback sources',
     otherSourcesHelp: 'Best when GitHub is reachable, or as fallbacks when a mirror is unavailable.',
     copyLink: 'Copy subscription',
@@ -438,9 +464,12 @@ const copySets: Record<string, CopySet> = {
       }
     },
     sources: {
-      tmby: { name: 'TMBy CFCDN', description: 'A maintainer-provided GitHub Raw proxy with timely updates for mainland networks.', badge: 'Mainland pick' },
-      cxplay: { name: 'CXPLAY Mirror', description: 'A real-time community mirror optimized for mainland networks.', badge: 'Real-time mirror' },
-      uura: { name: 'Uura Mirror', description: 'A community mirror that syncs about once per hour.', badge: 'Hourly sync' },
+      cxplay: { name: 'CXPLAY Mirror', description: 'A community subscription mirror to try when GitHub cannot be reached directly.', badge: 'Community mirror' },
+      uura: {
+        name: 'Uura Mirror',
+        description: 'Checks on 2026-10-26 found outdated content in some formats and compression compatibility issues. Verify before use.',
+        badge: 'Check updates and compatibility'
+      },
       ghraw: { name: 'GitHub Raw', description: 'The official real-time file URL; it may be unreachable on some mainland networks.', badge: 'Official live' },
       jsdelivr: { name: 'jsDelivr', description: 'A generally stable CDN route whose cache may delay updates.', badge: 'CDN fallback' },
       ghproxy: { name: 'ghproxy', description: 'A GitHub proxy with usually fast updates but variable service stability.', badge: 'Fallback' }
@@ -494,15 +523,30 @@ const availableLinks = computed(() => {
     .filter(item => item.link)
 })
 
-const domesticLinks = computed(() => availableLinks.value.filter(item => item.source.domestic))
-const otherLinks = computed(() => availableLinks.value.filter(item => !item.source.domestic))
+const recommendedLink = computed(() => availableLinks.value[0])
+const alternativeLinks = computed(() => availableLinks.value.slice(1))
+const domesticLinks = computed(() => alternativeLinks.value.filter(item => item.source.domestic))
+const otherLinks = computed(() => alternativeLinks.value.filter(item => !item.source.domestic))
+
+const resultHeading = ref<HTMLHeadingElement | null>(null)
+watch(step, async value => {
+  if (value !== 'result') return
+  await nextTick()
+  resultHeading.value?.focus({ preventScroll: true })
+  resultHeading.value?.scrollIntoView({ block: 'start' })
+})
 
 const tutorialLink = computed(() => {
   const tutorialMap: Record<string, string> = {
     adguard: '/AdGuard.html',
     quantumultX: '/QuantumultX.html',
     shadowrocket: '/ShadowRocket.html',
-    loon: '/Loon.html'
+    loon: '/Loon.html',
+    surgeRuleSet: '/Surge.html#rule-set',
+    surgeDomainSet: '/Surge.html#domain-set',
+    surgeModule: '/Surge.html#module',
+    singbox: '/SingBox.html',
+    mosdns: '/MosDNS.html'
   }
   return localePath(tutorialMap[selectedToolId.value] || '/Knowledge.html')
 })
@@ -824,9 +868,16 @@ onMounted(() => {
   border-bottom: 1px solid var(--vp-c-divider);
 }
 
-.result-summary h3 {
+.result-summary h2 {
   margin: 6px 0 8px;
+  border: 0;
+  padding: 0;
+  scroll-margin-top: 90px;
   font-size: clamp(25px, 4vw, 36px);
+}
+
+.result-summary h2:focus {
+  outline: none;
 }
 
 .result-summary p:last-child {
@@ -864,13 +915,40 @@ onMounted(() => {
   content: '✓ ';
 }
 
-.result-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px 20px;
-  color: var(--vp-c-text-3);
-  font-size: 13px;
+.recommended-source {
+  margin-top: 20px;
+}
+
+.recommended-source-label {
+  margin: 0 0 10px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+}
+
+.recommended-source .tutorial-link {
+  display: inline-block;
+  margin-top: 14px;
+}
+
+.profile-description {
+  color: var(--vp-c-text-2);
+}
+
+.more-sources {
+  margin-top: 24px;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 16px;
+}
+
+.more-sources > summary {
+  padding: 8px 0;
+  color: var(--vp-c-brand-1);
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.result-filename code {
+  overflow-wrap: anywhere;
 }
 
 .tutorial-link {
@@ -887,7 +965,7 @@ onMounted(() => {
 }
 
 .source-intro {
-  margin-top: 38px;
+  margin-top: 16px;
 }
 
 .source-intro h3 {

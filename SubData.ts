@@ -1,5 +1,5 @@
 export type VariantId = 'full' | 'ads' | 'noPrivacy' | 'noUnwelcome'
-export type SourceId = 'tmby' | 'cxplay' | 'uura' | 'ghraw' | 'jsdelivr' | 'ghproxy'
+export type SourceId = 'cxplay' | 'uura' | 'ghraw' | 'jsdelivr' | 'ghproxy'
 export type ToolGroup = 'popular' | 'proxy' | 'dns' | 'advanced'
 
 export type SubscriptionTool = {
@@ -174,10 +174,10 @@ export const sources: Array<{
   domestic: boolean
 }> = [
   {
-    id: 'tmby',
-    base: 'https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main',
+    id: 'jsdelivr',
+    base: 'https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main',
     flat: false,
-    domestic: true
+    domestic: false
   },
   {
     id: 'cxplay',
@@ -194,12 +194,6 @@ export const sources: Array<{
   {
     id: 'ghraw',
     base: 'https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main',
-    flat: false,
-    domestic: false
-  },
-  {
-    id: 'jsdelivr',
-    base: 'https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main',
     flat: false,
     domestic: false
   },

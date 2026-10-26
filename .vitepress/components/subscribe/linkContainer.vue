@@ -5,25 +5,39 @@
       {{ copied ? props.copiedLabel : props.copyLabel }}
     </button>
     <span class="sr-only" aria-live="polite">{{ liveMessage }}</span>
+    <span v-if="copyFailed" class="copy-error" role="alert">{{ props.copyErrorLabel }}</span>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onUnmounted, ref, watch } from 'vue'
 
 const props = defineProps<{
   link: string
   copyLabel: string
   copiedLabel: string
   copiedMessage: string
+  copyErrorLabel: string
 }>()
 
 const copied = ref(false)
 const liveMessage = ref('')
+const copyFailed = ref(false)
 let timer: ReturnType<typeof setTimeout> | undefined
 
 async function copyLink() {
-  await navigator.clipboard.writeText(props.link)
+  copied.value = false
+  copyFailed.value = false
+  liveMessage.value = ''
+  if (timer) clearTimeout(timer)
+  const link = props.link
+  try {
+    await navigator.clipboard.writeText(link)
+  } catch {
+    if (link === props.link) copyFailed.value = true
+    return
+  }
+  if (link !== props.link) return
   copied.value = true
   liveMessage.value = props.copiedMessage
   if (timer) clearTimeout(timer)
@@ -32,6 +46,19 @@ async function copyLink() {
     liveMessage.value = ''
   }, 2000)
 }
+
+watch(
+  () => props.link,
+  () => {
+    if (timer) clearTimeout(timer)
+    copied.value = false
+    copyFailed.value = false
+    liveMessage.value = ''
+  }
+)
+onUnmounted(() => {
+  if (timer) clearTimeout(timer)
+})
 </script>
 
 <style scoped>
@@ -52,6 +79,14 @@ async function copyLink() {
   font-size: 13px;
   line-height: 22px;
   white-space: nowrap;
+  user-select: text;
+}
+
+.copy-error {
+  grid-column: 1 / -1;
+  padding: 10px 14px;
+  color: var(--vp-c-danger-1);
+  font-size: 13px;
 }
 
 .copy-link {

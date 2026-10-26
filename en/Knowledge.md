@@ -46,69 +46,7 @@ rules:
 
 ### Sing-Box
 
-Here’s a simple example for self-configuration; inquiries of this type will not be addressed in the feedback group, especially for the Pure version.
-
-<details>
-  <summary>Example</summary>
-
-```json
-{
-  "dns": {
-    "servers": [
-      {
-        "tag": "dns_block",
-        "address": "rcode://success"
-      }
-    ],
-    "rules": [
-      {
-        "rule_set": "AWAvenue-Ads-Rule",
-        "server": "dns_block"
-      }
-    ]
-  },
-  "route": {
-    "rule_set": [
-      {
-        "type": "remote",
-        "tag": "AWAvenue-Ads-Rule",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Singbox.srs"
-      }
-    ]
-  }
-}
-```
-
-</details>
-
-<details>
-  <summary>1.11.0-alpha.7+</summary>
-
-```json
-{
-  "dns": {
-    "rules": [
-      {
-        "rule_set": "geosite-dnsblock",
-        "action": "reject"
-      }
-    ]
-  },
-  "route": {
-    "rule_set": [
-      {
-        "type": "remote",
-        "tag": "geosite-dnsblock",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Singbox.srs"
-      }
-    ]
-  }
-}
-```
-
-</details>
+[sing-box 1.14.x: configuration, updates, and verification](./SingBox.md)
 
 ### QuantumultX
 
@@ -124,11 +62,11 @@ Here’s a simple example for self-configuration; inquiries of this type will no
 
 ### Surge
 
-Just a moment (coming soon)
+[Surge: RULE-SET, DOMAIN-SET, and module imports](./Surge.md)
 
-### mosdns
+### MosDNS
 
-There is currently no tutorial, but you can set AdGuard Home as the upstream server for mosdns to achieve ad-blocking.
+[MosDNS v5: domain_set configuration and DNS checks](./MosDNS.md)
 
 ---
 

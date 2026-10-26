@@ -44,67 +44,7 @@ rules:
 ```
 ### Sing-Box
 
-简单地举个例子，自行配置，反馈交流群不接受此类型的询问，特别是Pure版。
-
-<details>
-  <summary>示例</summary>
-
-```json
-{
-  "dns": {
-    "servers": [
-      {
-        "tag": "dns_block",
-        "address": "rcode://success"
-      }
-    ],
-    "rules": [
-      {
-        "rule_set": "AWAvenue-Ads-Rule",
-        "server": "dns_block"
-      }
-    ]
-  },
-  "route": {
-    "rule_set": [
-      {
-        "type": "remote",
-        "tag": "AWAvenue-Ads-Rule",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Singbox.srs"
-      }
-    ]
-  }
-}
-```
-</details>
-
-<details>
-  <summary>1.11.0-alpha.7+</summary>
-
-```json
-{
-  "dns": {
-    "rules": [
-      {
-        "rule_set": "geosite-dnsblock",
-        "action": "reject"
-      }
-    ]
-  },
-  "route": {
-    "rule_set": [
-      {
-        "type": "remote",
-        "tag": "geosite-dnsblock",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Singbox.srs"
-      }
-    ]
-  }
-}
-```
-</details>
+[sing-box 1.14.x：配置、更新与生效检查](./SingBox.md)
 
 ### QuantumultX
 
@@ -120,11 +60,11 @@ rules:
 
 ### Surge
 
-Just a moment(咕咕咕)
+[Surge：RULE-SET、DOMAIN-SET 与模块导入](./Surge.md)
 
-### mosdns
+### MosDNS
 
-目前还没有教程，但是你完全可以把AdGuard Home设置为mosdns的上游来达到去广告的目的。
+[MosDNS v5：domain_set 配置与 DNS 验证](./MosDNS.md)
 
 ---
 
