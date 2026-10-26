@@ -1,3 +1,8 @@
+---
+lastVerified: 2026-10-26
+verificationScope: docs
+---
+
 # Shadowrocket 使用教學
 
 適用範圍：Shadowrocket 2.x 的模組匯入功能。發布檔案與開發者產品資料核對日期：2026-10-26。本次未以 iOS 實機匯入，尚未確認所有選用規則參數的最低支援版本。
@@ -23,3 +28,7 @@
 - 切換方案時，請替換原模組網址並重新整理，不要同時啟用多份方案。
 
 資料依據：[開發者的 App Store 說明](https://apps.apple.com/us/app/shadowrocket/id932747118)、[本專案發布的 Shadowrocket 模組](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Shadowrocket.module)。選單流程沿用本站既有教學，本次未以實機驗證。
+
+## 更新與還原
+
+切換方案時替換原網址並重新整理。暫時排查時，使用模組方式的就停用該模組，使用 RULE-SET 方式的就停用對應規則，再重新載入目前的設定並重新連線。確認誤攔截後，依紀錄中的實際網域加入精確允許例外；需要還原時可使用修改前的備份。

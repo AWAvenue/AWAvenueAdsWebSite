@@ -1,3 +1,8 @@
+---
+lastVerified: 2026-10-26
+verificationScope: docs
+---
+
 # MosDNS v5 使用教程
 
 适用版本：**MosDNS v5（以 5.3.4 为核验版本）**；文档核验日期：**2026-10-26**。此处使用原版 MosDNS YAML 格式；路由器插件可能自行生成配置，请使用其自定义规则入口，避免更新时被覆盖。
@@ -68,3 +73,7 @@ dig @127.0.0.1 -p 5353 example.com A
 4. 更新列表后，重启或使用部署方式提供的重新加载流程，让 `domain_set` 重新读入文件；仅下载新文件不代表进程已使用它。需要自动更新时，安排定时下载、内容检查、替换和重启，保留上次可用文件。
 
 官方依据：[v5 数据插件](https://irine-sistiana.gitbook.io/mosdns-wiki/mosdns-v5/ru-he-pei-zhi-mosdns/shu-ju-cha-jian)、[sequence 与 reject](https://irine-sistiana.gitbook.io/mosdns-wiki/mosdns-v5/ru-he-pei-zhi-mosdns/sequence-cha-jian)、[MosDNS 发布页](https://github.com/IrineSistiana/mosdns/releases)。
+
+## 更新与回退
+
+误拦截时先检查查询域名和所选列表。临时排障可从实际使用的 sequence 移除 `matches: qname $awa_domains` / `exec: reject 3` 这一步，保留原有上游转发，再重启并复测。若还要删除 `awa_domains` 插件，先确认所有 sequence 均已不再引用它。需要回退规则内容时恢复上一份可用的 `awa-ads.txt` 并重启，或恢复原配置备份。

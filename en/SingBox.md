@@ -1,3 +1,8 @@
+---
+lastVerified: 2026-10-26
+verificationScope: docs
+---
+
 # sing-box guide
 
 Applies to **sing-box 1.14.x**. Documentation checked: **2026-10-26**. This example uses the current HTTP client and DNS action formats; check the core version bundled with your graphical client before using it.
@@ -61,3 +66,7 @@ This fragment uses the full profile. Replace `url` with your generated URL for a
 4. If it resolves unexpectedly, check the DNS path, earlier allow rules, and client caches. A failed browser request alone does not establish a rule match.
 
 Do not reuse the old `rcode://success` DNS server or `download_detour` examples. References: [DNS server migration](https://sing-box.sagernet.org/deprecated/#legacy-dns-server-formats), [DNS actions](https://sing-box.sagernet.org/configuration/dns/rule_action/), [rule sets](https://sing-box.sagernet.org/configuration/rule-set/), and [HTTP clients](https://sing-box.sagernet.org/configuration/shared/http-client/).
+
+## Updates and rollback
+
+First identify the matching domain in logs. For troubleshooting, remove the rejection entry added to `dns.rules` and any optional rejection entry you added to `route.rules`, check the complete configuration, then restart. Before removing `awa-ads` from `route.rule_set`, remove all rules referencing it. Keep download clients and DNS servers still used elsewhere, or restore your original configuration backup.

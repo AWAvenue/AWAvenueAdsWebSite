@@ -1,6 +1,11 @@
+---
+lastVerified: 2026-10-26
+verificationScope: docs
+---
+
 # Loon 使用教程
 
-适用范围：支持插件的 Loon 3.x；官方文档与发布文件核验日期：2026-10-26。本次未进行 iOS 实机导入，也未确认所有可选规则参数的最低版本。
+适用范围：Loon 3.0.3+ 的插件功能；官方文档与发布文件核验日期：2026-10-26。本次未进行 iOS 实机导入，也未确认所有可选规则参数的最低版本。
 
 ## 导入插件
 
@@ -25,3 +30,7 @@
 依据：[Loon 插件文档](https://nsloon.app/en/docs/Plugin/)、[规则优先级](https://nsloon.app/en/docs/Rule/)、[本项目发布的 Loon 模块](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Loon.module)。
 
 原教程：ink_hitori，2025-03-22；本次按生成器当前提供的插件格式更新。
+
+## 更新与回退
+
+切换方案时替换原 URL 并刷新。临时排障时，停用本次添加的插件或分流订阅，再重新加载配置；不要为了停用一份列表而删除整个代理配置。确认误拦后，根据请求详情添加有针对性的本地放行规则，并核对本地规则优先级。需要回退时恢复修改前的备份。

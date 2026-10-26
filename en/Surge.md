@@ -1,3 +1,8 @@
+---
+lastVerified: 2026-10-26
+verificationScope: docs
+---
+
 # Surge guide
 
 Applies to remote rule sets in **Surge iOS 5.x / Mac 5.x and 6.x**. This project's module includes `pre-matching`, which requires **iOS 5.14.0+ / Mac 5.9.0+**. Documentation and published file checked: **2026-10-26**. This update did not perform imports on an Apple device; menu locations may vary.
@@ -43,3 +48,7 @@ Replace the URL for your chosen profile. DOMAIN-SET files contain bare domains; 
 For Surfboard, use its documented [RULE-SET](https://getsurfboard.com/docs/profile-format/rule/ruleset/) or [DOMAIN-SET](https://getsurfboard.com/docs/profile-format/rule/domainset/) workflow. Surge module instructions and version requirements do not apply to Surfboard.
 
 Official references: [Surge rule sets](https://manual.nssurge.com/rules/ruleset.html), [domain rules and version requirements](https://manual.nssurge.com/rules/domain.html), and [modules](https://manual.nssurge.com/profile/module.html).
+
+## Updates and rollback
+
+To troubleshoot, disable this module or comment out its RULE-SET / DOMAIN-SET line, then reload the active profile. Leave unrelated rules enabled so you can isolate this list. Restore the previous profile backup if needed. If an earlier module rejection prevents a main-profile allow exception, disable the module and use a rule set whose position you can control.

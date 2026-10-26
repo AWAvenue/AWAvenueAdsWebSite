@@ -13,7 +13,7 @@ _(The order below does not indicate ranking)_
 
 ### Developers / Volunteers / Artists
 - [**Andrey Meshkov** by AdguardTeam](https://github.com/ameshkov)
-- [**Elysia** by akashaProxy](elysias123)
+- [**Elysia** by akashaProxy](https://github.com/elysias123)
 - [**BenDanovo** by GaoJi Assistant R](https://github.com/liuran001)
 - [**MenglinOfficial** – Independent Artist](https://t.me/menglin0204)
 - [**ZX GU** – Independent Developer](https://i.pcbeta.com/space-uid-4880620.html)

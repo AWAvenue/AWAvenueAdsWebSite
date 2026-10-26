@@ -1,54 +1,42 @@
-# AWAvenue Ads Rule User Agreement
+# AWAvenue-Ads-Rule usage and licensing
 
-Thank you for using AWAvenue Ads Rule (referred to as "AWAvenue Rule"). AWAvenue Rule is an ad-blocking rule set designed for the advertising SDK in Android applications, aiming to provide a cleaner user experience.
+Revised: 2026-10-27
 
-Before using AWAvenue Rule, please read the following terms carefully. By using AWAvenue Rule, you agree to comply with the following provisions. If you do not agree to these terms, please stop using AWAvenue Rule.
+AWAvenue-Ads-Rule primarily targets advertising SDKs in Android applications and also provides rule formats for compatible tools on other platforms. This page explains the licenses for the rules and website documentation, the scope of filtering, and practical usage considerations.
 
-## 1. License for Rule Use
+## License for rule files and code {#rules-license}
 
-- **1.1** You are granted a personal, non-transferable, non-exclusive license to use AWAvenue Rule.
-- **1.2** You may install, use, display, and run AWAvenue Rule for personal use to block ads in Android applications.
-- **1.3** AWAvenue Rule must not be used for any commercial purpose, and you may not modify, copy, transfer, or violate the terms of this agreement in any other way.
-- **1.4** Users confirm that the use of this ad rule complies with local legal requirements and relevant policy regulations.
+The license for rule files and related code in the rule repository is determined by the `LICENSE` and any separate file notices in the version you use. The repository's current [LICENSE is GNU GPLv3](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE).
 
-## 2. Rule Modification and Updates
+- Individuals and organizations may use the rules under GPLv3, including for commercial purposes.
+- Copying, modification, and redistribution are permitted subject to the relevant GPLv3 conditions. These include retaining copyright, license, and warranty notices when distributing copies; and, when distributing modified versions, marking changes and meeting applicable requirements for continued GPL licensing and provision of corresponding source code.
+- Uses that comply with the applicable license do not require additional written permission because of this page. Copyright remains with the respective authors and contributors.
 
-- **2.1** Updated versions of AWAvenue Rule may be provided from time to time, and users can choose whether to update to the latest version.
-- **2.2** After the release of updated versions of AWAvenue Rule, users should update as needed.
+This is a readable overview. Consult the license text for the full rights and obligations; this page does not change rights granted by GPLv3.
 
-## 3. Responsibilities and Disclaimers
+## License for original website documentation {#docs-license}
 
-- **3.1** AWAvenue Rule is provided for user use and does not guarantee the absolute accuracy and completeness of ad blocking.
-- **3.2** Users bear the risks associated with using AWAvenue Rule, including but not limited to inaccuracies in blocking due to rule updates and application anomalies.
-- **3.3** AWAvenue Rule may be affected by factors such as third-party application updates and system updates, leading to unstable blocking effects. Users understand and accept this risk.
+Unless otherwise noted, this website's original tutorials and explanatory text are licensed under [CC BY-NC-SA 4.0 (Attribution–NonCommercial–ShareAlike)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-## 4. Intellectual Property
+You may share or adapt this material under that license: provide appropriate attribution, links to the original and the license, indicate whether changes were made, use it only for noncommercial purposes, and distribute adaptations under the same license. The license text governs its detailed conditions and exceptions.
 
-- **4.1** The intellectual property rights of AWAvenue Rule belong to the rule provider.
-- **4.2** Users may not use or transfer the intellectual property rights of AWAvenue Rule for any commercial or non-commercial purpose without the written consent of the rule provider.
+This documentation license does not replace the licenses for rule files or software code. Third-party references, images, brand marks, and linked content remain subject to their respective licenses or permissions.
 
-## 5. Agreement Changes
+## Filtering scope and usage {#scope}
 
-- **5.1** The rule provider has the right to modify the terms of this agreement when necessary, and users will view the modified terms on the relevant pages.
-- **5.2** If users do not agree to changes in the agreement, they should stop using AWAvenue Rule. Continued use is considered acceptance of the changed terms.
+- These rules primarily filter domains. They cannot guarantee separation of ads from normal content on the same domain or automatically hide empty areas on web pages.
+- Depending on the selected profile, filtering may cover ads, analytics and telemetry, forced updates, PCDN, push services, or remote configuration. Blocking may affect those functions. Choose a suitable profile and use logs to add necessary allow exceptions for false positives.
+- A rule list requires a compatible tool; it is not a complete proxy or DNS configuration. Follow the [guides](./Knowledge.md) to choose the format, merge configuration, and verify matches. Keep a backup of your previous configuration.
+- Comply with applicable laws where you use the rules and the requirements of your chosen tools.
 
-## 6. Applicable Laws and Dispute Resolution
+## Results, updates, and risks {#limitations}
 
-- **6.1** This agreement is governed by the laws of the Grand Duchy of Luxembourg.
-- **6.2** The signing location of this agreement is the Metropolitan Borough of Paddington, London.
-- **6.3** Both the user and the rule provider agree to resolve disputes arising from AWAvenue Rule through negotiation. If negotiation fails, either party may submit the dispute to a court with jurisdiction at the signing location of this agreement.
+The rules and documentation are provided as is. They do not guarantee that every ad will be blocked, that false positives will never occur, or that every device and version will remain supported. Application, system, and network changes can affect results. Warranty and liability are governed by the applicable licenses and law.
 
-## 7. Declarations
+Keep a working configuration before updating rules or changing profiles, and use query or connection logs to verify the effects. Third-party mirrors and CDNs may have caching or synchronization delays. A successful download does not establish that the content is current; choose a working source and check the actual content.
 
-- **7.1** The purpose of AWAvenue Rule is to provide a cleaner user experience, not to establish a competitive relationship with any commercial company. Its use does not imply any association or endorsement by the rule provider with any commercial company.
-- **7.2** The use of AWAvenue Rule is intended to legally block ads in Android applications and does not involve illegal intrusion into computers. Users must ensure compliance with all relevant laws and regulations.
+## Feedback and updates to this page {#updates-feedback}
 
-## 8. Others
+Report false positives, missed ads, or broken subscription links through the [support channels](./Support.md). Include the tool version, selected profile, relevant domains, reproduction steps, and necessary logs, with subscription credentials and personal information removed. Third-party tools and services are maintained by their respective providers; references do not imply mutual endorsement.
 
-- **8.1** The rule provider will notify users of rule modifications, updates, etc., through web announcements or other appropriate means.
-- **8.2** This agreement will be updated on December 7, 2023.
-- **8.3** The titles of all terms in this agreement are for readability and have no actual meaning. They cannot be used as a basis for interpreting the meaning of this agreement.
-
-### Finally, thank you for patiently reading the AWAvenue Ads Rule user agreement. We sincerely hope and wish you and your family a relaxed, enjoyable, and clean internet experience after using AWAvenue Rule!
-
-### If you have any questions or suggestions, please feel free to contact the rule provider.
+This page may be revised as the project changes, with its revision date shown above. Rights to use and distribute a particular version remain governed by its applicable license.

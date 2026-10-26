@@ -1,3 +1,8 @@
+---
+lastVerified: 2026-10-26
+verificationScope: docs
+---
+
 # Quantumult X 使用教學
 
 適用於支援遠端分流資源的 Quantumult X 1.x。文件與發布檔案核對日期：2026-10-26。本次未以 iOS 實機驗證介面，選單名稱可能因版本而異。
@@ -29,3 +34,7 @@ https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWA
 語法依據：[Quantumult X 官方設定範例](https://github.com/crossutility/Quantumult-X/blob/master/sample.conf)。
 
 依过去式於 2024-06-02 撰寫的中文教學改寫，並更新匯入與驗證步驟。
+
+## 更新與還原
+
+遇到誤攔截時，先從紀錄確認命中的網域與規則來源，再加入範圍明確的允許例外。暫時排查時，可停用本教學新增的規則或資源，並重新載入設定；找出原因後再啟用。請保留修改前的設定備份。

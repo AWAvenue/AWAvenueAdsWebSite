@@ -1,3 +1,8 @@
+---
+lastVerified: 2026-10-26
+verificationScope: docs
+---
+
 # sing-box 使用教學
 
 適用版本：**sing-box 1.14.x**；文件核對日期：**2026-10-26**。範例採用目前的 HTTP 用戶端與 DNS 規則動作格式，不能直接套用於舊版核心。使用圖形介面應用程式時，請先確認其內建核心版本。
@@ -61,3 +66,7 @@
 4. 若仍然能解析，請檢查查詢路徑、前面的放行規則及用戶端快取。單看瀏覽器無法開啟頁面，還不足以證明規則生效。
 
 舊版 DNS server 的 `address` 格式已於 1.14.0 移除，請勿再使用 `rcode://success` 或舊版 `download_detour` 範例。依據：[DNS 格式遷移](https://sing-box.sagernet.org/deprecated/#legacy-dns-server-formats)、[DNS 規則動作](https://sing-box.sagernet.org/configuration/dns/rule_action/)、[遠端規則集](https://sing-box.sagernet.org/configuration/rule-set/)、[HTTP 用戶端](https://sing-box.sagernet.org/configuration/shared/http-client/)。
+
+## 更新與還原
+
+先從紀錄確認命中的網域。暫時排查時，可移除本教學新增的 `dns.rules` 拒絕項目，以及另外加入的 `route.rules` 拒絕項目，檢查完整設定後重新啟動。若也要刪除 `route.rule_set` 的 `awa-ads`，須先移除所有參照它的規則；仍被其他設定使用的下載用戶端和 DNS 伺服器請保留。需要完整還原時使用原設定備份。

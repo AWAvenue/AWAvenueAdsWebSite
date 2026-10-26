@@ -78,7 +78,7 @@ pageClass: start-page
 
 ::: warning 订阅前
 
-请阅读[用户协议](./Protocol.md)和[使用教程](./Knowledge.md)。如果你使用的是 AdGuard、Quantumult X、Shadowrocket 或 Loon，也可以从生成结果直接进入对应教程。
+请阅读[使用说明与许可](./Protocol.md)和[使用教程](./Knowledge.md)。如果你使用的是 AdGuard、Quantumult X、Shadowrocket 或 Loon，也可以从生成结果直接进入对应教程。
 
 :::
 

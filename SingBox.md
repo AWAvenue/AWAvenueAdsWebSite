@@ -1,3 +1,8 @@
+---
+lastVerified: 2026-10-26
+verificationScope: docs
+---
+
 # sing-box 使用教程
 
 适用版本：sing-box **1.14.x**；文档核验日期：**2026-10-26**。以下使用当前 HTTP 客户端和 DNS 规则动作格式，不适用于原样粘贴到旧版本。图形客户端请先查看内置核心版本。
@@ -61,3 +66,7 @@
 4. 若仍能解析，检查查询是否经过 sing-box、前置放行规则与客户端缓存；更新规则后重新测试。
 
 旧的 DNS server `address` 格式已在 1.14.0 移除。依据：[迁移与弃用说明](https://sing-box.sagernet.org/deprecated/#legacy-dns-server-formats)、[DNS 规则动作](https://sing-box.sagernet.org/configuration/dns/rule_action/)、[远程规则集](https://sing-box.sagernet.org/configuration/rule-set/)、[HTTP 客户端](https://sing-box.sagernet.org/configuration/shared/http-client/)。
+
+## 更新与回退
+
+误拦截时先查看实际命中的域名。临时排障可移除本教程添加的 `dns.rules` 拒绝条目，以及你另外添加的 `route.rules` 拒绝条目，检查完整配置后重启。若还要删除 `route.rule_set` 中的 `awa-ads`，须先移除所有引用它的规则，避免留下失效标签；下载客户端和 DNS 服务器若仍被其他配置引用，不要一并删除。需要完整回退时恢复原配置备份。

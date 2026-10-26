@@ -1,3 +1,8 @@
+---
+lastVerified: 2026-10-26
+verificationScope: docs
+---
+
 # MosDNS v5 使用教學
 
 適用版本：**MosDNS v5（核對版本為 5.3.4）**；文件核對日期：**2026-10-26**。本教學使用原版 MosDNS 的 YAML 設定格式。路由器套件可能會自動產生設定檔，請使用其自訂規則功能，以免更新時覆蓋手動修改。
@@ -68,3 +73,7 @@ dig @127.0.0.1 -p 5353 example.com A
 4. 更新清單後，請重新啟動 MosDNS，或使用部署套件提供的重新載入流程，讓 `domain_set` 讀取新檔案。只下載檔案不代表服務已套用更新。若安排排程更新，應依序下載、檢查內容、替換檔案並重新啟動；失敗時保留上次可用的檔案。
 
 官方依據：[v5 資料外掛](https://irine-sistiana.gitbook.io/mosdns-wiki/mosdns-v5/ru-he-pei-zhi-mosdns/shu-ju-cha-jian)、[sequence 與 reject](https://irine-sistiana.gitbook.io/mosdns-wiki/mosdns-v5/ru-he-pei-zhi-mosdns/sequence-cha-jian)、[MosDNS 發布頁面](https://github.com/IrineSistiana/mosdns/releases)。
+
+## 更新與還原
+
+先確認查詢網域與所選清單。暫時排查時，可從實際使用的 sequence 移除 `matches: qname $awa_domains` / `exec: reject 3` 這一步，保留原本的上游轉送，再重新啟動並測試。若也要刪除 `awa_domains` 外掛，須先確認所有 sequence 都不再參照它。需要還原清單時，恢復上一份可用的 `awa-ads.txt` 並重新啟動，或還原原設定備份。

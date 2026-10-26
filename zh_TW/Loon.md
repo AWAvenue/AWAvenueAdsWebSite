@@ -1,6 +1,11 @@
+---
+lastVerified: 2026-10-26
+verificationScope: docs
+---
+
 # Loon 使用教學
 
-適用範圍：支援外掛的 Loon 3.x；官方文件與發布檔案核對日期：2026-10-26。本次未以 iOS 實機匯入，也尚未確認所有選用規則參數的最低支援版本。
+適用範圍：Loon 3.0.3+ 的外掛功能；官方文件與發布檔案核對日期：2026-10-26。本次未以 iOS 實機匯入，也尚未確認所有選用規則參數的最低支援版本。
 
 ## 匯入外掛
 
@@ -25,3 +30,7 @@
 依據：[Loon 外掛文件](https://nsloon.app/en/docs/Plugin/)、[規則優先順序](https://nsloon.app/en/docs/Rule/)、[本專案發布的 Loon 模組](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Loon.module)。
 
 原教學：ink_hitori，2025-03-22；本次依產生器目前提供的外掛格式更新。
+
+## 更新與還原
+
+切換方案時替換原網址並重新整理。暫時排查時，停用本次加入的外掛或分流訂閱，再重新載入設定，保留原本的代理設定。確認誤攔截後，依請求詳情加入範圍明確的本機允許規則，並核對規則優先順序。需要還原時使用修改前的備份。

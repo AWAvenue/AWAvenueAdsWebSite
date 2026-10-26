@@ -1,130 +1,92 @@
-# 使用教程
-
-::: danger 由于现有的去广告和代理工具种类繁多，我们难以面面俱到。如果您未找到适合的教程，还请谅解。若您有余力，欢迎参与文档完善工作，共同提升体验。许多工具在实现原理上相通，我们也希望您能举一反三，善用网络资源，自主解决问题。
-
-:::
-
-### AdGuard Home
-
-- (**推荐使用**) 复制可用的[订阅链接](./Sub.md)，将其导入到 AdGuard Home 的 DNS黑名单 中，即可生效。
-- 本规则已经加入了 AdGuard Home 的官方规则列表，您只需要点击“选择黑名单”然后找到“AWAvenue Ads Rule”勾选确认即可。
-> Tips：从 AdGuard HostlistsRegistry 获取的订阅链接会删除一些“可能会影响利益”的域名，若非必须，我们仍旧建议您从我们的官方仓库获取订阅链接以获得最佳的过滤效果。
-
-### AdGuard DNS
-
-规则列表中直接找到“AWAvenue Ads Rule”勾选订阅即可。
-
-### AdGuard 及 与代理软件共存教程
-
-复制可用的订阅链接，将其导入到 AdGuard 的 自定义过滤名单中，即可生效。
-
-[详细教程（含操作视频和共存教程）](./AdGuard.md)
-
-### Mihomo Meta
-
-简单地举个例子，自行配置，反馈交流群不接受此类型的询问。
-
-这里提供一份由baka维护的懒人配置，原理与下方配置一致，更加简单开箱即用。
-
-[点击查看](https://gist.github.com/liuran001/5ca84f7def53c70b554d3f765ff86a33)
-
-```yaml
-rule-providers:  
-  秋风广告规则:
-    type: http
-    behavior: classical
-    format: yaml
-    path: ./rule_providers/AWAvenue-Ads-Rule-Clash.yaml
-    #此处“/rule_providers”自行参考
-    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash-Classical.yaml"
-    interval: 86400
-rules:
-  - RULE-SET,秋风广告规则,REJECT
-  #此处“REJECT”分组仅为示例参考，具体分组请根据实际情况自行配置
-```
-### Sing-Box
-
-[sing-box 1.14.x：配置、更新与生效检查](./SingBox.md)
-
-### QuantumultX
-
-[自行查看文档](./QuantumultX.md)
-
-### ShadowRocket
-
-[自行查看文档](./ShadowRocket.md)
-
-### Loon
-
-[自行查看文档](./Loon.md)
-
-### Surge
-
-[Surge：RULE-SET、DOMAIN-SET 与模块导入](./Surge.md)
-
-### MosDNS
-
-[MosDNS v5：domain_set 配置与 DNS 验证](./MosDNS.md)
-
+---
+lastVerified: 2026-10-26
+verificationScope: docs
 ---
 
-## 常见问题（与答疑）
+# 使用教程总览
 
-1、为什么有些APP内的广告拦截不了？（例如banner广告）
+先在[订阅生成器](./Sub.md)选择工具与方案，再按下方教程导入。秋风广告规则按域名过滤，不能精确分离同一域名下的广告与正常内容。规则集、模块、脚本和完整配置的用途不同，请使用与客户端入口一致的格式。
 
-A：如果您知道本规则的工作原理您就应该不会有这个问题，我们仅可以拦截拥有独立域名的广告/追踪链接，部分厂商会将正常内容与广告内容混在相同的链接中下发，面对这种情况，除非我们解密您的流量数据（得安装根证书）再作分析，否则几乎无法拦截。
+各教程的覆盖范围以页面说明为准；文档核验不代表所有客户端、版本和镜像均已实测。
 
-<br />
+## 按客户端选择
 
-2、我是小米手机用户，订阅了本规则后，为什么我的 小米云备份 无法上传应用列表完成备份？
+- [AdGuard](./AdGuard.md)：说明产品选择、Android 导入步骤与其他平台的 DNS 过滤入口。
 
-A：请阅读这个issue：
-[小米云备份异常 #38](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/38)，然后自行放行
+- [AdGuard Home](./AdGuardHome.md)：适用于路由器或服务器的 DNS 过滤，涵盖阻止列表、查询日志、更新与回退。
 
-```DOMAIN
-a0.app.xiaomi.com
-```
+- [Android 共存说明](./Coexist.md)：说明过滤与代理同时使用时的本地 VPN 冲突及可选连接方式。
 
-<br />
+- [Mihomo](./Mihomo.md)：适用于 Mihomo 内核，分别使用 [domain YAML](./Mihomo.md#yaml)、[MRS](./Mihomo.md#mrs) 或 [Classical YAML](./Mihomo.md#classical)。
 
-3、我是搜狗输入法用户，订阅了本规则后，为什么我的 搜狗输入法 许多在线功能失效了？
+- [sing-box](./SingBox.md)：适用于 1.14.x，使用 source JSON 规则集与 DNS 拒绝。
 
-A：请阅读这个issue：
-[搜狗输入法跨屏输入的网页被拦截 #45](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/45)，然后自行放行
+- [Quantumult X](./QuantumultX.md)：导入远程分流 `.list`。
 
-```DOMAIN
-shouji.sougou.com
-```
+- [Shadowrocket](./ShadowRocket.md)：导入 `.module` 模块，另有 RULE-SET 替代方式。
 
-<br />
+- [Loon](./Loon.md)：导入 `.module` 插件，另有规则集替代方式。
 
-4、我可以用 Cemiuiler/HyperCeiler 中“阻止上传应用列表功能”啊，你们把这个域名移除吧！
+- [Surge](./Surge.md)：区分 RULE-SET、DOMAIN-SET 与模块；Surfboard 兼容范围需另查客户端说明。
 
-A：不是所有人都用 Cemiuiler/HyperCeiler ，亦不是所有人的小米手机都获取了root权限并刷入了LSPosed，我们需要照顾大多数。
+- [MosDNS v5](./MosDNS.md)：使用 `domain_set`，包含更新与 DNS 验证。
 
-<br />
-5、订阅了本规则后，为什么我的 CHANGHONG TV 收不到更新/一些在线功能无法使用了？
+托管版 AdGuard DNS 与自建 AdGuard Home 是不同产品；托管服务的规则选择与套餐能力请查看 [AdGuard DNS 官方说明](https://adguard-dns.io/kb/private-dns/setting-up-filtering/blocklists/)，不要直接套用自建教程。
 
-A：这个原因我们在添加这些域名的时候就已经公开在多出说明过了。
+## 其他生成器格式
 
-*“经过长时间的考察与慎重考虑，我们认为 CHANGHONG 是一家打着军工企业胡作非为的流氓公司，故对 CHANGHONG SmartTV 的绝大部分域名进行了封锁拦截，包括但不限于：所有经由域名请求的广告域、欢视商店的检测更新api、主页推送api、全局弹出式banner api（基本都是广告消息推送）、更新检测api、欢付api、不明意义的上传api 等。在拦截后， CHANGHONG SmartTV 作为一台智能电视的基本功能不会受到影响，可以正常使用。”*
+下列格式已有发布文件；此处只说明文件用途与官方入口，**尚未提供完整的安装、更新及实机验证教程**。需要维护 DNS、路由器配置或模块时，先备份并核对工具版本；不要把这些文件作为代理订阅或完整配置直接覆盖原设置。
 
-如果您需要上述的任何功能，请放行以下域名：
+### hosts / AdAway {#hosts}
 
-```DOMAIN
-pay.sboot.cn
-scs.openspeech.cn
-sdkauth.hpplay.cn
-itv2-up.openspeech.cn
-gslb.hpplay.cn
-rp.hpplay.cn
-tvapp.hpplay.cn
-t002.ottcn.com
-smart-tv.cn
-huantv.cn
-```
+`AWAvenue-Ads-Rule-hosts*.txt` 是 `IP 域名` 格式的 hosts 映射。使用支持 hosts 来源的工具；不包含子域名通配能力。参阅 [AdAway 官方项目](https://github.com/AdAway/AdAway)。本页不指导直接替换系统 hosts。
 
-<br />
-6、为什么 AdGuard for Magisk 模块更新版本后会断网？
+### Dnsmasq {#dnsmasq}
 
-A：top版模块脚本问题，建议更换为[twoone版AdGuard Home for Magisk](https://github.com/twoone-3/AdGuardHomeForMagisk)。同时，我们强烈建议您“就近”使用现成的工具进行广告过滤，例如您已经为您的 Android 设备刷入了 mihomo 系列代理模块，那么您完全可以使用我们为 mihomo 准备的广告规则而不是再刷写一份 AdGuard for Magisk。
+`AWAvenue-Ads-Rule-Dnsmasq*.conf` 含 `address=/域名/#` 指令，是待合并或包含的配置片段，不是纯域名清单。加载、配置检查与重启方法依发行版或路由器插件而异，参阅 [Dnsmasq 官方手册](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html)。
+
+### SmartDNS {#smartdns}
+
+`AWAvenue-Ads-Rule-SmartDNS*.conf` 含 `address /…/#` 指令。它不是 `domain-set` 所需的逐行纯域名文件，不能直接换进该入口；参阅 [SmartDNS 官方配置说明](https://pymumu.github.io/smartdns/config/)。具体版本及加载流程尚未实测。
+
+### RouterOS AdList {#routeros-adlist}
+
+`AWAvenue-Ads-Rule-RouterOS-Adlist*.txt` 是供 DNS Adlist 读取的 hosts 风格列表。需确认 RouterOS 版本具备 Adlist 功能，以及内存、更新和 DNS 服务配置；参阅 [MikroTik DNS 文档](https://help.mikrotik.com/docs/spaces/ROS/pages/37748767/DNS)。与下方脚本格式不可混用。
+
+### RouterOS Script {#routeros-script}
+
+`AWAvenue-Ads-Rule-RouterOS*.txt` 包含 `ip dns static add` 命令，会添加静态 DNS 项。它是脚本文本而不是 Adlist；没有在本教程中核验重复导入、删除旧项、更新事务与回退过程，暂不提供一键执行步骤。参阅 [RouterOS 官方文档](https://manual.mikrotik.com/docs/)。
+
+### AdClose {#adclose}
+
+`AWAvenue-Ads-Rule-AdClose*.rule` 包含 `domain, …` 等 AdClose 专用规则。只用于对应工具；模块版本、权限及导入步骤尚未覆盖，参阅 [AdClose 发布入口](https://github.com/Xposed-Modules-Repo/com.close.hook.ads)。
+
+### Geosite 源文本 {#geosite}
+
+`AWAvenue-Ads-Rule-Geosite*.txt` 含裸域名与 `full:` 等源文本条目，**不是编译后的 `geosite.dat`**，也不是 sing-box JSON。需由支持该源格式的构建流程处理；编译、标签命名与客户端加载未在本教程中覆盖。参阅 [v2fly/domain-list-community 格式说明](https://github.com/v2fly/domain-list-community)。
+
+### AdGuard Replenish 补充规则 {#adguard-replenish}
+
+`AWAvenue-Ads-Rule-Replenish.txt` 是独立的 AdGuard 补充过滤器，不提供四种方案。应先确认需要的补充过滤用途，再按 [AdGuard 自定义过滤器教程](./AdGuard.md#android-custom)选择正确入口；它不等于完整版 DNS 规则，含 URL 路径等非 DNS 语法，作为 AdGuard Home DNS 阻止列表不能完整生效。此补充列表的当前拦截效果尚未实测。
+
+### 纯域名列表 {#dns}
+
+纯域名列表通常每行一个域名，但精确匹配、后缀匹配及子域名语义由加载工具决定。生成器中的 MosDNS、Geosite、hosts 与各类 `.conf` 有各自语法，不能因后缀相似而当作纯域名清单互换。
+
+格式说明核对了[项目实际发布文件](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/tree/main/Filters)；新增完整教程前，仍需分别验证工具版本、下载、命中与回退。
+
+## 常见问题
+
+### 为什么部分广告仍会显示？
+
+广告若与正常内容共用域名，域名过滤可能无法单独处理；应用自带加密 DNS、缓存或绕过过滤路径也会影响结果。先在查询日志或连接记录确认请求是否经过工具、命中哪条规则。安装根证书不是本规则的通用生效步骤，也不会让域名规则自动获得页面元素过滤能力。
+
+### 正常功能疑似被误拦截，如何处理？
+
+先临时停用本列表，重试相同操作并查看日志；确认关联后，仅放行所需域名并复测。历史反馈包括[小米云备份 #38](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/38) 的 `a0.app.xiaomi.com`，以及[搜狗跨屏输入 #45](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/45) 的 `shouji.sougou.com`。这些是历史案例，不是适用于所有设备的固定放行建议。
+
+旧版文档还列过 CHANGHONG（长虹）电视更新、商店、投屏或付款功能相关的域名。当前设备、固件与所选方案可能不同，不能保证拦截不影响基本功能。需要排查时按当次日志逐一确认，不建议直接放行历史整份名单。
+
+### 模块更新后断网，是否应更换某个第三方模块？
+
+仅凭断网现象无法确定是模块脚本、端口冲突、DNS、上游还是规则造成。先停用最近的变更并恢复可用配置，再看对应工具的日志与维护说明。本站未持续验证第三方 Magisk 模块，不给出默认替换推荐；Android 共存问题可先看[共存说明](./Coexist.md)。

@@ -1,3 +1,8 @@
+---
+lastVerified: 2026-10-26
+verificationScope: docs
+---
+
 # Quantumult X guide
 
 Applies to Quantumult X 1.x with remote filter resources. Documentation and published file checked: 2026-10-26. The iOS interface has not been tested in this update; labels may vary by version.
@@ -29,3 +34,7 @@ This is a configuration fragment, not a complete proxy configuration. Preserve y
 Syntax reference: [Quantumult X official sample configuration](https://github.com/crossutility/Quantumult-X/blob/master/sample.conf).
 
 Adapted from the Chinese guide by 过去式 (2024-06-02), with import and verification instructions updated.
+
+## Updates and rollback
+
+For a false positive, first identify the matching domain and rule source in the log, then add a narrow allow exception. During troubleshooting, disable the rule or resource added in this guide and reload the configuration; re-enable it after isolating the cause. Keep a backup of your previous configuration.

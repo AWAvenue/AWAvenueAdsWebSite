@@ -1,6 +1,11 @@
+---
+lastVerified: 2026-10-26
+verificationScope: docs
+---
+
 # Loon guide
 
-Applies to Loon 3.x with plugin support. Official documentation and published file checked: 2026-10-26. This update did not test the iOS interface or establish the minimum version supporting every optional rule parameter.
+Applies to Loon 3.0.3+ with plugin support. Official documentation and published file checked: 2026-10-26. This update did not test the iOS interface or establish the minimum version supporting every optional rule parameter.
 
 ## Import the plugin
 
@@ -25,3 +30,7 @@ If you use a custom policy group, ensure it selects `REJECT`. Selecting `DIRECT`
 References: Loon's [plugin documentation](https://nsloon.app/en/docs/Plugin/) and [rule priority](https://nsloon.app/en/docs/Rule/); [the project's published Loon module](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Loon.module).
 
 The earlier Chinese guide was contributed by ink_hitori (2025-03-22). This guide follows the plugin format now supplied by the generator.
+
+## Updates and rollback
+
+Replace the existing URL and refresh to change profiles. For troubleshooting, disable the plugin or rule subscription added here and reload the configuration. Keep your existing proxy setup. For a confirmed false positive, add a narrow local allow rule based on request details and check its priority. Restore your configuration backup if needed.

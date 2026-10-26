@@ -1,129 +1,92 @@
-# 使用教學
-
-::: danger 溫馨提醒
-由於目前市面上去廣告與代理工具眾多，我們難以全面涵蓋所有使用情境。若您找不到適用的教學，還請見諒。
-若您有餘力，也歡迎一同參與文件完善，共同提升使用體驗。許多工具在原理上大致相同，建議您善用網路資源，靈活舉一反三，自行解決問題。
-:::
-
-### AdGuard Home
-
-* （**建議使用**）複製可用的[訂閱連結](./Sub.md)，匯入 AdGuard Home 的 DNS 黑名單即可生效。
-* 本規則已納入 AdGuard Home 官方規則清單，只需點擊「選擇黑名單」並勾選「AWAvenue Ads Rule」即可啟用。
-
-> 小提示：透過 AdGuard HostlistsRegistry 取得的訂閱連結會略過部分「可能影響商業利益」的網域，若無特殊需求，仍建議從我們的官方倉庫取得以達最佳過濾效果。
-
-### AdGuard DNS
-
-直接在規則清單中找到「AWAvenue Ads Rule」勾選訂閱即可。
-
-### AdGuard 及與代理工具共存教學
-
-將可用的訂閱連結匯入至 AdGuard 的「自訂過濾名單」中，即可生效。
-
-[詳細教學（含操作影片與共存說明）](./AdGuard.md)
-
-### Mihomo Meta
-
-這裡提供一份由 baka 維護的懶人設定，與下方配置原理一致，更加簡單好上手。
-
-[點我查看](https://gist.github.com/liuran001/5ca84f7def53c70b554d3f765ff86a33)
-
-```yaml
-rule-providers:  
-  秋風廣告規則:
-    type: http
-    behavior: domain
-    format: yaml
-    path: ./rule_providers/AWAvenue-Ads-Rule-Clash.yaml
-    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
-    interval: 86400
-rules:
-  - RULE-SET,秋風廣告規則,REJECT
-```
-
-> 「REJECT」分組僅為示意，請依照您的實際配置情況調整。
-
-### Sing-Box
-
-[sing-box 1.14.x：設定、更新與生效確認](./SingBox.md)
-
-### QuantumultX
-
-[請參考使用文件](./QuantumultX.md)
-
-### ShadowRocket
-
-[請參考使用文件](./ShadowRocket.md)
-
-### Loon
-
-[請參考使用文件](./Loon.md)
-
-### Surge
-
-[Surge：RULE-SET、DOMAIN-SET 與模組匯入](./Surge.md)
-
-### MosDNS
-
-[MosDNS v5：網域清單設定與 DNS 驗證](./MosDNS.md)
-
+---
+lastVerified: 2026-10-26
+verificationScope: docs
 ---
 
-## 常見問題與解答
+# 使用教學總覽
 
-### 1. 為什麼有些 App 裡的廣告無法攔截？（例如 banner 廣告）
+先在[訂閱產生器](./Sub.md)選擇工具與方案，再依下方教學匯入。秋風廣告規則依網域過濾，無法精確區分同一網域下的廣告與正常內容。規則集、模組、指令碼和完整設定各有用途，請使用與用戶端入口一致的格式。
 
-答：我們的規則僅能攔截獨立網域名稱的廣告或追蹤連結。若 App 將廣告與正常內容混合於相同域名下發送，我們無法進行精準阻擋，除非解析其流量（需安裝根憑證），否則幾乎無解。
+各教學的涵蓋範圍以頁面說明為準；文件核驗不代表所有用戶端、版本和鏡像均已實測。
 
----
+## 依用戶端選擇
 
-### 2. 我是小米手機使用者，為什麼訂閱本規則後無法完成雲備份？
+- [AdGuard](./AdGuard.md)：說明產品選擇、Android 匯入步驟與其他平台的 DNS 過濾入口。
 
-答：請參閱此 Issue：[小米雲備份異常 #38](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/38)，並手動放行以下網域：
+- [AdGuard Home](./AdGuardHome.md)：適用於路由器或伺服器的 DNS 過濾，涵蓋封鎖清單、查詢記錄、更新與還原。
 
-```DOMAIN
-a0.app.xiaomi.com
-```
+- [Android 共存說明](./Coexist.md)：說明過濾與代理同時使用時的本機 VPN 衝突及可選連線方式。
 
----
+- [Mihomo](./Mihomo.md)：適用於 Mihomo 核心，分別使用 [domain YAML](./Mihomo.md#yaml)、[MRS](./Mihomo.md#mrs) 或 [Classical YAML](./Mihomo.md#classical)。
 
-### 3. 為什麼我使用搜狗輸入法後，許多線上功能失效？
+- [sing-box](./SingBox.md)：適用於 1.14.x，使用 source JSON 規則集與 DNS 拒絕。
 
-答：請參閱此 Issue：[搜狗輸入法跨螢輸入功能被攔截 #45](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/45)，並放行以下網域：
+- [Quantumult X](./QuantumultX.md)：匯入遠端分流 `.list`。
 
-```DOMAIN
-shouji.sougou.com
-```
+- [Shadowrocket](./ShadowRocket.md)：匯入 `.module` 模組，另有 RULE-SET 替代方式。
 
----
+- [Loon](./Loon.md)：匯入 `.module` 外掛，另有規則集替代方式。
 
-### 4. 我使用 Cemiuiler/HyperCeiler 就能阻止備份功能，能否移除該網域？
+- [Surge](./Surge.md)：區分 RULE-SET、DOMAIN-SET 與模組；Surfboard 相容範圍請另查用戶端說明。
 
-答：並非所有使用者都具備 root 權限或使用 Cemiuiler/HyperCeiler，我們需兼顧大多數人。
+- [MosDNS v5](./MosDNS.md)：使用 `domain_set`，包含更新與 DNS 驗證。
 
----
+託管版 AdGuard DNS 與自行架設的 AdGuard Home 是不同產品；託管服務的清單選擇與方案功能請查看 [AdGuard DNS 官方說明](https://adguard-dns.io/kb/private-dns/setting-up-filtering/blocklists/)，不要直接套用自行架設的教學。
 
-### 5. 為什麼訂閱後 CHANGHONG（長虹）電視的更新功能與部分線上功能無法使用？
+## 其他產生器格式
 
-答：我們早已於多處公告說明，出於資訊安全與商業道德考量，已封鎖 CHANGHONG 智慧電視的大量可疑網域，包括廣告推播、API 更新、彈窗廣告、支付與資訊回傳等。
+下列格式已有發布檔案；此處僅說明檔案用途與官方入口，**尚未提供完整的安裝、更新及實體裝置驗證教學**。維護 DNS、路由器設定或模組前，請先備份並核對工具版本；不要把這些檔案當作代理訂閱，或直接覆蓋完整設定。
 
-> *這些設定不會影響智慧電視的基本使用，如您需特定功能，請手動放行以下域名：*
+### hosts / AdAway {#hosts}
 
-```DOMAIN
-pay.sboot.cn
-scs.openspeech.cn
-sdkauth.hpplay.cn
-itv2-up.openspeech.cn
-gslb.hpplay.cn
-rp.hpplay.cn
-tvapp.hpplay.cn
-t002.ottcn.com
-smart-tv.cn
-huantv.cn
-```
+`AWAvenue-Ads-Rule-hosts*.txt` 是 `IP 網域` 格式的 hosts 對應表。請使用支援 hosts 來源的工具；此格式不含子網域萬用字元能力。參閱 [AdAway 官方專案](https://github.com/AdAway/AdAway)。本頁不提供直接取代系統 hosts 的步驟。
 
----
+### Dnsmasq {#dnsmasq}
 
-### 6. 為什麼我用 AdGuard for Magisk 模組更新後會斷網？
+`AWAvenue-Ads-Rule-Dnsmasq*.conf` 含 `address=/網域/#` 指令，是待合併或載入的設定片段，不是純網域清單。載入、語法檢查與重新啟動方法依發行版或路由器外掛而異，參閱 [Dnsmasq 官方手冊](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html)。
 
-答：可能是 top 版本模組腳本的問題，建議改用 [twoone 版 AdGuard Home for Magisk](https://github.com/twoone-3/AdGuardHomeForMagisk)。如果您的 Android 裝置已刷入 mihomo 等代理模組，建議直接使用相應的廣告規則，而非額外安裝 AdGuard 模組。
+### SmartDNS {#smartdns}
+
+`AWAvenue-Ads-Rule-SmartDNS*.conf` 含 `address /…/#` 指令。它不是 `domain-set` 所需的每行一個網域檔案，不能直接換進該入口；參閱 [SmartDNS 官方設定說明](https://pymumu.github.io/smartdns/config/)。特定版本及載入流程尚未實測。
+
+### RouterOS AdList {#routeros-adlist}
+
+`AWAvenue-Ads-Rule-RouterOS-Adlist*.txt` 是供 DNS Adlist 讀取的 hosts 風格清單。需確認 RouterOS 版本具備 Adlist 功能，以及記憶體、更新和 DNS 服務設定；參閱 [MikroTik DNS 文件](https://help.mikrotik.com/docs/spaces/ROS/pages/37748767/DNS)。與下方指令碼格式不可混用。
+
+### RouterOS Script {#routeros-script}
+
+`AWAvenue-Ads-Rule-RouterOS*.txt` 包含 `ip dns static add` 命令，會新增靜態 DNS 項目。它是指令碼文字而不是 Adlist；本教學未核驗重複匯入、刪除舊項目、更新交易與還原流程，暫不提供一鍵執行步驟。參閱 [RouterOS 官方文件](https://manual.mikrotik.com/docs/)。
+
+### AdClose {#adclose}
+
+`AWAvenue-Ads-Rule-AdClose*.rule` 包含 `domain, …` 等 AdClose 專用規則。僅用於對應工具；模組版本、權限及匯入步驟尚未涵蓋，參閱 [AdClose 發布入口](https://github.com/Xposed-Modules-Repo/com.close.hook.ads)。
+
+### Geosite 原始文字 {#geosite}
+
+`AWAvenue-Ads-Rule-Geosite*.txt` 含裸網域與 `full:` 等原始文字項目，**不是編譯後的 `geosite.dat`**，也不是 sing-box JSON。需由支援該來源格式的建置流程處理；編譯、標籤命名與用戶端載入尚未涵蓋。參閱 [v2fly/domain-list-community 格式說明](https://github.com/v2fly/domain-list-community)。
+
+### AdGuard Replenish 補充規則 {#adguard-replenish}
+
+`AWAvenue-Ads-Rule-Replenish.txt` 是獨立的 AdGuard 補充過濾器，不提供四種方案。請先確認需要的補充過濾用途，再依 [AdGuard 自訂過濾器教學](./AdGuard.md#android-custom)選擇正確入口；它不等同完整版 DNS 規則，含 URL 路徑等非 DNS 語法，當作 AdGuard Home DNS 封鎖清單無法完整生效。此補充清單目前的攔截效果尚未實測。
+
+### 純網域清單 {#dns}
+
+純網域清單通常每行一個網域，但精確比對、後綴比對及子網域語意由載入工具決定。產生器中的 MosDNS、Geosite、hosts 與各類 `.conf` 有各自語法，不能因副檔名相似就當作純網域清單互換。
+
+格式說明核對了[專案實際發布檔案](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/tree/main/Filters)；新增完整教學前，仍需各別驗證工具版本、下載、命中與還原。
+
+## 常見問題
+
+### 為什麼部分廣告仍會顯示？
+
+廣告若與正常內容共用網域，網域過濾可能無法單獨處理；應用程式自帶的加密 DNS、快取或繞過過濾的路徑也會影響結果。先在查詢記錄或連線紀錄確認請求是否經過工具、命中哪條規則。安裝根憑證不是本規則的一般生效步驟，也不會讓網域規則自動取得網頁元素過濾能力。
+
+### 正常功能疑似被誤擋，如何處理？
+
+先暫時停用本清單，重試相同操作並查看記錄；確認關聯後，只放行需要的網域並重新測試。歷史回報包含[小米雲端備份 #38](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/38) 的 `a0.app.xiaomi.com`，以及[搜狗跨螢幕輸入 #45](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/45) 的 `shouji.sougou.com`。這些是歷史案例，不是適用所有裝置的固定放行建議。
+
+舊版文件也曾列出 CHANGHONG（長虹）電視更新、商店、投放或付款功能相關網域。目前裝置、韌體與所選方案可能不同，無法保證攔截不影響基本功能。排查時請依當次記錄逐一確認，不建議直接放行歷史整份清單。
+
+### 模組更新後斷網，是否應更換某個第三方模組？
+
+僅憑斷網現象無法判定是模組指令碼、連接埠衝突、DNS、上游或規則造成。先停用最近的變更並還原可用設定，再查看對應工具的記錄與維護說明。本站未持續驗證第三方 Magisk 模組，不提供預設替換建議；Android 共存問題可先看[共存說明](./Coexist.md)。

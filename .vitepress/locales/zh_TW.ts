@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { tutorialSidebar } from '../tutorials.mjs'
 
 export default defineConfig({
   lang: 'zh-TW',
@@ -6,8 +7,15 @@ export default defineConfig({
 
   themeConfig: {
     nav: nav(),
+    footer: {
+      message:
+        '原創文件: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · 規則: <a href="https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE">GPLv3</a>'
+    },
+    sidebar: tutorialSidebar('zh_TW'),
+    sidebarMenuLabel: '教學導覽',
+    docFooter: { prev: '上一篇', next: '下一篇' },
 
-    lastUpdatedText: '最後更新',
+    lastUpdated: { text: '頁面更新', formatOptions: { dateStyle: 'medium', forceLocale: true } },
     darkModeSwitchLabel: '深色模式',
     returnToTopLabel: '回到頂部',
     outline: {
@@ -15,7 +23,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/TG-Twilight/AWAvenueAdsWebSite/edit/main/:path',
+      pattern: 'https://github.com/AWAvenue/AWAvenueAdsWebSite/edit/main/:path',
       text: '在 GitHub 中編輯此頁'
     }
   }
@@ -27,7 +35,7 @@ function nav() {
     { text: '訂閱規則', link: '/zh_TW/Sub.html' },
     { text: '感謝名單', link: '/zh_TW/Thank.html' },
     { text: '用戶交流', link: '/zh_TW/Support.html' },
-    { text: '用戶協議', link: '/zh_TW/Protocol.html' },
+    { text: '使用與授權', link: '/zh_TW/Protocol.html' },
     { text: '使用教程', link: '/zh_TW/Knowledge.html' }
   ]
 }

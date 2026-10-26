@@ -1,3 +1,8 @@
+---
+lastVerified: 2026-10-26
+verificationScope: docs
+---
+
 # MosDNS v5 guide
 
 Applies to **MosDNS v5 (verification version: 5.3.4)**. Documentation checked: **2026-10-26**. Router packages may generate their own configuration; use their custom-rule facility to avoid having your edits overwritten.
@@ -68,3 +73,7 @@ dig @127.0.0.1 -p 5353 example.com A
 4. After updating the file, restart/reload MosDNS through your deployment's supported procedure so the domain set is read again. For scheduled updates, download, validate, replace, then restart; retain the last working file on failure.
 
 Official references: [v5 data plugins](https://irine-sistiana.gitbook.io/mosdns-wiki/mosdns-v5/ru-he-pei-zhi-mosdns/shu-ju-cha-jian), [sequence and reject](https://irine-sistiana.gitbook.io/mosdns-wiki/mosdns-v5/ru-he-pei-zhi-mosdns/sequence-cha-jian), and [releases](https://github.com/IrineSistiana/mosdns/releases).
+
+## Updates and rollback
+
+Check the queried domain and selected list first. For troubleshooting, remove the `matches: qname $awa_domains` / `exec: reject 3` step from the active sequence, keep upstream forwarding, then restart and retest. Before removing the `awa_domains` plugin, remove its references from every sequence. To roll back a list update, restore the last working `awa-ads.txt` and restart, or restore your previous configuration backup.

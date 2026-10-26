@@ -1,3 +1,8 @@
+---
+lastVerified: 2026-10-26
+verificationScope: docs
+---
+
 # Shadowrocket 使用秋风广告规则教程
 
 适用范围：Shadowrocket 2.x 的模块导入功能。发布文件与开发者产品资料核验日期：2026-10-26。本次未进行 iOS 实机导入，尚未确认每个可选规则参数的最低支持版本。
@@ -25,3 +30,7 @@
 资料依据：[开发者的 App Store 产品说明](https://apps.apple.com/us/app/shadowrocket/id932747118)、[本项目发布的 Shadowrocket 模块](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Shadowrocket.module)。菜单流程沿用本站既有教程，本次未作设备验证。
 
 原教程编写日期：2025-11-14；本次按生成器实际提供的模块格式更新。
+
+## 更新与回退
+
+切换方案时替换原 URL 并刷新。临时排障时，使用模块方式的就停用该模块，使用 RULE-SET 方式的就停用对应规则行，再重新加载当前配置并重新连接。确认误拦后，根据日志中的实际域名添加精确放行例外；恢复旧配置可使用修改前的备份。

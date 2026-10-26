@@ -189,6 +189,7 @@ import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { useData } from 'vitepress'
 import { getFilename, getSubscriptionLink, getTool, getVariantId, sources, tools, type SourceId, type ToolGroup, type VariantId } from '../../../SubData'
 import LinkContainer from './linkContainer.vue'
+import { tutorialMap } from '../../tutorials.mjs'
 
 type CopySet = {
   eyebrow: string
@@ -302,8 +303,8 @@ const copySets: Record<string, CopySet> = {
     copied: '已复制',
     copiedMessage: '已复制：',
     unavailableNote: '当前格式有少量镜像尚未提供，因此仅展示确认可用的线路。',
-    footer: '订阅前请阅读用户协议；遇到误杀、漏拦或链接故障，欢迎反馈。',
-    protocol: '用户协议',
+    footer: '订阅前请阅读使用说明与许可；遇到误杀、漏拦或链接故障，欢迎反馈。',
+    protocol: '使用说明与许可',
     feedback: '反馈渠道',
     profiles: {
       full: { title: '完整防护', description: '同时拦截广告、隐私追踪与不受欢迎的网络行为，保持秋风广告规则的默认完整体验。' },
@@ -372,8 +373,8 @@ const copySets: Record<string, CopySet> = {
     copied: '已複製',
     copiedMessage: '已複製：',
     unavailableNote: '目前格式有少量鏡像尚未提供，因此只顯示已設定的來源。',
-    footer: '訂閱前請閱讀使用者協議；遇到誤擋、漏攔或連結故障，歡迎回報。',
-    protocol: '使用者協議',
+    footer: '訂閱前請閱讀使用說明與授權；遇到誤擋、漏攔或連結故障，歡迎回報。',
+    protocol: '使用說明與授權',
     feedback: '回報管道',
     profiles: {
       full: { title: '完整防護', description: '同時攔截廣告、追蹤行為與不受歡迎的網路行為，保留秋風廣告規則的預設完整體驗。' },
@@ -444,8 +445,8 @@ const copySets: Record<string, CopySet> = {
     copied: 'Copied',
     copiedMessage: 'Copied: ',
     unavailableNote: 'A few mirrors do not provide this format, so only confirmed working sources are shown.',
-    footer: 'Read the user protocol before subscribing. Reports of false positives, missed ads, and broken links are welcome.',
-    protocol: 'User Protocol',
+    footer: 'Read the usage and licensing information before subscribing. Reports of false positives, missed ads, and broken links are welcome.',
+    protocol: 'Usage and licensing',
     feedback: 'Support channels',
     profiles: {
       full: {
@@ -537,18 +538,7 @@ watch(step, async value => {
 })
 
 const tutorialLink = computed(() => {
-  const tutorialMap: Record<string, string> = {
-    adguard: '/AdGuard.html',
-    quantumultX: '/QuantumultX.html',
-    shadowrocket: '/ShadowRocket.html',
-    loon: '/Loon.html',
-    surgeRuleSet: '/Surge.html#rule-set',
-    surgeDomainSet: '/Surge.html#domain-set',
-    surgeModule: '/Surge.html#module',
-    singbox: '/SingBox.html',
-    mosdns: '/MosDNS.html'
-  }
-  return localePath(tutorialMap[selectedToolId.value] || '/Knowledge.html')
+  return localePath(tutorialMap[selectedToolId.value as keyof typeof tutorialMap] || '/Knowledge.html')
 })
 
 function localePath(path: string) {

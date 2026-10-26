@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { tutorialSidebar } from '../tutorials.mjs'
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -6,8 +7,15 @@ export default defineConfig({
 
   themeConfig: {
     nav: nav(),
+    footer: {
+      message:
+        '原创文档: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · 规则: <a href="https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE">GPLv3</a>'
+    },
+    sidebar: tutorialSidebar('root'),
+    sidebarMenuLabel: '教程导航',
+    docFooter: { prev: '上一篇', next: '下一篇' },
 
-    lastUpdatedText: '最后更新',
+    lastUpdated: { text: '页面更新', formatOptions: { dateStyle: 'medium', forceLocale: true } },
     darkModeSwitchLabel: '深色模式',
     returnToTopLabel: '回到顶部',
     outline: {
@@ -15,7 +23,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/TG-Twilight/AWAvenueAdsWebSite/edit/main/:path',
+      pattern: 'https://github.com/AWAvenue/AWAvenueAdsWebSite/edit/main/:path',
       text: '在 GitHub 中编辑本页'
     }
   }
@@ -27,7 +35,7 @@ function nav() {
     { text: '订阅规则', link: '/Sub.html' },
     { text: '感谢列表', link: '/Thank.html' },
     { text: '用户交流', link: '/Support.html' },
-    { text: '用户协议', link: '/Protocol.html' },
+    { text: '使用与许可', link: '/Protocol.html' },
     { text: '使用教程', link: '/Knowledge.html' }
   ]
 }

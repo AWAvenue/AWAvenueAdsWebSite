@@ -78,7 +78,7 @@ The builder asks two plain-language questions instead of making you memorize tec
 
 ::: warning Before subscribing
 
-Read the [User Protocol](./Protocol.md) and [Usage Guide](./Knowledge.md). Results for AdGuard, Quantumult X, Shadowrocket, and Loon also link to their specific guides.
+Read the [Usage and licensing](./Protocol.md) and [Usage Guide](./Knowledge.md). Results for AdGuard, Quantumult X, Shadowrocket, and Loon also link to their specific guides.
 
 :::
 

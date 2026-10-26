@@ -1,3 +1,8 @@
+---
+lastVerified: 2026-10-26
+verificationScope: docs
+---
+
 # Surge 使用教程
 
 适用范围：**Surge iOS 5.x / Mac 5.x、6.x** 的远程规则集；本项目模块使用的 `pre-matching` 需 **iOS 5.14.0+ / Mac 5.9.0+**。文档与发布文件核验日期：**2026-10-26**。本次未在 Apple 设备上实际导入，菜单位置以所用版本为准。
@@ -43,3 +48,7 @@ DOMAIN-SET,https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/
 Surfboard 用户可参考其 [RULE-SET](https://getsurfboard.com/docs/profile-format/rule/ruleset/) 与 [DOMAIN-SET](https://getsurfboard.com/docs/profile-format/rule/domainset/) 文档，使用上述两种规则集方式；不要套用 Surge 的模块或版本要求。
 
 官方依据：[Surge 规则集](https://manual.nssurge.com/rules/ruleset.html)、[域名规则与版本要求](https://manual.nssurge.com/rules/domain.html)、[模块](https://manual.nssurge.com/profile/module.html)。
+
+## 更新与回退
+
+临时排障时，模块方式可停用本模块；RULE-SET / DOMAIN-SET 方式则注释对应的规则行，再重新加载当前配置。不要同时停用其他规则，以便确认变化是否由这份列表引起。需要回退时恢复修改前的备份；若模块优先拒绝而覆盖主配置的放行例外，可先停用模块，改用能自行安排顺序的规则集方式。
